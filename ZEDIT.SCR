@@ -1,0 +1,2895 @@
+.* PPRINT OPTIONS: MODE DCF(FPASSES (2) SYSVAR(G INLINE X NO)CONT INDEX)
+.* PPRINT OPTIONS: DCF-VERSION(BOOK)
+.* BOOKMASTER
+.*
+.*** BM2IPF requires rdef be changed to tdef to recognized it
+.*** under OS/2 tables must be done by hand afterward anyway
+:gdoc.
+:frontm.
+:titlep.
+:title.ZEDIT Version 1.17
+:date.January 2001
+:author.Clyde Thomas Zuber
+:address.
+:aline.2121 Woodrow Street
+:aline.Durham, NC  27705
+:eaddress.
+:etitlep.
+:abstract.
+:p.Zedit is a Latin/Greek/Hebrew editor providing diacritic overlays
+(i.e. accents, vowels, breathing marks).  Language scripts can be
+mixed, text entered in L->R or R->L modes.  ISPF/PDF-like interface.
+.*
+:h2.Special Notices
+:xmp.
+Licensed Material - Program Property of Clyde Thomas Zuber.
+(c) Copyright 1987, 2001.  All Rights Reserved.
+:exmp.
+:toc.
+:body.
+:h1.Conceptual Overview
+.*
+:h2.Getting Started
+.*
+:h3.Command Line Options
+:p.To obtain a complete list of command line options enter the
+command, ZEDIT1 for DOS or Windows 9x, ZEDIT2 for OS/2 1.3 or
+Windows NT, or ZEDIT3 for OS/2 2.0 and above (i.e. Warp, etc.),
+without any options, and a usage list will be displayed.
+:p.Later you may want to create a DOS batch (.BAT) or OS/2 command
+(.CMD) file which selects the options for you.  Or if using OS/2
+1.3, they may be added to the program properties if you use a PM
+group to start the program.  For OS/2 2.x and above open the
+settings of a new program icon.  The program name and parameters may
+be entered on the program page of the notebook.
+:p.The following is an example batch file:
+:xmp.
+ZEDIT1 /i /z=%1 /n
+:exmp.
+.*
+:h3.Scroll Keys
+:p.If you are familiar with the PDF or XEDIT editors on the IBM MVS or
+VM operating systems, one thing that will be different is the need to
+use TAB to move between screen field areas.  For instance, the line
+number field and the text entry field are separate screen field areas.
+In Zedit, one must use TAB or reverse-TAB to switch from either area
+to the other.  The RTAB primary command may also be set to a PFkey to
+perform the reverse-TAB.
+.*
+:h2.Description
+:p.Zedit is a multiple script language editor.  It supports the normal
+ASCII character set in both a regular and special font set.  It has
+font definitions for Latin, Greek and Hebrew with diacritic
+capabilities.  And it allows multiple direction/multiple script text
+to coexist anywhere in the file.
+:p.Zedit is an editor modeled after the IBM ISPF/PDF editor.   For
+this reason documentation for the PDF editor in either the MVS/TSO or
+the VM/CMS environment can also be referenced to learn how to use
+Zedit.  Zedit is like PDF but it is not identical.  This documentation
+emphasizes the unique differences.
+:p.Some commands have been given aliases where the PDF editor function
+overlaps with functions from VM/CMS XEDIT and the two use different
+names for the function.  An example is the PDF "cancel" and the XEDIT
+"quit".  Zedit will accept either.
+:p.There are also many commands in Zedit which are unique to its
+application.  These must be learned from the included documentation and
+by experimenting with their use.
+.*
+:h2.Graphic Video Modes
+:p.Zedit was first developed on the original IBM PC with a monochrome
+monitor and a Hercules type graphics card.  This mimicked the regular
+text mode of the monitor in that the graphics mode did not change the
+number of pixels on the screen, 720h X 348v.  This standard screen
+size is 80 characters across with 25 lines.  The character box is 8 X
+14 pixels with an extra pixel between each box horizontally for extra
+legibility.  If you have this hardware, select the /h (Hercules)
+option.
+:note.The /h option will display random characters with random
+attributes if selected on a VGA screen.
+:p.Support was later added for CGA graphics in its highest resolution
+of 640h X 200v.  There was no graphics mode for this monitor which was
+the same as its normal text display.  The character box for Zedit is
+still 8 X 14 so the screen size is 80 characters across with only 14
+lines.  There is also no pixel between character boxes.  The CGA mode
+has a vertical elongation of the aspect ratio which makes the
+characters appear tall.  The total effect has the look of a "large
+print edition".  This is the /c (CGA) option.
+:p.The next set of hardware to be supported was the IBM PS/2.   The
+display mode used is 640h X 350v.  This was developed using VGA
+equipment, but is actually an EGA resolution.  This standard graphics
+mode resembles the original monochrome graphics, but does not have the
+extra pixel between character boxes.  This mode is selected with the /e
+(EGA) option.
+:p.The /m option and the /v option provide 640h X 480v pixels on MCGA
+and VGA displays respectively.  Zedit uses an 8 X 19 character box in
+these modes giving 80 characters across by 25 lines down.  Some may
+find that the extra blank space in the character box provides greater
+legibility.  This is especially the case for Latin diactritics if
+placed over capital letters (upper case).
+:p.Knowing that the normal character display on the terminal is done
+with 720h X 350v pixels, I created a mode which programs the display
+registers directly.  This mode allows for the extra pixel between
+character boxes as the original Hercules mode does.  It is selected
+with the /i (IBM) option.  I called it the IBM option because it may
+not work with all VGA clone hardware.  For legibility, this mode is
+recommended if it will work with your hardware.  If you have a slow
+processor in your computer you may prefer /e for a faster display.
+:p.Corresponding to the /m and /v options there is also a /i+ option
+which provides 720h X 480v resolution.
+:note.Since Zedit updates the physical screen registers when using the
+/i and /i+ options, IOPL=YES must be coded in CONFIG.SYS for their use
+in OS/2 protect mode.  If IOPL=NO is coded then the /w option may also
+be required in any video mode which defaults to a display color.
+:p.The most recent video mode addition, /x, provides 8514/XGA adapter
+support.  This mode has a resolution of 1025h X 768v with 25 lines of
+80 characters.  This mode was created to provide additional space
+horizontally between characters.  For OS/2, a separate set of
+excutable modules, ZEDIT2X and ZEDIT3X, are needed which allow the use
+of this mode.  The display is controled by IBM software which is
+supplied with the display adapter.  Under DOS, this support is provided
+by a TSR program for the 8514 (HDILOAD.EXE) and a .SYS file which is
+added to the CONFIG.SYS file for XGA.  Under OS/2 a .DLL file is
+required for the /x enabled executables to run.
+:p.There is also a text video mode, /t, which is non-graphic on all of
+the supported hardware.  The editor runs as normal, but output is only
+in the default hardware character set; diacritic codes are not
+displayed.
+.*
+:h2 id=fonts.Fonts
+:p.The Greek and Hebrew font sets are both entirely original creations
+of mine.  Consideration was given to being able to fit all possible
+diacritic combinations in an overlay fashion on top of the consonant
+character set.
+:p.The "regular" font set is similar to the pixel layout of an IBM
+3278 display terminal.  The "special" font set is the built in 8 X 8
+character set from your computer's ROM.  (When printing with the
+PostScript option, "special" will print as an italics version of
+"regular").  See :hdref page=yes refid=charset. for more information.
+.*
+:h2 id=intrep.Internal Data Representation
+:p.The data file produced by Zedit contains only 7-bit ASCII codes.
+This makes conversion between ASCII and EBCDIC easier using normal
+code translate tables.  The only control character used is ASCII x'7F'
+which translates to EBCDIC x'07'.
+:note.In actual practice I have found that my original goal was too
+idealistic because code translation tables vary considerably from
+location to location if transported between multiple hosts.  When
+transferring Zedit files across an EBCDIC network, I recommend
+uploading and downloading in binary mode.
+:p.Since the codes are the ones used for normal code pages
+(independent of terminal type) the data may be inspected and
+manipulated using other editors.  Diacritic overlay codes follow their
+consonant code.  Diacritics must be allowed for when choosing a
+maximum logical record length for a data file.  In addition, a change
+in script usually requires two bytes.  It will require four if there
+is a mixture of Hebrew with any of the other scripts on the same line.
+Finally, two bytes at the end of every line are required for a newline
+character and a null byte.
+.*
+:h2.Entering a Data Set Name
+.*
+:h3.The Data Set Definition Panel
+:p.The data set name entry panel allows for a disk drive letter, three
+levels of path directories and an eight character name with a three
+character extension.  The main thing to note is that no punctuation is
+needed for any of these items as they are entered on different fields
+of the panel.  In other words, there is no need for a colon after the
+drive letter and no slashes with the path name and also no period in
+the file name.
+:p.If your data set name does not fit within the above restrictions,
+or if you just prefer, there is a free form field for entering a data
+set name.  The name will be used exactly as entered, Zedit does not
+syntax check it; all system required punctuation must be present.  On
+OS/2 HPFS disks, long data set names may be used in OS/2 screen
+sessions.
+.*
+:h3.Fast Path (/z=dsn) Invocation
+.*
+:p.As an alternative to menu panel invocation, an edit session may be
+started by specifying the data set name on the command line.
+For example:
+:xmp.
+zedit -i -z=discuss.dat
+:exmp.
+would be the same as selecting option 2 on the primary menu and then
+entering "discuss" for the file name and "dat" as the extension.
+:note.The data set name when selected in this manner is not validity
+checked or verified for syntactical correctness.  On OS/2 HPFS disks,
+long data set names may be used in OS/2 screen sessions.
+:p.Another use of the /z= option is to select a data set for printing.
+If no display mode option is selected the editor prints the data
+set rather than creating an edit session.
+.*
+:h2.Screen Display Concepts
+.*
+:h3.Dual Screen Areas
+:p.Zedit supports two logical screens for all graphic display modes.
+This allows the use of the SWAP or SPLIT commands in order to have two
+edit/browse sessions going at the same time.
+:p.The /t option only uses one screen area.  It may also require the
+swap command to find the block cursor when using CGA hardware and
+ZEDIT1 under DOS.
+.*
+:h3.Message Line and Audible Alarm
+:p.The Zedit message line on most displays is the bottom line of the
+screen, line 25.  In CGA mode (option /c) the top line of the screen
+also doubles as the message line.  (Sorry, this does not always work
+very well as some messages are written and then immediately reset).
+Messages are displayed in reverse video and are of both informational
+and error/warning types.  Error/warning messages are prefixed by an
+exclamation point "!".  All messages which have the exclamation point
+are also accompanied by an audible alarm (beep).
+:p.The audible alarm or beep is also used to indicate certain
+conditions under which Zedit exits to the system prompt in failure.
+In a failure situation, Zedit attempts to restore the screen display
+to text mode so that an error message can be displayed.  Since under
+failure conditions there is no certainty as to whether the message
+will be displayed, the number of alarms sounded also indicates what
+the error was that caused Zedit to terminate.  One alarm is a general
+failure.  An example of this is when Zedit is invoked with no
+parameters.  Two alarms is an error opening an input file, three
+alarms is an error opening an output file, four alarms signifies a
+video failure, and five alarms occurs when Zedit is unable to obtain
+additional memory storage.
+.*
+:h3.The Display "Window"
+:p.The screen area can be thought of as a window through which one can
+view only part of the page of a book.  By scrolling or moving the
+window to the left or right, up or down, one can see the other portions
+of the page.  This concept is common to all editors and actually common
+to most computer display use.  With Zedit the concept gets somewhat
+confusing because it supports text that is written right to left
+(Hebrew) as well as the more common left to right.
+:p.The concept of left and right in relation to scrolling gets
+reversed for Hebrew.  The best way of keeping this straight is to
+mentally associate left with the beginning of the line and right with
+the end.  Zedit provides synonyms of over (right) and back (left) to
+use instead, if you find them helpful.
+:p.The reversal of left and right for Hebrew is specific to the data
+itself.  It is a by-product of Zedit allowing the two different
+directions to exist in the same data file and even in the same line.
+:p.The keys that move the cursor, the arrow keys, will always move
+the cursor in the direction of the arrow.
+:note.If the beginning of a Hebrew line, for the entire screen width,
+is all Hebrew, Zedit will not allow any other script to be added to
+the line when scrolled over.
+:p.The display window concept also affects the operation of insert mode
+versus overlay mode.  Overlay mode allows the changing of the data
+within the window scope by typing new data over the existing data (if
+there is any).  Insert mode moves the existing data out of the way of
+the new data.  It does this by moving the existing data "to the right"
+(or over).  The main thing to remember in this regard is that no
+existing data outside of the scope of the window will ever be changed.
+It does not matter whether the keyboard is in insert or overlay mode.
+:p.In insert mode, if a character must be moved from the rightmost
+column (or leftmost for Hebrew) the keyboard will lock to prevent
+data loss.
+.*
+:h2.Data Entry
+.*
+:h3.Getting Used to the Keyboard
+:p.Zedit was developed in a complete vacuum as far as conventions or
+standards relating to keyboard layout.  The decisions made for location
+of key assignments were made to try to provide the most logical
+connection between my knowledge of the English alphabet, the U.S.
+keyboard layout and classical Greek and Hebrew.  Sometimes the
+correlation is as weak as the shape of one letter being suggestive of
+the other.  Sometimes it was because it was an available key.  Often I
+sought to maintain the alphabetic order correspondence or the type of
+sound of the two letters was the same.
+:p.One of the more obscure associations I made was the capital V with
+the Greek iota-subscript.  I think of the V as a big arrow head down to
+the subscript below the line.
+:p.I especially tried to keep the Hebrew vowels with their closest
+English vowel equivalent.  This meant moving Alef to the single quote
+key location.  The single quote was chosen because a smooth breathing
+mark is sometimes used to transliterate Alef.
+:p.The other main consideration was to keep as much on the lower case
+keys and the easier to reach keys as possible.
+.*
+:h3.Typing Terminal/Final Form Letters
+:p.Greek has a terminal sigma and Hebrew has many terminal forms.
+These forms are entered by typing a totally different key for the
+Greek sigma (v), and by using the shift (capital) key for Hebrew.  As
+a convenience, if you first type the normal form of the letter
+followed by the terminal form, the terminal form will automatically
+replace the normal form.  Thus, the key sequence, sv, will have the
+same result as just v.  In Hebrew, the terminal form must be typed
+before any diacritics for the replacement to be done.  Zedit will
+issue a warning if you type any consonant instead of a space or
+punctuation following a terminal form.  It will also warn you if you
+end a word with the non-terminal form of a letter that has one.
+.*
+:h3.Typing Diacritical Marks
+:p.Diacritical marks are keyed in after the letter on which they will
+be placed.  Thus the cursor must be in the position following the
+letter which will be marked.  If the diacritic placement is correct
+then the cursor will not advance until a non-diacritic character is
+typed.  If the diacritic does not properly go on the letter the cursor
+is positioned after, then the diacritic will be placed in the position
+occupied by the cursor itself, overlaying a blank character instead,
+and the cursor will advance to the next position.
+:p.If you first type a diacritical mark and need to change it, typing
+the correct mark will often replace just the diacritic in error, if
+the two are mutually exclusive.  If the two are not mutually
+exclusive, then the backspace key must be used to start over.
+:p.To place diacritics on a Greek capital, type the diacritics
+preceding the Greek capital as is done in printed Greek texts.  For
+capitals in the Latin script, the diacritic is typed just as for the
+lower case forms.  In all the video modes except /v and /i+ the
+diacritic may merge with the character due to its size.
+:p.The regular and special character sets can have the underline
+character overlaid on them in the same manner as the diacritics for
+Greek and Hebrew.  The ctrl key in combination with the underline/dash
+key is used to enter the overlay.  The underline is unique and
+different from the diacritics in that it will repeat if held down
+through a line of text.
+.*
+:h3.Typing Direction
+:p.The text entry direction is totally independent of the script type.
+The commands for changing language scripts are also independent from
+the command to change direction.  If you are in overlay mode you can
+type in the reverse direction and end up with the characters in
+reverse order.
+:p.A feature of insert mode is called "reverse insert".  When the
+typing direction is the opposite of normal for the selected script
+type (e.g. right to left for English, left to right for Hebrew), the
+cursor will remain stationary with the insert pushing the text into
+the line without disrupting any text of that normally flows in that
+direction.  This is especially convenient when typing a text line that
+contains multiple script directions.
+:note.The command line at the top of the screen is always parsed from
+left to right.  This also is independent of the direction of text entry.
+.***************************
+:h1.Primary Commands
+:p.The following table is an exhaustive list of commands recognized by
+Zedit.  Most are available by PFkey or by menu option.  Several are
+aliases of other commands for the benefit of those users who are
+already familiar with the similarly functioned command name.
+.*
+:h2.Table of Valid Primary Commands
+:h3.Key to Notes Column
+:p.  +  indicates command is also defined to a PFkey.
+:p.  *  indicates command is also a primary menu option.
+.*
+:rdef id=primcmd align='r l l' cwidths='* 3* 3*'.
+:table split=yes refid=primcmd.
+:thd.
+:c.Notes
+:c.COMMAND
+:c.ALIAS
+:ethd.
+:row.
+:c.
+:c.back
+:c.left
+:row.
+:c.
+:c.bottom
+:c.down max
+:row.
+:c.*
+:c.browse
+:c.1
+:row.
+:c.+
+:c.cancel
+:c.quit
+:row.
+:c.+
+:c.change
+:c.
+:row.
+:c.
+:c.columns
+:c.
+:row.
+:c.*
+:c.config
+:c.0
+:row.
+:c.
+:c.copy
+:c.get
+:row.
+:c.
+:c.create
+:c.replace
+:row.
+:c.+
+:c.cursor
+:c.
+:row.
+:c.
+:c.delete
+:c.
+:row.
+:c.+
+:c.down
+:c.
+:row.
+:c.*
+:c.edit
+:c.2
+:row.
+:c.+
+:c.end
+:c.file
+:row.
+:c.+
+:c.eraseeof
+:c.
+:row.
+:c.* +
+:c.exitsys
+:c.x
+:row.
+:c.*
+:c.expgrk
+:c.53
+:row.
+:c.*
+:c.expheb
+:c.54
+:row.
+:c.*
+:c.exphhi
+:c.56
+:row.
+:c.
+:c.file
+:c.end
+:row.
+:c.+
+:c.find
+:c.
+:row.
+:c.
+:c.get
+:c.copy
+:row.
+:c.+
+:c.greek
+:c.
+:row.
+:c.+
+:c.hebrew
+:c.
+:row.
+:c.+
+:c.help
+:c.
+:row.
+:c.*
+:c.impgrk
+:c.51
+:row.
+:c.*
+:c.impheb
+:c.52
+:row.
+:c.
+:c.keys
+:c.
+:row.
+:c.
+:c.latin
+:c.
+:row.
+:c.+
+:c.left
+:c.back
+:row.
+:c.
+:c.list
+:c.locate
+:row.
+:c.
+:c.letters
+:c.
+:row.
+:c.
+:c.locate
+:c.list
+:row.
+:c.
+:c.over
+:c.right
+:row.
+:c.+
+:c.print
+:c.
+:row.
+:c.
+:c.put
+:c.replace
+:row.
+:c.
+:c.quit
+:c.cancel
+:row.
+:c.+
+:c.refresh
+:c.
+:row.
+:c.+
+:c.regular
+:c.
+:row.
+:c.
+:c.replace
+:c.create
+:row.
+:c.+
+:c.reset
+:c.
+:row.
+:c.+
+:c.return
+:c.=
+:row.
+:c.+
+:c.reverse
+:c.
+:row.
+:c.+
+:c.right
+:c.over
+:row.
+:c.
+:c.rtab
+:c.
+:row.
+:c.+
+:c.save
+:c.
+:row.
+:c.+
+:c.special
+:c.
+:row.
+:c.
+:c.split
+:c.swap
+:row.
+:c.+
+:c.swap
+:c.split
+:row.
+:c.*
+:c.system
+:c.exitsys
+:row.
+:c.
+:c.top
+:c.up max
+:row.
+:c.+
+:c.up
+:c.
+:row.
+:c.*
+:c.x
+:c.exitsys
+:row.
+:c.*
+:c.0
+:c.config
+:row.
+:c.*
+:c.1
+:c.browse
+:row.
+:c.*
+:c.2
+:c.edit
+:row.
+:c.*
+:c.51
+:c.impgrk
+:row.
+:c.*
+:c.52
+:c.impheb
+:row.
+:c.*
+:c.53
+:c.expgrk
+:row.
+:c.*
+:c.54
+:c.expheb
+:row.
+:c.*
+:c.56
+:c.exphhi
+:row.
+:c.
+:c.=
+:c.return
+:etable.
+.*
+:h2.Primary Command Descriptions
+:dl.
+:dthd.Command
+:ddhd.DESCRIPTION
+:dt.back
+:dd.This is an alias for LEFT.  This might be more acceptable when
+entering Hebrew in right to left mode.
+:dt.bottom
+:dd.This is an alternative to entering "DOWN MAX".  XEDIT compatible.
+:dt.browse
+:dd.Displays preexisting data file only.
+:dt.cancel
+:dd.Ignore all changes since last SAVE and or since beginning of edit
+session if SAVE has not been entered.
+:dt.change
+:dd.Syntax is "CHANGE parm1 parm2".  A search is done for parm1 and if
+found, parm2 is substituted in its place.  See :hdref page=yes
+refid=findprm. for more information.
+:dt.columns
+:dd.This command is valid within an edit or browse session.  It adds a
+line to the display that numbers the column positions across the data
+area.  The line is added as the first line on the display area.  If
+the data that occupies the first line of the display when the command
+is entered is Hebrew text, the column positions will be displayed
+right to left.  The same display can also be obtained by the COLS
+line command.
+:dt.config
+:dd.Use this option to specify a Zedit customization configuration.
+See the section titled :hdref page=yes refid=config. for more
+information.
+:dt.copy
+:dd.Gets a copy of a file from another data set other than the one
+currently being edited and adds it to the one currently being edited.
+The position where to add the lines that are copied may be marked using
+an A or B line command.  If a line is not marked, the lines are added
+after the first line of the current screen display.
+:dt.create
+:dd.Basically does a SAVE into another data file.  If the file already
+exists it will replace it, thus its alias is REPLACE.  Syntax is
+"CREATE dsn".  No validity checking is done on "dsn" to see if it
+matches operating system requirements.  This command is different from
+ISPF/PDF in that lines are not selectable, the entire in storage edit
+file is used.
+:dt.cursor
+:dd.This command only makes sense on its PFkey.  Performs a "home" of
+putting the cursor on the command line.
+:dt.delete
+:dd.The minimum abreviation for this command is "DEL".  It requires
+a parameter of either "X" or "NX".  An optional parameter of "ALL"
+is allowed.  An example of the full syntax is "DEL ALL X".  This would
+result in all excluded lines being deleted.  "DEL NX" would result in
+all non-excluded lines being deleted.
+:dt.down
+:dd.Scroll the data display forward or down.  See :hdref page=yes
+refid=scramt. for more information.
+:dt.edit
+:dd.Edit a new or existing data set.  If data set does not exist, it
+will automatically be created.
+:dt.end
+:dd.Deselect the current display panel.  If in an edit session, it will
+also save the data set.  The next panel displayed is the one which was
+immediately displayed before the current one.
+:dt.eraseeof
+:dd.Erase the line from the current cursor position to the end of the
+screen field.
+:dt.exitsys
+:dd.Similar in function to END and RETURN but exits Zedit completely,
+returning to the operating system.
+:dt.expgrk
+:dd.This option takes a Zedit file as input and does an "export" by
+striping out its diacritics.  In addition, the Zedit codes used to
+represent the consonants are exchanged according to whatever is
+defined in the Greek keyboard customization table.  The only reason
+to want to do this is for processing with some other editor or
+printing convention.  See the section titled :hdref page=yes
+refid=config. for more information.
+:p.The result (output) file of this function will have the same name
+as the input file with the three letter extension changed to EXP.
+:dt.expheb
+:dd.This option takes a Zedit file as input and does an "export" by
+striping out its diacritics.  In addition, the Zedit codes used to
+represent the consonants are exchanged according to whatever is
+defined in the Hebrew keyboard customization table.  The only reason
+to want to do this is for processing with some other editor or
+printing convention.  See the section titled :hdref page=yes
+refid=config. for more information.
+:p.The result (output) file of this function will have the same name
+as the input file with the three letter extension changed to EXP.
+:dt.exphhi
+:dd.This option is similar to EXPHEB above.  The output data file
+consonants are in the IBM standard Hebrew character codes rather than
+according to the Hebrew keyboard customization table.  The standard
+Hebrew character codes are in the high ASCII range (i.e. greater than
+x'7F') and this export is not customizable within Zedit.  See the
+section titled :hdref page=yes refid=config. for more information.
+:p.The result (output) file of this function will have the same name
+as the input file with the three letter extension changed to HEB.
+:dt.file
+:dd.This is an alias for END.  XEDIT compatible.
+:dt.find
+:dd.Syntax is "FIND parm1".  A search is done for parm1.  See
+:hdref page=yes refid=findprm. for more information.
+:dt.get
+:dd.This is an alias for COPY.  XEDIT compatible.
+:dt.greek
+:dd.Select entering text in Greek characters.
+:dt.hebrew
+:dd.Select entering text in Hebrew characters.
+:dt.help
+:dd.(currently non-functional).
+:dt.impgrk
+:dd.This option takes a file created by some other editor as input
+and does an "import" by adding a Zedit Greek control sequence to the
+beginning of the file.  In addition the Zedit codes used to represent
+the consonants are exchanged according to whatever is defined in the
+Greek keyboard customization table.  See the section titled :hdref
+page=yes refid=config. for more information.
+:p.The result (output) file of this function will have the same name
+as the input file with the three letter extension changed to ZED.
+:dt.impheb
+:dd.This option takes a file created by some other editor as input and
+does an "import" by adding a Zedit Hebrew control sequence to the
+beginning of the file.  The standard high (ASCII 128-256) code point
+values for the Hebrew consonants are automatically mapped to the Zedit
+internal values.  If the input is in the low range then the consonants
+are exchanged according to whatever is defined in the Hebrew keyboard
+customization table.  See the section titled :hdref page=yes
+refid=config. for more information on low range processing.
+:p.The result (output) file of this function will have the same name
+as the input file with the three letter extension changed to ZED.
+:dt.keys
+:dd.This command is valid within an edit or browse session.  It adds a
+line to the display that shows the primary, unshifted PFkey function
+values.  The line is added as the first line on the display area.  The
+same display may be obtained using the KEYS line command.
+:dt.latin
+:dd.Select entering text in Latin characters.
+:dt.left
+:dd.Scroll the screen data display area to the left or rather to the
+beginning of the line.  For lines that have been stored in the reverse
+direction, the impression will be of scrolling right.  For this reason,
+the alias of BACK may be used to maintain intuitive perspective.
+:dt.letters
+:dd.This command is valid within an edit or browse session.  It adds
+lines to the display that show the alphabetic correspondence between
+the regular, Greek, and Hebrew scripts.  The lines are added at the
+top of the display area.  The same display may also be obtained by the
+LETS line command.
+:dt.list
+:dd.This is an alias for LOCATE.
+:dt.locate
+:dd.Syntax is "LOCATE linenum".  The display will be scrolled to have
+the line with the count of linenum at the top of the screen.  Note that
+this is in no way related to the XEDIT locate command.  For that
+function, use FIND.
+:dt.over
+:dd.This is an alias for RIGHT.  This might be more acceptable when
+entering Hebrew in right to left mode.
+:dt.print
+:dd.Prints the entire data set being browsed or edited.  This is
+different from ISPF/PDF.  To only print a screen image as the PDF
+command does, see "print screen" under :hdref page=yes refid=othkeys..
+See :hdref page=yes refid=zedprt. for more information on printing the
+entire data set.
+:dt.put
+:dd.This is an alias for REPLACE.  XEDIT compatible.
+:dt.quit
+:dd.This is an alias for CANCEL.  XEDIT compatible.
+:dt.refresh
+:dd.This is a "panic mode help key".  Because Zedit changes the video
+display registers in some operating environments this function key was
+created to refresh the video mode.  Use this key if the display
+becomes garbage.  It should only be needed with the Hercules graphics
+mode, but it will function, if needed, in any mode.
+:dt.regular
+:dd.Select entering text with REGULAR characters.  This is
+specifically opposed to SPECIAL characters.  See :hdref page=yes
+refid=charset. for more information.
+:dt.replace
+:dd.This is an alias for CREATE.
+:dt.reset
+:dd.Will cancel any pending line commands and/or erase the message
+display line area (line 25 or in CGA, line 1).
+:dt.return
+:dd.Functions like END except that the primary option menu is displayed
+next.
+:dt.reverse
+:dd.Change the directional orientation of text entry.  This operates as
+a toggle between left to right and right to left.
+:dt.right
+:dd.Scroll the screen data display area to the right or rather away
+from the beginning of the line.  For lines that have been stored in
+the reverse direction, the impression will be of scrolling left.  For
+this reason the alias of OVER may be used to maintain intuitive
+perspective.
+:dt.rtab
+:dd.Performs the reverse tab key combination (or tab-left).  Its
+intended use is as the value of a PFkey as performing the reverse tab
+is awkward on many keyboards.
+:dt.save
+:dd.Write the data set to disk.
+:dt.special
+:dd.Select entering text with SPECIAL characters.  This is
+specifically opposed to REGULAR characters.  See :hdref page=yes
+refid=charset. for more information.
+:dt.split
+:dd.This is an alias of SWAP.
+:dt.swap
+:dd.Display the other screen area.
+:dt.system
+:dd.This is an alias of EXITSYS.
+:dt.top
+:dd.This is equivalent to entering "UP MAX".  It is XEDIT compatible.
+:dt.up
+:dd.Scroll the data display backward or up.  (Note that "BACK" is NOT
+an alias for this command).  See :hdref page=yes refid=scramt. for more
+information.
+:dt.X
+:dd.EXITSYS option on primary option menu.
+:dt.0
+:dd.CONFIG option on primary option menu.
+:dt.1
+:dd.BROWSE option on primary option menu.
+:dt.2
+:dd.EDIT option on primary option menu.
+:dt.51
+:dd.IMPGRK option on primary option menu.
+:dt.52
+:dd.IMPHEB option on primary option menu.
+:dt.53
+:dd.EXPGRK option on primary option menu.
+:dt.54
+:dd.EXPHEB option on primary option menu.
+:dt.56
+:dd.EXPHHI option on primary option menu.
+:dt.=
+:dd.This is an alias for RETURN.  Its use, however, is as a fast path
+key to another option.  Thus "=2" says return to primary option menu
+and select option 2.
+:edl.
+.*
+:h2.Entering Commands or Abbreviations
+:p.All commands may be abbreviated up to the point where they are still
+unique, except as noted below.  In other words, it depends on what other
+commands start with the same letter, or letters, and on how much of the
+command must be typed.
+:note.FIND and CHANGE can always be abbreviated by one letter, "f" and
+"c", respectively, regardless of other commands that begin with the
+same letters.
+:note.The minimum abreviation for DELETE is "del".
+:p.Commands should be entered in regular script.  The parameters may be
+in the other scripts for FIND or CHANGE.
+.*
+:h2 id=scramt.Entering Scroll Amounts
+:p.Scroll amounts can be entered on the command line following the UP,
+DOWN, LEFT, or RIGHT commands.  They can also be entered alone when the
+command is entered via PFkey.  If no amount is entered on the command
+line the value in the SCROLL ===> field is used.  This value may also
+be changed and will remain in effect for the length of the edit or
+browse session.
+:p.The values which may be specified are as follows:
+:dl.
+:dthd.Value
+:ddhd.DESCRIPTION
+:dt.a number
+:dd.A decimal number or count may be used.
+:dt.data
+:dd.Indicates to scroll the entire screen size less one.  For instance,
+the bottom line of the screen would become the top line of the next
+display for a DOWN command.
+:dt.half
+:dd.Scroll half the number of lines for the display.
+:dt.max
+:dd.Scroll to the outermost range.
+:dt.page
+:dd.Scroll the entire screen size.
+:dt.csr
+:dd.Scroll to the location the cursor occupies when the command is
+entered.
+:edl.
+.*
+:h2 id=findprm.Find/Change Parameters
+:ol.
+:li.Parameters are delimited by blanks unless a parameter is enclosed
+within quotes.  Either single or double quotes may be used if a
+parameter is to contain either blanks or the other type of quote.
+:li.Only forward search is supported at this time. Thus, the PDF
+parameters ALL, NEXT, PREV, FIRST, are not supported.
+:li.The search starts from the first line on the display through to the
+bottom of the data file.  If the FIND command is entered again after
+receiving the bottom of data message, the search will begin again from
+the top of the data file.
+:li.If the parameter to be searched for contains diacritics, only exact
+matches including diacritics will be found.  If the parameter does not
+contain diacritics, all strings with any possible diacritics will be
+found.
+:p.In this context, terminal letters are treated the same as
+diacritics.  To do the fuzzier search, without diacritics, the terminal
+letter may be entered in its regular form (not the terminal form).
+:li.The search parameter is case sensitive.
+:li.Strings which span lines will not be matched.
+:li.The parameters on the command line are always parsed left to right.
+:li.The parameters may be in any script but a change from one script to
+another is not supported.
+:li.Be careful of confusing Latin with the regular ASCII script as they
+display similarly on the screen.
+:eol.
+.*
+:h2 id=numunn.Numbered/Unnumbered Edit, Browse
+:p.The numbered edit mode is 72 characters wide by default.  The
+unnumbered browse mode is 80 characters.
+:p.Other screen widths up to the default, which is the maximum, can be
+selected with the /b option when used in combination with the /r=
+option.  The /r= option sets the right margin for working with
+interlinear text.  Matching different directional lines requires the
+window line size to be a constant.  Since Hebrew is the only script
+Zedit supports which goes right to left, this is only a consideration
+if the data will include Hebrew text.
+:p.More importantly, the line size is also an issue for printing
+multi-directional type data.  For this reason, the /r= option is
+provided for specifying a right margin for Hebrew.  In pratice,
+relative displacements of multi-directional text lines will be the
+same if a multiple of the original display window is chosen for the
+right margin value.
+:note.The default value is /r=72.
+:p.Zedit has a bias toward left to right text in that when a line has
+more than one direction for its scripts, it stores it in the left to
+right direction.  So even if a line is mostly Hebrew, if it has any
+other type of text script, it will be stored in the left to right
+direction.  This also will create multi-directional type data with the
+convergence considerations mentioned above.
+:p.When using the PPDS graphic print modes, /g, /g+, or /gx, with /2
+to switch from dual density to single density printing, the /r= option
+has the additional use of shortening the print line so that it can be
+fit to the width of the paper.  /gx needs this capability with or
+without the /2 option because of the greater size of the printed
+characters.  See :hdref page=yes refid=grphpr. for more information
+on the PPDS graphic print modes.
+.*
+:h2 id=charset.Character Set Considerations
+:p.Under most circumstances, use regular as opposed to the special
+character set.  Special has been provided to tag text for special
+consideration during printing or other processing.  For instance, with
+dot matrix printers (default, /p, /n) the print command prints the
+special character set from the resident font within the printer.  It
+therefore is not the same height as the other fonts when printed.  On
+the other hand, when printing with a PostScript printer (/s), the
+special character set is printed as an italic version of regular.  And
+finally, with the PPDS graphic print modes (/g, /g+, /gx) the special
+characters are always printed just as they appear on the display
+screen.  See :hdref page=yes refid=grphpr. for more information on
+the PPDS graphic print modes.
+.*
+.***************************
+:h1.Control Keys
+.*
+:h2.PFkey (Function Key) Settings
+:rdef id=pfkey align='c c c c c' cwidths='* 2* 2* 2* 2*'.
+:table split=yes refid=pfkey.
+:thd.
+:c.
+:c.<NONE>
+:c.SHIFT
+:c.CTRL
+:c.ALT
+:ethd.
+:row.
+:c.PF1
+:c.refresh
+:c.help
+:c.help
+:c.help
+:row.
+:c.PF2
+:c.swap
+:c.swap
+:c.swap
+:c.swap
+:row.
+:c.PF3
+:c.end
+:c.end
+:c.eraseeof
+:c.end
+:row.
+:c.PF4
+:c.exitsys
+:c.print
+:c.return
+:c.return
+:row.
+:c.PF5
+:c.regular
+:c.find
+:c.find
+:c.regular
+:row.
+:c.PF6
+:c.greek
+:c.change
+:c.change
+:c.greek
+:row.
+:c.PF7
+:c.hebrew
+:c.up
+:c.reset
+:c.hebrew
+:row.
+:c.PF8
+:c.reverse
+:c.down
+:c.cancel
+:c.reverse
+:row.
+:c.PF9
+:c.latin
+:c.swap
+:c.left
+:c.latin
+:row.
+:c.PF10
+:c.left
+:c.left
+:c.right
+:c.special
+:row.
+:row.
+:c.PF11
+:c.right
+:c.right
+:c.save
+:c.left
+:row.
+:c.PF12
+:c.special
+:c.cursor
+:c.exitsys
+:c.right
+:etable.
+.*
+:ol.
+:li.The SHIFT PFkeys are set to the default ISPF/PDF settings.
+:li.The function key for find and change operate slightly differently
+than their PDF counterpart.  There is no distinction of command for the
+repeat function (e.g. RFIND). In addition, when the find or change
+parameters are initially entered, the command "f" or "c" may be entered
+on the command line or the pfkey selected, but not both.  (PDF requires
+both if the function key is used).
+:li.PF11 and PF12 are available under DOS only with the use of the
+/k command line option when using an enhanced keyboard.
+:eol.
+.*
+:h2 id=othkeys.Other PC - PS/2 Keys
+.*
+:dl.
+:dthd.Key
+:ddhd.DESCRIPTION
+.*
+:dt.alt
+:dd.The ALT state keys are used in combination with the PFkeys keys.
+.*
+:dt.backspace
+:dd.The backspace key moves the cursor one character position to the
+left, removing the character that was in that position.  All of the
+characters following the cursor on the line (in the screen field) move
+with the cursor.  Sometimes this action is referred to as "destructive
+backspace".  Compare with DELETE.
+.*
+:dt.ctrl
+:dd.The control key may be used in combination with other keys, such
+as the PFkeys, the scroll keys, PgUp and PgDown, and the DELETE and
+END, keys.
+.*
+:dt.delete
+:dd.The character in the box marked by the cursor is removed.  All of
+the characters following the cursor on the line (in the screen field)
+move toward the cursor.  Compare with BACKSPACE.  This key in
+combination with the CTRL key is the same function as the ERASEEOF
+primary command or PFkey.
+.*
+:dt.end
+:dd.When this key is pressed, the cursor moves to the end of the
+current screen field.  This key in combination with the CTRL key is the
+same function as the ERASEEOF primary command or PFkey.
+.*
+:dt.enter
+:dd.The regular ENTER key is a combination of "newline" and "enter".
+Newline means that normally it will simply move the cursor down the
+screen to the beginning of the next entry field.  "Enter" means it
+signals a command event for Zedit to start processing a command that
+has been entered.  The only time it functions as "enter" is when it is
+pressed and the cursor is on the primary command line, or when a line
+command has been typed in the prefix area.
+:p.In order to signal "enter" to process a panel such as the data set
+entry panel, ENTER should be used in combination with the CTRL key.
+If you wanted to process a command from the command line on such a
+panel without processing the panel itself, the cursor should be on the
+primary command line and the key used without the CTRL key.
+:p.Another way to signal CTRL-Enter is to use the ENTER key on the
+numeric keypad of the PS/2 enhanced keyboard.  It always has the
+"enter" function.  If for some reason you prefer not to use CTRL-Enter
+or the keypad ENTER, CTRL-J is another method.
+.*
+:dt.escape
+:dd.This key performs the same function as the "end" primary command
+which is assigned to PF3 by default.  It deselects the current display
+panel.  If in an edit session, it will also save the data set.  The
+next panel displayed is the one which was immediately displayed before
+the current one.
+.*
+:dt.home
+:dd.Moves the cursor to the beginning position of the command field at
+the top of the screen.  This is the same function as the CURSOR
+primary command.
+.*
+:dt.insert
+:dd.Toggles the data entry state for the screen field area between
+overlay and insert.  Overlay replaces characters in the position where
+the cursor is.  Insert moves the character and all following characters
+one position away to make room for the freshly typed character.
+:p.Insert state is remembered independently of the command line sate
+in OS/2 protect mode sessions.  In other words, the initial state, INS
+or OVR, may appear to be arbitrary when starting Zedit.
+.*
+:dt.page down
+:dd.The action is the same as entering the DOWN primary command.
+Performs similarly to the command when entered via PFkey.  This key in
+combination with the CTRL key is the same function as DOWN with MAX as
+a parameter (or the BOTTOM alias).
+.*
+:dt.page up
+:dd.The action is the same as entering the UP primary command.
+Performs similarly to the command when entered via PFkey.  This key in
+combination with the CTRL key is the same function as UP with MAX as
+a parameter (or the TOP alias).
+.*
+:dt.print screen (and *)
+:dd.The native operating system provides some graphic display support.
+This does not include nonstandard modes.  Zedit includes code to print
+a screen image direct from the the video buffer in whatever mode it
+was invoked with.
+:p.On the PC (10 function key) keyboard it is selected by pressing
+the shift key while pressing the print screen key.  This key has an
+"*" character in the shift position.  The corresponding key on the
+PS/2 enhanced keyboard is the "*" key on the right numeric keypad.  No
+shift is necessary on the enhanced keyboard.
+:note.Hercules mode (/h) print screen support is available only for
+Epson printers.
+:note.Print screen to PostScript printers (/s) is not supported.
+.*
+:dt.return
+:dd.See ENTER above.
+.*
+:dt.scroll
+:dd.Also called arrow keys.  These four keys move the cursor one
+character position at a time around the screen field areas.  If you
+are familiar with the PDF or XEDIT editors on MVS or VM, one thing
+that will be different is the need to use TAB to move between screen
+field areas.  For instance, the line number field and the text entry
+field are separate screen field areas.  In Zedit, one must use TAB or
+reverse-TAB to switch from either area to the other.  The RTAB primary
+command may also be set to a PFkey to perform the reverse-TAB.
+:p.CTRL in combination with a SCROLL key will make the cursor move
+twice as fast.  On most keyboards, care must be given to press the CTRL
+key prior to the SCROLL arrow, otherwise the opposite will happen.
+.*
+:dt.shift
+:dd.The shift state keys are used in combination with other keys, such
+as the PFkeys.  The most common use, of course, is to select capital
+letters.
+.*
+:dt.tab
+:dd.On most keyboards, there is one TAB key which, when pressed,
+performs a TAB to the right.  The SHIFT key in combination with the
+TAB key performs a reverse-TAB to the left.  CTRL-U will also perform
+a reverse-TAB, as well as the RTAB primary command when assigned to a
+PFkey.
+:p.The TAB function moves the cursor from one screen field area to the
+next/right or previous/left.  The line will move to the next or
+previous line if the cursor is at the "end of the screen".
+:p.The TAB key or keys do not place any data within your file as some
+editors do.  Zedit does not support the changing of "tabs" created by
+such editors.
+:note.TAB must be used to move between the line number prefix area and
+the text area in zedit numbered mode.
+.*
+:edl.
+.*
+.***************************
+:h1.Line Commands
+.*
+:h2.Line Command Set
+:p.The line commands may be entered in upper or lower case.  They are
+shown here in upper case to help distinguish the actual command from
+the (n) variable which is an optional count parameter.  The default for
+n is 1 in all cases.
+.*
+:note.The # is used as a place marker by Zedit to indicate a partially
+processed command.  An example of this would be when a C (copy) has
+been entered on a line and the return key has been entered.  A # will
+appear on the line number field until the A, B is entered on another
+line number.  The RESET primary command will clear outstanding (#)
+line commands if, for instance, the command was entered accidentally.
+:dl.
+:dthd.Command
+:ddhd.DESCRIPTION
+:dt."n
+:dd.alias for the R, XEDIT compatible
+:dt.""n
+:dd.alias for the RR, XEDIT compatible
+:dt.(n
+:dd.shift left n positions
+:dt.((n
+:dd.block shift left n positions
+:dt.)n
+:dd.shift right n positions
+:dt.))n
+:dd.block shift right n positions
+:dt.A
+:dd.After, used with copy and move
+:dt.B
+:dd.Before, used with copy and move
+:dt.Cn
+:dd.Copy n lines
+:dt.CC
+:dd.Copy block of lines
+:dt.COLS
+:dd.essentially the same as the COLUMNS primary command, with the
+column marker placed above the selected line rather than as the first
+line of the display
+:dt.Dn
+:dd.Delete
+:dt.DD
+:dd.Delete block of lines
+:dt.Fn
+:dd.show (re-display) First n lines of an excluded block
+:dt.GR
+:dd.GReek
+:dt.HE
+:dd.HEbrew
+:dt.In
+:dd.Insert or add n lines
+:dt.KEYS
+:dd.essentially the same as the KEYS primary command, with the PFkey
+display line placed above the selected line rather than as the first
+line of the display
+:dt.Ln
+:dd.show (re-display) Last n lines of an excluded block
+:dt.LA
+:dd.LAtin
+:dt.LETS
+:dd.essentially the same as the LETTERS primary command, with the
+alphabet lines placed above the selected line rather than as the first
+line of the display
+:dt.Mn
+:dd.Move n lines
+:dt.MM
+:dd.Move block of lines
+:dt.On
+:dd.On, used with copy and move
+:dt.OO
+:dd.block On, used with copy and move
+:dt.RE
+:dd.REgular
+:dt.Rn
+:dd.Repeat line n times
+:dt.RRn
+:dd.Repeat block of lines n times
+:dt.Sn
+:dd.Show (re-display) first n lines of an excluded block
+:dt.SP
+:dd.SPecial
+:dt.TE
+:dd.Zedit does not support the Text Entry line command.
+:dt.TF
+:dd.(currently non-functional) Text Flow
+:dt.TS
+:dd.(currently non-functional) Text Split
+:dt.Xn
+:dd.eXclude n lines from being displayed
+:dt.XX
+:dd.eXclude a block of lines from being displayed
+:edl.
+.*
+:h2.Shifting and Language Tags
+.*
+:p.As is the case with PDF, data that is shifted toward the beginning
+of the line (left) or over the end of the maximum logical record length
+(right) is lost.
+:p.Since Zedit has embedded tags to indicate the language of the text
+it is possible to change the script of text by the use of the shift
+line commands, (, ((, ), and )).
+Zedit attempts to minimize the exposure of this happening by preventing
+tags from being lost where they normally occur.  The exposure is mainly
+in single lines that contain multiple scripts.  This type of
+manipulation of text data is expected to be unusual but Zedit provides
+line commands to allow the correction of internal tags in this event:
+:ul.
+:li.GR - changes the starting script type of the line to Greek.
+:li.HE - changes the starting script type of the line to Hebrew.
+:li.LA - changes the starting script type of the line to Latin.
+:li.RE - changes the starting script type of the line to Regular.
+:li.SP - changes the starting script type of the line to Special.
+:eul.
+:note.These commands can NOT be used to change a line that already
+begins with an embedded tag.  They are provided only for corrective use.
+If a block of text needs to be changed back to a particular text type,
+start with the last line affected, enter the command, and repeat the
+command on each line up to the first affected line.
+.***************************
+:h1.Symbolic Correspondence
+.*
+:h2.Code Tables
+:ol.
+:li.ASCII is used for both Regular and Special.
+:li.Only the hex codes which appear from Zedit output are listed.
+:li.DEL, x'7F', and the character following it in the file indicates
+the Zedit character set or direction.
+:li.A reserved or unused code is indicated by <*> (Hebrew only).
+:note.Hebrew code point names enclosed in angle brackets (e.g.
+<segolta>) are proposed assignments for Hebrew accent support in
+the next release.
+:eol.
+:rdef id=chars align='c c l l l' cwidths='* 2* 4* 4* 4*'.
+:table split=yes refid=chars.
+:thd.
+:c.hex
+:c.ASCII
+:c.Greek
+:c.Hebrew
+:c.Latin
+:ethd.
+:row.
+:c.20
+:c.space
+:c.space
+:c.space
+:c.space
+:row.
+:c.21
+:c.!
+:c.!
+:c.!
+:c.!
+:row.
+:c.22
+:c."
+:c.grave accent
+:c."
+:c."
+:row.
+:c.23
+:c.#
+:c.#
+:c.# <salselet>
+:c.breve/ caron
+:row.
+:c.24
+:c.$
+:c.$
+:c.$ <darga>
+:c.cedilla/ ogonek/ double acute
+:row.
+:c.25
+:c.%
+:c.%
+:c.% <pazer magnum>
+:c.overdot/ overcircle/ middle dot
+:row.
+:c.26
+.* real ampersand is not friendly to DWScript
+:c.&amp.
+:c.&amp.
+:c.&amp. <pasta/azla>
+:c.eth
+:row.
+:c.27
+:c.'
+:c.acute accent
+:c.alef
+:c.acute accent
+:row.
+:c.28
+:c.(
+:c.(
+:c.(
+:c.(
+:row.
+:c.29
+:c.)
+:c.)
+:c.)
+:c.)
+:row.
+:c.2A
+:c.*
+:c.*
+:c.*
+:c.*
+:row.
+:c.2B
+:c.+
+:c.+
+:c.+ <pazer>
+:c.+
+:row.
+:c.2C
+:c.,
+:c.,
+:c.,
+:c.,
+:row.
+:c.2D
+:c.-
+:c.-
+:c.maqqaf
+:c.-
+:row.
+:c.2E
+:c..
+:c..
+:c..
+:c..
+:row.
+:c.2F
+:c./
+:c./
+:c./
+:c.stroke
+:row.
+:c.30
+:c.0
+:c.0
+:c.0
+:c.0
+:row.
+:c.31
+:c.1
+:c.1
+:c.1
+:c.1
+:row.
+:c.32
+:c.2
+:c.2
+:c.2
+:c.2
+:row.
+:c.33
+:c.3
+:c.3
+:c.3
+:c.3
+:row.
+:c.34
+:c.4
+:c.4
+:c.4
+:c.4
+:row.
+:c.35
+:c.5
+:c.5
+:c.5
+:c.5
+:row.
+:c.36
+:c.6
+:c.6
+:c.6
+:c.6
+:row.
+:c.37
+:c.7
+:c.7
+:c.7
+:c.7
+:row.
+:c.38
+:c.8
+:c.8
+:c.8
+:c.8
+:row.
+:c.39
+:c.9
+:c.9
+:c.9
+:c.9
+:row.
+:c.3A
+.* real colon is not friendly to IPF (table not converted by bm2ipf)
+:c.&colon.
+:c.raised dot colon
+:c.sof pasuq
+:c.&colon.
+:row.
+:c.3B
+.* real semicolon is not friendly to DWScript
+:c.&semi.
+:c.&semi.
+:c.shewa
+:c.&semi.
+:row.
+:c.3C
+:c.<
+:c.<
+:c.< <mahpak>
+:c.<
+:row.
+:c.3D
+:c.=
+:c.=
+:c.=
+:c.=
+:row.
+:c.3E
+:c.>
+:c.>
+:c.> <yetib>
+:c.>
+:row.
+:c.3F
+:c.?
+:c.?
+:c.?
+:c.?
+:row.
+:c.40
+:c.@
+:c.dieresis (umlaut)
+:c.@
+:c.dieresis (umlaut)
+:row.
+:c.41
+:c.A
+:c.ALPHA
+:c.qamats
+:c.A
+:row.
+:c.42
+:c.B
+:c.BETA
+:c.<*> <mahpakatum>
+:c.B
+:row.
+:c.43
+:c.C
+:c.GAMMA
+:c.final (terminal) kaf
+:c.C
+:row.
+:c.44
+:c.D
+:c.DELTA
+:c.<*> <seggolta>
+:c.D
+:row.
+:c.45
+:c.E
+:c.EPSILON
+:c.seggol
+:c.E
+:row.
+:c.46
+:c.F
+:c.ZETA
+:c.cholam
+:c.F
+:row.
+:c.47
+:c.G
+:c.ETA
+:c.<*> <geres>
+:c.G
+:row.
+:c.48
+:c.H
+:c.THETA
+:c.<*> <garsayim>
+:c.H
+:row.
+:c.49
+:c.I
+:c.IOTA
+:c.<*> <silluq>
+:c.I
+:row.
+:c.4A
+:c.J
+:c.rough breathing mark
+:c.<*> <rebia>
+:c.J
+:row.
+:c.4B
+:c.K
+:c.KAPPA
+:c.<*> <zaqef>
+:c.K
+:row.
+:c.4C
+:c.L
+:c.LAMBDA
+:c.<*> <zaqef magnum>
+:c.L
+:row.
+:c.4D
+:c.M
+:c.MU
+:c.final (terminal) mem
+:c.M
+:row.
+:c.4E
+:c.N
+:c.NU
+:c.final (terminal) nun
+:c.N
+:row.
+:c.4F
+:c.O
+:c.OMICRON
+:c.<*> <qamets qatan>
+:c.O
+:row.
+:c.50
+:c.P
+:c.PI
+:c.final (terminal) pe
+:c.P
+:row.
+:c.51
+:c.Q
+:c.XI
+:c.<*> <kepula>
+:c.Q
+:row.
+:c.52
+:c.R
+:c.RHO
+:c.<*> <mereka>
+:c.R
+:row.
+:c.53
+:c.S
+:c.SIGMA
+:c.sin
+:c.S
+:row.
+:c.54
+:c.T
+:c.TAU
+:c.<*> <tipha>
+:c.T
+:row.
+:c.55
+:c.U
+:c.UPSILON
+:c.<*> <munah>
+:c.U
+:row.
+:c.56
+:c.V
+:c.iota subscript
+:c.<*> <galgal>
+:c.V
+:row.
+:c.57
+:c.W
+:c.PHI
+:c.<*> <illuj>
+:c.W
+:row.
+:c.58
+:c.X
+:c.CHI
+:c.final (terminal) tsadi
+:c.X
+:row.
+:c.59
+:c.Y
+:c.PSI
+:c.<*> <tebir>
+:c.Y
+:row.
+:c.5A
+:c.Z
+:c.OMEGA
+:c.<*> <dehi>
+:c.Z
+:row.
+:c.5B
+.* real [ (left bracket) is not friendly to BookMaster
+:c.&lbrk.
+:c.&lbrk.
+:c.&lbrk.
+.* aelig added only because it is available
+:c.&aelig. (ae diphthong)
+:row.
+:c.5C
+:c.\
+:c.\
+:c.&semi.
+:c.thorn
+:row.
+:c.5D
+.* real ] (right bracket) is not friendly to BookMaster
+:c.&rbrk.
+:c.&rbrk.
+:c.&rbrk.
+.* oelig must be removed for IPF (added because available)
+:c.&oelig. (oe ligature)
+:row.
+:c.5E
+.* real caret is not friendly to BookMaster
+:c.&caret.
+:c.circumflex accent
+:c.&caret. <atnah>
+:c.circumflex accent
+:row.
+:c.5F
+:c._
+:c._
+:c.raphe
+:c._
+:row.
+:c.60
+.* real ` (backward quote) is not friendly to BookMaster
+:c.&osq.
+:c." (double quote)
+:c.' (single quote)
+:c.grave accent
+:row.
+:c.61
+:c.a
+:c.alpha
+:c.pattach
+:c.a
+:row.
+:c.62
+:c.b
+:c.beta
+:c.bet
+:c.b
+:row.
+:c.63
+:c.c
+:c.gamma
+:c.kaf
+:c.c
+:row.
+:c.64
+:c.d
+:c.delta
+:c.dalet
+:c.d
+:row.
+:c.65
+:c.e
+:c.epsilon
+:c.sere
+:c.e
+:row.
+:c.66
+:c.f
+:c.zeta
+:c.dagesh
+:c.f
+:row.
+:c.67
+:c.g
+:c.eta
+:c.gimel
+:c.g
+:row.
+:c.68
+:c.h
+:c.theta
+:c.he
+:c.h
+:row.
+:c.69
+:c.i
+:c.iota
+:c.chiriq
+:c.i
+:row.
+:c.6A
+:c.j
+:c.smooth breathing mark
+:c.tet
+:c.j
+:row.
+:c.6B
+:c.k
+:c.kappa
+:c.het
+:c.k
+:row.
+:c.6C
+:c.l
+:c.lambda
+:c.lamed
+:c.l
+:row.
+:c.6D
+:c.m
+:c.mu
+:c.mem
+:c.m
+:row.
+:c.6E
+:c.n
+:c.nu
+:c.nun
+:c.n
+:row.
+:c.6F
+:c.o
+:c.omicron
+:c.samekh
+:c.o
+:row.
+:c.70
+:c.p
+:c.pi
+:c.pe
+:c.p
+:row.
+:c.71
+:c.q
+:c.xi
+:c.quf
+:c.q
+:row.
+:c.72
+:c.r
+:c.rho
+:c.resh
+:c.r
+:row.
+:c.73
+:c.s
+:c.sigma
+:c.shin
+:c.s
+:row.
+:c.74
+:c.t
+:c.tau
+:c.tav
+:c.t
+:row.
+:c.75
+:c.u
+:c.upsilon
+:c.qubbuts
+:c.u
+:row.
+:c.76
+:c.v
+:c.final (terminal) sigma
+:c.ayin
+:c.v
+:row.
+:c.77
+:c.w
+:c.phi
+:c.vav
+:c.w
+:row.
+:c.78
+:c.x
+:c.chi
+:c.tsadi
+:c.x
+:row.
+:c.79
+:c.y
+:c.psi
+:c.yod
+:c.y
+:row.
+:c.7A
+:c.z
+:c.omega
+:c.zayin
+:c.z
+:row.
+:c.7B
+:c.{
+:c.{
+:c.{ <telisa parvum>
+.* AElig added only because it is available
+:c.&AElig. (AE diphtong)
+:row.
+:c.7C
+:c.|
+:c.|
+:c.paseq
+:c.THORN
+:row.
+:c.7D
+:c.}
+:c.}
+:c.} <telisa magnum>
+.* OElig must be removed for IPF
+:c.&OElig. (OE ligature)
+:row.
+:c.7E
+.* real ~ (tilde) not friendly to BookMaster
+:c.&tilde.
+:c.&tilde.
+:c.&tilde. <sinnorit/zarqa>
+:c.tilde accent
+:row.
+:c.7F
+:c.DEL
+:c.DEL
+:c.DEL
+:c.DEL
+:etable.
+.*
+:h2.Keyboard Layouts
+:p.The code tables may be used to map Zedit's use of a symbol to most
+(if not all) keyboard layouts.  Zedit operates independently of the
+computer's code page definitions or character sets except for text
+entered as SPECIAL.  See :hdref page=yes refid=fonts. for more
+information on SPECIAL.
+.*
+:h2.Latin Diacritics
+:rdef id=latdia align='r c c c c c c c c c'
+              cwidths='* * * * * * * * * *'.
+:table split=yes refid=latdia.
+:thd.
+:c.
+:c.acute
+:c.breve/ caron
+:c.cedilla/ ogonek/ double- acute
+:c.circum- flex
+:c.dieresis (umlaut)
+:c.grave
+:c.over/ middle- circle/ dot
+:c.stroke
+:c.tilde
+:ethd.
+:row.
+:c.a/A
+:c.***
+:c.***
+:c.***
+:c.***
+:c.***
+:c.***
+:c.***
+:c.
+:c.***
+:row.
+:c.e/E
+:c.***
+:c.***
+:c.***
+:c.***
+:c.***
+:c.***
+:c.
+:c.
+:c.
+:row.
+:c.i/I
+:c.***
+:c.
+:c.
+:c.***
+:c.***
+:c.***
+:c.
+:c.
+:c.
+:row.
+:c.o/O
+:c.***
+:c.
+:c.***
+:c.***
+:c.***
+:c.***
+:c.
+:c.***
+:c.***
+:row.
+:c.u/U
+:c.***
+:c.***
+:c.***
+:c.***
+:c.***
+:c.***
+:c.***
+:c.
+:c.
+:row.
+:c.c/C
+:c.***
+:c.***
+:c.***
+:c.***
+:c.
+:c.
+:c.***
+:c.
+:c.
+:row.
+:c.d/D
+:c.
+:c.***
+:c.
+:c.
+:c.
+:c.
+:c.
+:c.***
+:c.
+:row.
+:c.g/G
+:c.
+:c.***
+:c.
+:c.***
+:c.
+:c.
+:c.***
+:c.
+:c.
+:row.
+:c.h/H
+:c.
+:c.
+:c.
+:c.***
+:c.
+:c.
+:c.
+:c.***
+:c.
+:row.
+:c.j/J
+:c.
+:c.
+:c.
+:c.***
+:c.
+:c.
+:c.
+:c.
+:c.
+:row.
+:c.l/L
+:c.***
+:c.***
+:c.
+:c.
+:c.
+:c.
+:c.***
+:c.***
+:c.
+:row.
+:c.n/N
+:c.***
+:c.***
+:c.
+:c.
+:c.
+:c.
+:c.
+:c.
+:c.***
+:row.
+:c.r/R
+:c.***
+:c.***
+:c.
+:c.
+:c.
+:c.
+:c.
+:c.
+:c.
+:row.
+:c.s/S
+:c.***
+:c.***
+:c.***
+:c.***
+:c.
+:c.
+:c.
+:c.
+:c.
+:row.
+:c.t/T
+:c.
+:c.***
+:c.***
+:c.
+:c.
+:c.
+:c.
+:c.
+:c.
+:row.
+:c.y/Y
+:c.***
+:c.
+:c.
+:c.
+:c.***
+:c.
+:c.
+:c.
+:c.
+:row.
+:c.z/Z
+:c.***
+:c.***
+:c.
+:c.
+:c.
+:c.
+:c.***
+:c.
+:c.
+:etable.
+.***************************
+:h1 id=config.Optional Configuration
+.*
+:h2.Configuration Description
+:p.Zedit is configured by default according to what is documented in
+this manual.  No configuration is required.  If keyboard or function
+key redefinitions are desired the configuration file must be kept in
+the same directory as the editor executable module (ZEDITx.exe).  The
+configuration file name is ZEDIT.CFG.
+:p.The optional configuration file may be created by selecting option
+"0" from the primary menu.  The first panel to be displayed will
+contain an entry panel to override the default keyboard assignment for
+both Greek and Hebrew.  The second panel displays the current PFkey
+assignments and allows you to update them.  Both panels must be
+entered for the configuration file to be created.  If no changes are
+desired for one of the panels, simply process it with CTRL-Enter
+without making any changes.
+:p.A second, perhaps unconnected, use is made of the configuration
+file in processing the import and export functions.  The configuration
+file provides a code translate table for exchanging codes when doing
+an import or an export.  If the file you are importing does not use
+the same code correspondence as your keyboard customization, you will
+need another configuration file besides the one you use for your
+customizations.  Using different configuration files is a manual
+process of renaming the ZEDIT.CFG file.
+:note.The standard high range (greater than x'7F') encoding for the
+Hebrew consonants is recognized for IMPHEB.  To import data from a
+standard Hebrew editor, no configuration is necessary for the
+consonants themselves.  If you have a configuration file it will only
+be used for code values that fall in the low range.  A configuration
+file will be necessary if the single quote is used as punctuation in
+the file, for example, as the default mapping of the single quote is
+to the character Alef.
+.*
+:h2.Entering the Configuration Tables
+.*
+:p.On the first display will be the ASCII character sequence with
+their Zedit characters immediately below it, in paired lines.  Each
+character on the screen occupies a separate field.  This is to enable
+you to enter diacritics as separate characters with no reference to
+their surrounding characters.  The consequence of this is that to
+navigate the cursor around the screen you must use the TAB key and
+the reverse-TAB key to move left and right rather than the
+scroll/arrow keys.
+:p.If you have the code correspondence chart in front of you it may be
+possible to enter the table with the ASCII character set.  This is not
+recommended.  The most obvious reason is that it is easier to enter
+the characters and see the correspondence with the Greek or Hebrew
+script.  You should change the Zedit input mode to either Greek or
+Hebrew in the same manner as is done during an edit session.
+:p.The changes will not take effect until the panel is processed with
+CTRL-Enter.  Furthermore, the configuration file will not be saved
+until the PFkey configuration panel is processed.
+:p.To enter changes to the PFkeys, find the key to be changed and
+type the command which you would like it to perform.  The entry field
+for the command is only five characters long, so only enter up to the
+first five characters for the command.  Just like the command line,
+the command only needs to be typed to the point where it is unique
+to any other command.
+.*
+.***************************
+:h1 id=zedprt.Printing with Zedit
+.*
+:h2.Print Functions
+:p.There are two ways in which to print from within Zedit. In
+addition, Zedit may be used to print without any panel being
+displayed.  The first way to print is to graphically print a screen
+image.  This function is supplied from within Zedit and is triggered
+by pressing a keyboard key which is described by "print screen" under
+:hdref page=yes refid=othkeys..
+:p.The second way to print is further broken down into two categories
+and is what this section of the manual describes.
+:p.The break down into categories is based on whether Zedit is
+downloading fonts to the printer or is printing a bit mapped graphic
+image of the document.  Either method is invoked by the "print"
+primary command from within edit or browse or by invoking Zedit
+without a display mode option and using /z= to select the file to be
+edited.  Which method Zedit uses, font downloading or bit mapped
+graphics, depends on the command line option chosen when Zedit is
+started.
+:p.Zedit is mainly an editor, and as such, it encodes the character
+sequences for later use, such as reading or printing.  If you have
+some other support for printing Greek or Hebrew text, it is
+possible to convert the data into the form needed by the other
+facility.  Zedit provides some help with this type of task with its
+export function.
+.*
+:h2 id=downfnt.Download Font Options
+.*
+:h3 id=downpr.Print Description for Download Fonts
+:p.All print options, other than /g, /g+, and /gx use printer font
+downloading capabilities.
+:p.When the print command is used within Zedit, the current, in
+storage buffer that is being displayed by the edit or browse session
+is printed.  Under DOS, this means that while the buffer is being
+printed the cursor will disappear.  Under OS/2 protect mode, the
+cursor will return as a separate thread will print the buffer.  You
+may continue to edit the data set, but keep in mind that the in
+storage buffer that you are editing is also the one that is printing.
+If you attempt to end the edit or browse session while the print task
+is still executing the cursor will disappear just as it does under
+DOS.  Furthermore, any attempt to use a line command will have the
+same affect.
+:note.(OS/2 only) It is not recommended that you continue editing a
+data set while also printing it.  Whether the changes will be printed
+is unpredictable.  Browsing the data from edit or browse will not
+cause problems.  To edit a different data set while printing is being
+done you may use the SWAP command to use the other logical session.
+.*
+:h3.PostScript Printers
+:p.Zedit supports PostScript printers by invocation with the /s
+option.  The print screen function is not available with this option,
+however.
+:p.PostScript output is calibrated for full page printing of your
+file.  It is possible to direct the PostScript output to a data set
+rather than to a printer.  Doing so will enable you to edit the
+PostScript print file and change character generation point sizes or
+otherwise customize the output at your discretion.  This, of course,
+assumes that you have familiarity with the PostScript language.
+.*
+:h3.Dot Matrix Printers
+:p.Zedit will print on any printer that supports the command set
+supported by either the IBM Proprinter, 9-pin models, or the Epson FX
+line of printers.  These printers only support 8 X 8 character boxes
+in their downloadable fonts.  Zedit downloads its 8 X 14 fonts in two
+halves and then prints two lines for each line of text.  The first
+pass is the top half of the character and the second is the bottom
+half.  Epson mode is the default mode.  /p selects Proprinter draft
+and /n is Proprinter NLQ.
+:p.The print functions supply the lowest print control sequence to the
+printer.  It adjusts the line spacing due to printing its characters
+in what to the printer is two separate lines.  Other than that, you
+may initialize the printer beforehand to whatever characteristics are
+desired.  This in fact is actually recommended.  The base draft mode
+on these printers drops a pixel if two adjacent pixels are both set,
+(i.e. print a dot).  The /n option on the IBM Proprinter, NLQ mode, is
+easier to read than the /p, draft mode, since it keeps this from
+happening.
+:p.The default mode for printing on these dot matrix printers uses two
+down load font buffers in the printer in order to increase the speed
+of printing.  Character sets down loaded to the second buffer are
+mapped to the high ASCII range (x'80'-x'FF').  Early models of the IBM
+Proprinter for the U.S. market do not have both buffers and require
+the usage of the /1 command line option.  The /1 option should also be
+used when using embedded escape (ESC) sequences in your document.
+This is because the printer will not recognize the sequence when it is
+mapped to the high ASCII range.
+:p.Most printer escape sequences in your document should work when
+using the /1 option.  Keep in mind that each line is printed twice,
+top then bottom, so if a control is turned on and not turned off in
+the current line, the total bottom half would consider it on.  Note
+also that you must use another editor, after creating the document
+with Zedit, to construct escape sequences.
+:note.The Latin character set middledot which is placed on the
+letter L will not print with the dot matrix printer settings,
+(default, /p, /n).
+:note.When printing in OS/2 change the default print driver to IBMNULL
+before doing Zedit font down load printing.
+.*
+:h2 id=grphpr.Generic Graphic Print Option
+.*
+:h3.Print Description for Graphic Printing
+:p.Generic graphic print is chosen from the command line with the /g,
+/g+, or /gx option.  Most of the discussion in section :hdref
+page=no refid=downpr. under :hdref page=yes refid=downfnt. applies to
+this section also.  The one exception is that under OS/2, Zedit does
+not create a separate thread for graphic image print.
+:p.The control codes used to print bit mapped graphic images are
+common among a broad range of printers available from most printer
+manufacturers.  IBM refers to to these control codes as IBM PPDS
+and previously referred to them as IBM ASCII control codes.
+:p.Because an image of the data is being printed, rather than the
+normal method of printing characters in a printer font, there are some
+limitations on what may be done.  The bit image printed conforms to
+Zedit screen width dimensions.  The default browse width is also the
+maximum dimension that may be selected.  The default dimensions are 72
+columns for edit mode and 80 columns for browse mode.  The dimension
+may be shortened by using the /r= option on Zedit invocation.  The
+minimum value that may be selected is 16.
+:p.Left margin indentation is automatically provided when the options
+selected allow the output together with the indentation to fit on a
+standard letter size sheet of paper.  To explain further, it is
+easiest to start with what does not provide left margin indentation.
+:ul.
+:li.If you specify the /2 option with any of /g, /g+, or /gx there
+will be no indentation.
+:li.If you specify /r= with a value greater than 72 there will be
+no indentation.
+:li.The default value for the print command while in browse mode is
+/r=80 so there will be no indentation provided.
+:eul.
+:p./g and /g+ will otherwise indent 8 character widths.
+:p./gx will otherwise indent 5.3 character widths.
+:p.These indentation values need to be factored in with any
+indentation you set up with the printer.  The left margin or starting
+column can be set up on the printer before invoking Zedit.  Zedit will
+then use that as the starting point for the line using further
+indentation as stated above.
+:note.Any data in the file being printed that would not be displayed
+on the screen (i.e. such as a line greater than 80 columns) is not
+included in the printed output.  The same routines that are used to
+create the Zedit screen display are used to create the image which is
+printed.
+.*
+.***************************
+:h1.Command Line Summary
+:note.Command line options must be coded separately on the command
+line.  Zedit parsing of the command line expects each switch letter
+following a / or - character.
+.*
+:h2.Screen Display Functions
+:p.One of the following screen options, besides /w, which will work
+with the computer display, must be chosen to invoke the Zedit panels.
+:dl.
+:dthd.Option
+:ddhd.DESCRIPTION
+:dt./c
+:dd.640h X 200v CGA resolution, 80 X 14 lines.
+:dt./h
+:dd.720h X 348v Hercules-type monochrome graphics, 80 X 25 lines.
+:dt./m
+:dd.640h X 480v MCGA resolution, 80 X 25 lines.
+:dt./e
+:dd.640h X 350v EGA resolution, 80 X 25 lines.
+:dt./v
+:dd.640h X 480v VGA resolution, 80 X 25 lines.
+:dt./i
+:dd.720h X 350v text resolution graphics on VGA, 80 X 25 lines.
+:dt./i+
+:dd.720h X 480v text resolution graphics on VGA, 80 X 25 lines.
+:dt./t
+:dd.Non-graphic display in text mode, 80 X 25 lines, primarily used
+for testing.
+:dt./w
+:dd.Does not use default colors, white text on black screen display.
+This option may be used with any of the screen options.
+:dt./x
+:dd.1024h X 768v text resolution graphics on 8514/XGA, 80 X 25 lines.
+:edl.
+.*
+:h2.Miscellaneous Functions
+:dl.
+:dthd.Option
+:ddhd.DESCRIPTION
+:dt./k
+:dd.Allow PF11/PF12 usage on enhanced keyboards.  This only is
+necessary under DOS.  The default is to support ten PFkeys under DOS.
+:dt./z=editdsn
+:dd.Menu bypass to edit on data set "editdsn" (replace with name).
+If no screen option is selected, Zedit will print the data set
+indicated with the /z= option and not display any panels.
+:edl.
+.*
+:h2.Printer Options
+:note.These options are independent of the screen display options.
+Comparisons to screen modes are for illustrative purposes.
+:dl.
+:dthd.Option
+:ddhd.DESCRIPTION
+:dt.(none)
+:dd.The default print mode is for Epson FX print control codes if no
+other option (/g, /g+, /gx, /n, /p, or /s) is coded.
+:dt./a
+:dd.When used in combination with one of the generic graphic print
+modes (/g, /g+, /gx) this option selects alternate PPDS codes for the
+print stream.  If the /3 option is not also selected then the codes
+are those required by the IBM 5182 color printer or compatible
+printers.
+:p.Together with the /3 option it switches the type of 24-pin
+graphics printers that are supported (e.g. use with Epson, NEC).
+:dt./g
+:dd.Use PPDS/ASCII generic graphic printer codes (no font download).
+The print matches the /i display mode dimensions with a 9 X 14
+pixel character box.
+:dt./g+
+:dd.Use PPDS/ASCII generic graphic printer codes (no font download).
+The print matches the /i+ display mode dimensions with a 9 X 19
+pixel character box.
+:dt./gx
+:dd.Use PPDS/ASCII generic graphic printer codes (no font download).
+The print matches the /x display mode dimensions with a 12 X 30
+pixel character box.
+:dt./n
+:dd.Use IBM Proprinter, 9-pin, NLQ control codes.
+:dt./p
+:dd.Use IBM Proprinter, 9-pin, control codes.
+:dt./s
+:dd.Produce PostScript output.
+:dt./1
+:dd.Use only normal font down load buffer, no mapping is done to high
+ASCII codes.  This option is required if the print file contains
+embedded escape (ESC) sequences.
+:dt./2
+:dd.The generic graphic print modes (/g, /g+, /gx) ordinarily print in
+the printer's dual density graphic mode.  This option changes the
+print to single density graphic mode.  In single density mode the
+letters are wider than in dual density mode, so using /2 for the
+option kind of makes sense as a multiplication factor, even though
+dual in most contexts might otherwise imply 2.
+:dt./3
+:dd.Convert the generic graphic print modes (/g, /g+, /gx) to support
+some 24-pin graphic printers that cannot print in 9-pin compatibility
+mode.  May also be used in conjunction with the /a option for other
+incompatible 24-pin printers.
+:edl.
+:h2.Auxilary Options
+:dl.
+:dthd.Option
+:ddhd.DESCRIPTION
+:dt./o=outdsn
+:dd.The output file name is "outdsn" (replace with name).  The default
+file is PRN.
+:dt./l=maxlrecl
+:dd.The maximum logical record length is "maxlrecl" (replace with a
+number).  The default maximum is 258.  In low memory environments,
+(i.e. DOS) files with additional lines may be edited by lowering
+this value.  See :hdref page=yes refid=intrep. for information on
+selecting an adequate value.
+:dt./r=rmar
+:dd.The right margin from which to begin printing Hebrew right to left
+printing is "rmar" (replace with number).  The default right margin is
+72 for edit and 80 for browse.  The minimum value allowed is 16.  When
+used with the generic graphic print modes (/g, /g+, /gx) the maximum
+value allowed is 80, otherwise the maximum is whatever your printer
+will allow.  See the discussion in the section :hdref page=yes
+refid=grphpr. for more information on /g, /g+, and /gx.
+:dt./b
+:dd.Applies the value of /r= to the display screen as well as to any
+print file.  The values that are allowed are the same as with the
+generic graphic print modes.  (See /r=rmar directly above).
+:p.When used with any of those modes (/g, /g+, /gx) and the
+corresponding display modes (/i, /i+, /x) you obtain approximate
+WYSIWYG (what you see is what you get) aside from differing pixel
+dimensions and aspect ratios between your display screen and your
+printer.
+:edl.
+.*
+.***************************
+:h1.Release Summaries
+.*
+:h2.Release 16
+:ul.
+:li.June 1994.
+:li.Reverse insert capability.
+:li.Keyboard lock on insert where a character used to be lost from
+screen.
+:li.Graphic print mode support for some 24-pin printers.
+:eul.
+:h2.Release 15
+:ul.
+:li.January 1994.
+:li.Swap screen is now available in all graphic screen display modes.
+:li.All Latin diacritics that previously were only supported on lower
+case are now supported on the corresponding capital letters.
+:li.Hebrew character set additions, raphe, paseq, and semi-colon,
+mapped to the underline, vertical-bar, and back-slash keys,
+respectively.
+:li.New display option, /x - 1024h X 768v, XGA/8514 resolution when
+using IBM supplied adapter software support.
+:ul.
+:li.(OS/2 now has separate executables, one which requires the
+software support DLL to be installed on system and one which does not
+support /x and thus does not require the DLL).
+:li.Print screen support for /x display mode.
+:eul.
+:li.ZEDPRT command line options have been merged into the ZEDIT
+executable, removing the need for a separate print routine.
+:li.New option, /b, applies the right margin value (e.g. /r=40) to both
+the screen display and the print output, consequently the NBROWSE and
+UNNEDIT options have been removed.
+:li.Print option, /g+, creates image print in the same resolution as
+the /i+ display mode.
+:li.Print option, /gx, creates image print in the same resolution as
+the /x display mode.
+:li.The right margin value (e.g. /r=55) now sets the line length for
+PPDS/ASCII /g, /g+, /gx, graphic printing (minimum 16, maximum 80).
+:li.IBM 5182 Color printer support, via /1 option, using alternate
+PPDS/ASCII codes (when used in combination with /g, /g+ or /gx).
+:li.New print option, /2, changes the default dual density graphics of
+the /g, /g+, and /gx options to single density graphics.
+:eul.
+.*
+:h2.Release 14
+:ul.
+:li.August 1993.
+:li.Exclude line commands, Xn, XX.
+:li.Show, Sn, First, Fn, and Last, Ln line commands which re-display
+excluded lines.
+:li.DELete all X and DELete all NX primary command.
+:li.Find command will re-display excluded line in which a match occurs.
+:li.Single line copy and move are expanded to allow a numeric repetition
+count, Cn and Mn.
+:li.Copy and move on (using OO or On) now repeats to the destination
+size (as ISPF/PDF does).
+:eul.
+.*
+:h2.Release 13
+:ul.
+:li.October 1992.
+:li.Swap/split screen support for OS/2 when using the /e or /i display
+options.
+:li.New display options:
+:dl.
+:dt./m
+:dd.640h X 480v MCGA resolution
+:dt./v
+:dd.640h X 480v VGA resolution
+:dt./i+
+:dd.720h X 480v IBM text resolution
+:edl.
+:ul.
+:li.The character matrix of the new display modes is 24 X 80.
+:li.Current benefit of creating space between successive lines.
+:li.Future development requirement for Hebrew accents/tropes.
+:eul.
+:li.Documentation distributed in BookManager format as well as script.
+:eul.
+.*
+:h2.Release 12
+:ul.
+:li.June 1992.
+:li.Zedit style diacritic support for European languages based on the
+Latin character set (for example n+~ = Spanish nye).
+:li.Aditional characters in Latin character set
+:ul.
+:li.ae diphthong
+:li.oe ligature
+:li.Thorn Icelandic
+:li.eth Icelandic
+:eul.
+:li.Diacritic overlays for Latin character set
+:ul.
+:li.underscore
+:li.cedilla/ogonek
+:li.stroke/slash
+:li.middle dot
+:li.acute
+:li.grave
+:li.circumflex
+:li.diaeresis/umlaut
+:li.tilde
+:li.breve/caron
+:li.overcircle/overdot
+:li.double acute
+:eul.
+:li.The default PFkey settings have been changed to include the
+LATIN script primary command.
+:li.Regular and special ACSII modes now allow fast underlining of
+text by using the Ctrl key with the - or _ key
+:eul.
+.*
+:h2.Release 11
+:ul.
+:li.April 1992.
+:li.Export Zedit Hebrew text to IBM standard Hebrew consonant codes.
+:li.Data set extension name change for all import and export commands.
+:li.KEYS command displays standard function key assignments.
+:li.RTAB command allows assigning reverse tab to function key.
+:li.LETTERS command displays Greek and Hebrew alphabet configuration.
+:li.Performance improvements.
+:li.Improved handling of mixed directional lines.
+:li.Command scope limiting has been tightened.
+:li.Ctrl-PgUp or PgDown same as max up/down (top/bottom) commands.
+:li.Ctrl-up arrow or down arrow causes double fast cursor movement.
+:li.Ctrl-DEL (same as Ctrl-END) performs erase end of file function.
+:li.Additional Hebrew sample document contribution.
+:eul.
+.*
+:h2.Release 10
+:ul.
+:li.October 1991.
+:li.New ZEDIT3.EXE 32 bit compiled module for OS/2 Version 2.
+:li.Maximum logical record length increased:
+:ul.
+:li.32767 for zedit1 (DOS),
+:li.32767 for zedit2 (OS/2 V1 & V2), and
+:li.99999 for zedit3 (OS/2 V2).
+:eul.
+:li.COLUMNS/COLS primary and line commands implemented.
+:li.COPY primary command implemented.
+:li.GET/PUT command aliases were added for XEDIT command compatibility.
+:li.DOS mode switch /k for PF11/PF12 usage on enhanced keyboards.
+:eul.
+.*
+:h2.Release 9
+:ul.
+:li.August 1991.
+:li.PostScript output may now be directed to a file for customization
+editing before printing.
+:li.Import Hebrew function (IMPHEB/52) will now import data from
+standard Hebrew word processors or editors that use the high character
+code range for the Hebrew consonants.
+:p.No changes are necessary to the optional configuration file.
+:li.Escape key (Esc) may now also be used for the "end" function,
+same as the default PF3 setting.
+:li.Normal single quote character added to Hebrew character set to
+support modern Hebrew usage.
+:li.The release 8 feature:  "Keying Greek diacritics before a capital
+no longer requires an extra space to typed" has been withdrawn due to
+undesirable side effects.
+:eul.
+.*
+:h2.Release 8
+:ul.
+:li.June 1991.
+:li.PPDS/ASCII generic graphic printer support, /g.
+:li.Keying Greek diacritics before a capital no longer requires an
+extra space to be typed.
+:li.Enhanced verification of letters with terminal forms.
+:li.Enhanced usage surveillance of the Greek dieresis (umlaut).
+:li.Erase end of file now erases to left or right depending on mode.
+:eul.
+.*
+:h2.Release 7
+:ul.
+:li.May 1991.
+:li.Print support for PostScript printers, /s.
+:li.Option which allows embedded ESC controls for dot matrix printers,
+/1.
+:li.Option to not use default color, /w.
+:li.Improved default IBM Proprinter output speed using dual buffers.
+:li.OS/2 HPFS long file name support.
+:li.Maximum logical record length increased to 9999.
+:eul.
+.*
+:h2.Release 6
+:ul.
+:li.January 1991.
+:li.Print command now available again from within edit and browse.
+:li.Print command and zedprt now supports IBM Proprinter (9-pin).
+:li.Print screen key support for all video modes.
+:p.Supports both Epson and IBM Proprinter (except for /h - Hercules,
+which only supports Epson printer).
+:eul.
+.*
+:h2.Release 5
+:ul.
+:li.October 1990.
+:li.Optional configuration of keyboard and PFkeys.
+:li.Import and export options added to primary option menu.
+:li."file" command added as alias for "end" as part of XEDIT
+compatibility.
+:li.Free format data set name field added to edit and browse entry
+panel.
+:li.The tables included in this documentation upgraded to script
+format.
+:eul.
+.*
+:h2.Release 4
+:ul.
+:li.October 1990.
+:li.First PCTOOLS/OS2TOOLS release.
+:li.Find and change commands implemented.
+:li.Exchanged codes for Greek grave and acute accents.
+:li.Added Greek dieresis (umlaut) to character set.
+:eul.
+.*
+:h2.Release 3
+:ul.
+:li.August 1990.
+:li.OS/2 support.
+:li./i display option added.
+:li.Screen color corresponding to display mode.
+:li.Command line now automatically cleared.
+:li.Code added to support Tandy PC keyboard quirks.
+:eul.
+.*
+:h2.Release 2
+:ul.
+:li.February 1989.
+:li.Display error and informational messages.
+:li.Return (=) function added.
+:li.XEDIT command compatibility aliases added.
+:li.NBROWSE (3) and UNNEDIT (4) primary options.
+:eul.
+.*
+:h2.Release 1
+:ul.
+:li.January 1989.
+:li.(/c display option capability for VMS.)
+:li.Usage message displayed when no options on command line.
+:li.Termination messages and audible alarms.
+:eul.
+.*
+:h2.Release 0
+:ul.
+:li.March 1988.
+:li.First limited distribution release.
+:li.Browse and edit modes.
+:li.Dual screen capability.
+:li./c and /e display modes added to the /h graphics mode.  Text mode
+default.
+:li.Changable maximum logical record length with 999 limit.
+:eul.
+.*
+.***************************
+:h1.Problem Correction History
+.*
+:h2.Release 16
+:ul.
+:li.The maximum data set name field on the data set name entry panel
+was too large.
+:li.The print capability without a display option would hang unless
+the /r=rightmar option was specified.
+:eul.
+.*
+:h2.Release 15
+:ul.
+:li.Release 14 broke the COLUMNS/KEYS/LETTERS primary commands when
+the current line was *top of data*.  This has been fixed.
+:li.The Latin characters for eth, ae, oe, and thorn would display
+overlays randomly, if diacritics had been displayed in their character
+position on the screen previously.
+:li.The LATIN command was not recognized by the configuration option
+as being a valid command to assign to a function key.
+:li.PostScript printing would print Hebrew lines in the wrong
+direction if they immediately followed a line of text that was mixed,
+part Hebrew and non-Hebrew.
+:eul.
+.*
+:h2.Release 14
+:ul.
+:li.The documentation in previous releases had incorrectly indicated
+that copy and move would allow allow a numeric repetition count, Cn and
+Mn.  This support is now available in this release.
+:li.Miscellaneous cleanups, especially in relation to line commands.
+:note.The F line command is no longer XEDIT compatible.  Its new
+function is as in ISPF/PDF.
+:eul.
+.*
+:h2.Release 13
+:ul.
+:li.The END command was killing both sessions when in split screen
+mode if the foreground screen was on the primary option panel.
+:li.If one session was left on the data set entry panel while in split
+screen mode, command processing would be incorrect in both sessions.
+:eul.
+.*
+:h2.Release 12
+:ul.
+:li.Warning alarm beep incorrectly sounding on redisplay of mixed
+script line which contained a Hebrew terminal form.
+:eul.
+.*
+:h2.Release 11
+:ul.
+:li.Print error where Hebrew lines would print in the wrong direction
+when they followed a mixed script line which ended in Hebrew.
+:li.An invalid value in the high ASCII range (i.e. greater than x'7F')
+in the input data set would cause a protection exception when using
+Edit or Browse under OS/2.
+:li.Script change on long lines with undisplayed text would be ignored
+if it occurred in the scrolled over end portion.
+:li.A terminal form which was invalidly imbedded in a word would cause
+an abnormal termination if the screen was scrolled over.
+:li.Doing a move onto line command onto a shorter line could erroneously
+recover previously deleted text that had been in the target line.
+:li./h screen attributes not reset properly on exit for some Hercules
+clone display adapters.
+:li.Scrolling over into middle of Hebrew text imbedded in a left to
+right line did not display correctly.
+:li./t on Zedit3 did not work.
+:li.Print command caused abnormal termination in Zedit3.
+:li.On secondary use of blank Data Set Entry panel, the previous
+values would be used if enter function accidentally selected.
+:eul.
+.*
+:h2.Release 10
+:ul.
+:li.Trailing blanks were being included in the data set name from the
+data set name entry panel.  This only affected HPFS on OS/2.
+:eul.
+.*
+:h2.Release 9
+:ul.
+:li.Unmixed Hebrew line direction incorrectly reversed after a mixed
+script line that ended with Hebrew script.
+:li.Multiple line commands entered at the same time could end up
+operating on the wrong lines.
+:li.Import and export functions not freeing file buffer space after
+completion.
+:eul.
+.*
+:h2.Release 8
+:ul.
+:li.Configuration file processing.
+:li.Corrected script documentation on typing diacritical marks.
+:li.Internal control code error when line starting with new script
+was also indented one space.
+:li.Top line columns display area not being reinitialized properly.
+:eul.
+.*
+:h2.Release 7
+:ul.
+:li.OS/2 protect mode, /t - test/text mode (no graphics) would not
+survive a task switch.
+:eul.
+.*
+:h2.Release 6
+:ul.
+:li.Some Hebrew printing was not functioning in releases 4 and 5.
+:li.In /c - CGA mode, message display was partially clearing lines
+10 and 11.
+:li.In /c - CGA mode, the reset command was not restoring the top
+line.
+:li.OS/2 protect mode now uses its own API for the audible alarm
+or bell.
+:eul.
+.*
+:h2.Release 5
+:ul.
+:li.Greek dieresis (umlaut) not being written to data set.
+:li.Greek dieresis (umlaut) printing as "@" with zedprt command.
+:li.On system with two monitors (EGA/mono), Zedit was turning off the
+monochrome display.
+:eul.
+.*
+:h2.Release 4
+:ul.
+:li.A column of diacritics would display in the last screen column
+when scrolled over with the end of long lines displayed on the screen.
+:eul.
+.*
+:h2.Release 3
+:ul.
+:li.Problem where certain line combinations would display in the wrong
+script type when scrolled over.
+:li.File created by some other editors were causing the loss of the
+last record when edited by Zedit.
+:eul.
+.*
+:h2.Release 2
+:ul.
+:li.Numerous abends with scrolling over and back.
+:eul.
+.*
+:h2.Release 1
+:ul.
+:li.Leading blanks on a line were being processed as ASCII characters
+even when the line did not contain any other ASCII characters.
+:eul.
+.*
+:h2.Release 0
+:ul.
+:li.Many stabilizing corrections to prerelease code.
+:eul.
+.*
+.* END of DOCUMENT
+.***************************
+:egdoc.

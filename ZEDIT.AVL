@@ -1,0 +1,73 @@
+************************************************************************
+ZEDIT Version 1.15  -  January 1994
+    by Clyde Thomas Zuber   RALVM12(ZUBER)
+************************************************************************
+NEW FEATURE SUMMARY for RELEASE 15
+  o  Swap screen is now available in all graphic screen display modes
+  o  All Latin diacritics that previously were only supported on
+     lower case are now supported on the corresponding capital letters
+  o  Hebrew character set additions, raphe, paseq, and semi-colon,
+     mapped to the underline, vertical-bar, and back-slash keys,
+     respectively
+  o  New display option, /x - 1024h X 768v, XGA/8514 resolution when
+     using IBM supplied adapter software support
+     -  (OS/2 now has separate executables, one which requires the
+         software support DLL to be installed on system and one which
+         does not support /x and thus does not require the DLL)
+     -  Print screen support for /x display mode
+  o  ZEDPRT command line options have been merged into the ZEDIT
+     executable, removing the need for a separate print routine
+  o  New option, /b, applies the right margin value (eg. /r=40) to
+     both the screen display and the print output, consequently the
+     NBROWSE and UNNEDIT options have been removed
+  o  Print option, /g+, creates image print in the same resolution as
+     the /i+ display mode
+  o  Print option, /gx, creates image print in the same resolution as
+     the /x display mode
+  o  The right margin value (eg. /r=55) now sets the line length for
+     PPDS/ASCII /g, /g+, /gx, graphic printing (minimum 16, maximum 80)
+  o  IBM 5182 Color printer support, via /1 option, using alternate
+     PPDS/ASCII codes (when used in combination with /g, /g+ or /gx)
+  o  New print option, /2, changes the default dual density graphics
+     of the /g, /g+, and /gx options to single density graphics
+************************************************************************
+ABSTRACT:
+Zedit is a Latin/Greek/Hebrew editor providing diacritic overlays
+(ie. accents, vowels, breathing marks).  Language scripts can be mixed,
+text entered in L->R or R->L modes.  ISPF/PDF-like interface.
+ZEDIT1 Package on PCTOOLS provides DOS support.
+ZEDIT2 Package on OS2TOOLS provides OS/2 support
+      (includes ZEDIT2.EXE for OS/2 V1.x and ZEDIT3.EXE for OS/2 V2.x).
+************************************************************************
+DESCRIPTION:
+    Zedit is a multiple script language editor.  It supports the
+normal ASCII character set in both a regular and special font set.  It
+has font definitions for Latin, Greek and Hebrew with diacritic
+capabilities.  And it allows multiple direction, multiple script text
+to coexist anywhere in a file.
+************************************************************************
+DISPLAY OPTIONS:
+    If the corresponding hardware is installed on the computer the
+following options may be used.  For instance, with VGA, /c or /e or
+/v or /i or /i+ are all valid.
+
+ /h  - 720h  X 348v Hercules-type monochrome graphics   80 X 25 lines
+ /c  - 640h  X 200v CGA resolution                      80 X 14 lines
+ /e  - 640h  X 350v EGA resolution                      80 X 25 lines
+ /m  - 640h  X 480v MCGA resolution                     80 X 25 lines
+ /v  - 640h  X 480v VGA resolution                      80 X 25 lines
+ /i  - 720h  X 350v text resolution graphics on VGA     80 X 25 lines
+ /i+ - 720h  X 480v text resolution graphics on VGA     80 X 25 lines
+ /x  - 1024h X 768v XGA/8514 resolution                 80 X 25 lines
+************************************************************************
+BUGS FIXED in RELEASE 15
+  o  Release 14 broke the COLUMNS/KEYS/LETTERS primary commands when
+     the current line was *top of data*.  This has been fixed.
+  o  The Latin characters for eth, ae, oe, and thorn would display
+     overlays randomly, if diacritics had been displayed in their
+     character position on the screen previously.
+  o  The LATIN command was not recognized by the configuration option
+     as being a valid command to assign to a function key.
+  o  PostScript printing would print Hebrew lines in the wrong
+     direction if they immediately followed a line of text that was
+     mixed, part Hebrew and non-Hebrew.

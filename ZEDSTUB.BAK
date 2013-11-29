@@ -1,0 +1,45 @@
+;**********************************************************************
+;
+; ZEDSTUB is (the DOS stub) for OS2 only.
+;    masm386 zedstub.asm;
+;
+;**********************************************************************
+
+DOSSEG
+DGROUP   GROUP   TEXT,STACK
+
+TEXT     SEGMENT
+         assume  cs:DGROUP,ds:nothing,es:nothing,ss:DGROUP
+
+MAIN     PROC    FAR
+
+         call  display         ; pushes offset of TXT because that
+                               ; would otherwise be the return offset
+
+TXT      LABEL WORD
+         DB    'This copy of the program requires OS/2.'
+         DB    0Dh,0Ah,00h
+         DB    ' ZEDIT V1 (c) Copyright 1987,1994 by'
+         DB    ' Clyde Thomas Zuber, All Rights Reserved.'
+         DB    0Dh,0Ah,"$"
+
+MAIN     ENDP
+
+DISPLAY  PROC   NEAR
+         pop    dx             ; get TXT offset into DX
+         push   cs             ;   which is the bytes following CALL
+         pop    ds
+         assume ds:TEXT        ; DS:DX=message to print
+         mov    ah,9
+         int    21h
+         mov    ax,4C01h
+         int    21h
+
+DISPLAY  ENDP
+TEXT     ENDS
+
+STACK    SEGMENT STACK
+         dw      100h dup (?)
+STACK    ENDS
+
+         END     MAIN

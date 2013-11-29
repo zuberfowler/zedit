@@ -1,0 +1,8 @@
+; comment lines start with a semicolons
+NAME ZEDIT NOTWINDOWCOMPAT NEWFILES
+DESCRIPTION ' ZEDIT V1 (c) Copyright 1987,2001 by Clyde Thomas Zuber '
+PROTMODE
+STACKSIZE 1024000
+SEGMENTS
+    '_IOPLTXT'      CLASS 'CODE'     IOPL     EXECUTEONLY
+    'ZEDRODAT'      CLASS 'DATA'     READONLY

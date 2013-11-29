@@ -1,0 +1,1667 @@
+
+ ZEDIT
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000000C3H _IOPLTXT               CODE 16-bit
+               at offset 00000000 000C3H bytes from e:\str\stdf\stdf3p.lib (iopltxt.asm)
+
+ 0002:00000000 00002AD10H CODE32                 CODE 32-bit
+               at offset 00000000 00740H bytes from ZEDIT3P.OBJ (ZEDMAIN.C)
+               at offset 00000740 001E8H bytes from zedit3p.lib (CFGINIT.C)
+               at offset 00000928 00040H bytes from zedit3p.lib (CLRPANL.C)
+               at offset 00000968 000A0H bytes from zedit3p.lib (CMDPRSE.C)
+               at offset 00000a08 00054H bytes from zedit3p.lib (CMPLINE.C)
+               at offset 00000a5c 00080H bytes from zedit3p.lib (DELNEXC.C)
+               at offset 00000adc 00058H bytes from zedit3p.lib (DELPROT.C)
+               at offset 00000b34 0008CH bytes from zedit3p.lib (DELXBLK.C)
+               at offset 00000bc0 00044H bytes from zedit3p.lib (EXCMERG.C)
+               at offset 00000c04 00148H bytes from zedit3p.lib (EXCRDSP.C)
+               at offset 00000d4c 00048H bytes from zedit3p.lib (EXCREMV.C)
+               at offset 00000d94 000E0H bytes from zedit3p.lib (FREEBUF.C)
+               at offset 00000e74 00080H bytes from zedit3p.lib (FUNCKEY.C)
+               at offset 00000ef4 0006CH bytes from zedit3p.lib (LETSGRK.C)
+               at offset 00000f60 00184H bytes from zedit3p.lib (LETSHEB.C)
+               at offset 000010e4 00078H bytes from zedit3p.lib (MERGEON.C)
+               at offset 0000115c 00060H bytes from zedit3p.lib (PSHSTCK.C)
+               at offset 000011bc 000D4H bytes from zedit3p.lib (RENBUFR.C)
+               at offset 00001290 0010CH bytes from zedit3p.lib (RHEBREW.C)
+               at offset 0000139c 00134H bytes from zedit3p.lib (TRANHEB.C)
+               at offset 000014d0 00060H bytes from zedit3p.lib (WRTEBUF.C)
+               at offset 00001530 002A0H bytes from zedit3p.lib (DISPLIN.C)
+               at offset 000017d0 00484H bytes from zedit3p.lib (DS8CIB2.C)
+               at offset 00001c54 0048CH bytes from zedit3p.lib (DS8CIBM.C)
+               at offset 000020e0 003BCH bytes from zedit3p.lib (DS8LIB2.C)
+               at offset 0000249c 003C4H bytes from zedit3p.lib (DS8LIBM.C)
+               at offset 00002860 00264H bytes from zedit3p.lib (DSP8CHR.C)
+               at offset 00002ac4 002E8H bytes from zedit3p.lib (DSP8LIN.C)
+               at offset 00002dac 00454H bytes from zedit3p.lib (DSPCIB2.C)
+               at offset 00003200 00304H bytes from zedit3p.lib (DSPCIBM.C)
+               at offset 00003504 003ECH bytes from zedit3p.lib (DSPLIB2.C)
+               at offset 000038f0 003A8H bytes from zedit3p.lib (DSPLIBM.C)
+               at offset 00003c98 002A4H bytes from zedit3p.lib (OV8CIB2.C)
+               at offset 00003f3c 0029CH bytes from zedit3p.lib (OV8CIBM.C)
+               at offset 000041d8 001F8H bytes from zedit3p.lib (OVERCHR.C)
+               at offset 000043d0 00220H bytes from zedit3p.lib (OVR8CHR.C)
+               at offset 000045f0 00270H bytes from zedit3p.lib (OVRCIB2.C)
+               at offset 00004860 001F4H bytes from zedit3p.lib (OVRCIBM.C)
+               at offset 00004a54 00130H bytes from zedit3p.lib (REVCIB2.C)
+               at offset 00004b84 0013CH bytes from zedit3p.lib (REVCIBM.C)
+               at offset 00004cc0 00358H bytes from zedit3p.lib (REVLINE.C)
+               at offset 00005018 00C70H bytes from zedit3p.lib (ZEDLOGO.C)
+               at offset 00005c88 00204H bytes from zedit3p.lib (DISPCHR.C)
+               at offset 00005e8c 00060H bytes from zedit3p.lib (CLRLXGA.C)
+               at offset 00005eec 001FCH bytes from zedit3p.lib (DS8CXGA.C)
+               at offset 000060e8 0023CH bytes from zedit3p.lib (DS8LXGA.C)
+               at offset 00006324 001B0H bytes from zedit3p.lib (DSPCXGA.C)
+               at offset 000064d4 00234H bytes from zedit3p.lib (DSPLXGA.C)
+               at offset 00006708 00174H bytes from zedit3p.lib (OV8CXGA.C)
+               at offset 0000687c 000C8H bytes from zedit3p.lib (REVCXGA.C)
+               at offset 00006944 00070H bytes from zedit3p.lib (REVLXGA.C)
+               at offset 000069b4 001D4H bytes from zedit3p.lib (CLRLINE.C)
+               at offset 00006b88 00168H bytes from zedit3p.lib (OVRCXGA.C)
+               at offset 00006cf0 000ECH bytes from zedit3p.lib (STCKCMD.C)
+               at offset 00006ddc 000B0H bytes from zedit3p.lib (BROWPAN.C)
+               at offset 00006e8c 00494H bytes from zedit3p.lib (CFGFPAN.C)
+               at offset 00007320 0090CH bytes from zedit3p.lib (CFGKPAN.C)
+               at offset 00007c2c 00388H bytes from zedit3p.lib (CMDDONE.C)
+               at offset 00007fb4 000D8H bytes from zedit3p.lib (CMDREST.C)
+               at offset 0000808c 00170H bytes from zedit3p.lib (CONVINP.C)
+               at offset 000081fc 00110H bytes from zedit3p.lib (DELCHAR.C)
+               at offset 0000830c 00164H bytes from zedit3p.lib (EDBRPAN.C)
+               at offset 00008470 000C8H bytes from zedit3p.lib (EDITPAN.C)
+               at offset 00008538 001B0H bytes from zedit3p.lib (ERASEOF.C)
+               at offset 000086e8 00114H bytes from zedit3p.lib (EXCXBLK.C)
+               at offset 000087fc 00A3CH bytes from zedit3p.lib (FINDPRM.C)
+               at offset 00009238 001C0H bytes from zedit3p.lib (GETSTRT.C)
+               at offset 000093f8 001D8H bytes from zedit3p.lib (INSCHAR.C)
+               at offset 000095d0 0008CH bytes from zedit3p.lib (LASTSRP.C)
+               at offset 0000965c 00104H bytes from zedit3p.lib (LOCLCMD.C)
+               at offset 00009760 00190H bytes from zedit3p.lib (OPTBACK.C)
+               at offset 000098f0 00064H bytes from zedit3p.lib (RDSPASC.C)
+               at offset 00009954 00218H bytes from zedit3p.lib (RDSPGRK.C)
+               at offset 00009b6c 004F0H bytes from zedit3p.lib (RDSPLAT.C)
+               at offset 0000a05c 000F0H bytes from zedit3p.lib (RDSPLIN.C)
+               at offset 0000a14c 0005CH bytes from zedit3p.lib (RDSPROM.C)
+               at offset 0000a1a8 001B4H bytes from zedit3p.lib (STATLIN.C)
+               at offset 0000a35c 00230H bytes from zedit3p.lib (TXTONLY.C)
+               at offset 0000a58c 00304H bytes from zedit3p.lib (CFGKGET.C)
+               at offset 0000a890 002B4H bytes from zedit3p.lib (CFGFGET.C)
+               at offset 0000ab44 001E0H bytes from zedit3p.lib (CHNGPRM.C)
+               at offset 0000ad24 00B54H bytes from zedit3p.lib (CMDLINE.C)
+               at offset 0000b878 00090H bytes from zedit3p.lib (DISPMSG.C)
+               at offset 0000b908 00170H bytes from zedit3p.lib (PRIMCMD.C)
+               at offset 0000ba78 00144H bytes from zedit3p.lib (SRPBUFR.C)
+               at offset 0000bbbc 0004CH bytes from zedit3p.lib (VREPCNT.C)
+               at offset 0000bc08 00BB4H bytes from zedit3p.lib (CONVOUT.C)
+               at offset 0000c7bc 002FCH bytes from zedit3p.lib (DSENTRY.C)
+               at offset 0000cab8 0038CH bytes from zedit3p.lib (BUFTSLN.C)
+               at offset 0000ce44 007E8H bytes from zedit3p.lib (ENTPANL.C)
+               at offset 0000d62c 00190H bytes from zedit3p.lib (INUSAGE.C)
+               at offset 0000d7bc 00BA0H bytes from zedit3p.lib (PGRKCHR.C)
+               at offset 0000e35c 00FCCH bytes from zedit3p.lib (PHEBCHR.C)
+               at offset 0000f328 00FD8H bytes from zedit3p.lib (PLATCHR.C)
+               at offset 00010300 00A90H bytes from zedit3p.lib (RDSPHEB.C)
+               at offset 00010d90 00090H bytes from zedit3p.lib (LCINVAL.C)
+               at offset 00010e20 00070H bytes from zedit3p.lib (PROTLIN.C)
+               at offset 00010e90 003A0H bytes from zedit3p.lib (SCRTBUF.C)
+               at offset 00011230 001ECH bytes from zedit3p.lib (TRANSCR.C)
+               at offset 0001141c 00128H bytes from zedit3p.lib (ZFINISH.C)
+               at offset 00011544 001F4H bytes from zedit3p.lib (SAVEVIO.C)
+               at offset 00011738 0020CH bytes from zedit3p.lib (XGA8514.C)
+               at offset 00011944 00060H bytes from zedit3p.lib (ZEPILOG.C)
+               at offset 000119a4 00284H bytes from zedit3p.lib (CKPLACE.C)
+               at offset 00011c28 000F4H bytes from zedit3p.lib (COLSLIN.C)
+               at offset 00011d1c 00140H bytes from zedit3p.lib (COPYLIN.C)
+               at offset 00011e5c 00084H bytes from zedit3p.lib (COPYONB.C)
+               at offset 00011ee0 00090H bytes from zedit3p.lib (DDELBLK.C)
+               at offset 00011f70 00194H bytes from zedit3p.lib (EXCLUDE.C)
+               at offset 00012104 00154H bytes from zedit3p.lib (EXCSHOW.C)
+               at offset 00012258 00150H bytes from zedit3p.lib (KEYSLIN.C)
+               at offset 000123a8 006ECH bytes from zedit3p.lib (LETSLIN.C)
+               at offset 00012a94 00220H bytes from zedit3p.lib (LINECMD.C)
+               at offset 00012cb4 0068CH bytes from zedit3p.lib (LNECMD1.C)
+               at offset 00013340 006ECH bytes from zedit3p.lib (LNECMD2.C)
+               at offset 00013a2c 0055CH bytes from zedit3p.lib (LNECMD3.C)
+               at offset 00013f88 000D0H bytes from zedit3p.lib (MOVELIN.C)
+               at offset 00014058 000E8H bytes from zedit3p.lib (MOVEONB.C)
+               at offset 00014140 00140H bytes from zedit3p.lib (MOVECPY.C)
+               at offset 00014280 00194H bytes from zedit3p.lib (PROCEDT.C)
+               at offset 00014414 002A8H bytes from zedit3p.lib (PROCINP.C)
+               at offset 000146bc 00634H bytes from zedit3p.lib (PROCSCN.C)
+               at offset 00014cf0 00128H bytes from zedit3p.lib (RREPBLK.C)
+               at offset 00014e18 002D4H bytes from zedit3p.lib (SCRLCMD.C)
+               at offset 000150ec 000F0H bytes from zedit3p.lib (SHIFTLF.C)
+               at offset 000151dc 001A0H bytes from zedit3p.lib (SHIFTRT.C)
+               at offset 0001537c 001A8H bytes from zedit3p.lib (SRCHCMD.C)
+               at offset 00015524 00450H bytes from zedit3p.lib (BACKCMD.C)
+               at offset 00015974 008BCH bytes from zedit3p.lib (BUFTSCR.C)
+               at offset 00016230 0009CH bytes from zedit3p.lib (DISPNUM.C)
+               at offset 000162cc 001F0H bytes from zedit3p.lib (TOPLINE.C)
+               at offset 000164bc 00020H bytes from zedit3p.lib (ZEDPPRM.C)
+               at offset 000164dc 006B0H bytes from zedit3p.lib (INVCOPT.C)
+               at offset 00016b8c 00678H bytes from zedit3p.lib (MISCCMD.C)
+               at offset 00017204 00334H bytes from zedit3p.lib (ZDRIVER.C)
+               at offset 00017538 002C4H bytes from zedit3p.lib (PASCCHR.C)
+               at offset 000177fc 002B8H bytes from zedit3p.lib (PROMCHR.C)
+               at offset 00017ab4 003CCH bytes from zedit3p.lib (CMDPARM.C)
+               at offset 00017e80 000D0H bytes from zedit3p.lib (FILLSCR.C)
+               at offset 00017f50 00214H bytes from zedit3p.lib (GETFILE.C)
+               at offset 00018164 0047CH bytes from zedit3p.lib (GRPHREG.C)
+               at offset 000185e0 005F8H bytes from zedit3p.lib (PAN2CMD.C)
+               at offset 00018bd8 00414H bytes from zedit3p.lib (PANLCMD.C)
+               at offset 00018fec 0048CH bytes from zedit3p.lib (PRIMARY.C)
+               at offset 00019478 00144H bytes from zedit3p.lib (READBUF.C)
+               at offset 000195bc 001E8H bytes from zedit3p.lib (REVCHAR.C)
+               at offset 000197a4 000D0H bytes from zedit3p.lib (SCRPESC.C)
+               at offset 00019874 00784H bytes from zedit3p.lib (SCRPRNT.C)
+               at offset 00019ff8 004CCH bytes from zedit3p.lib (SCRPXGA.C)
+               at offset 0001a4c4 00084H bytes from zedit3p.lib (TEXTREG.C)
+               at offset 0001a548 00290H bytes from zedit3p.lib (ZEDINIT.C)
+               at offset 0001a7d8 0008CH bytes from zedit3p.lib (ZEDPBSE.C)
+               at offset 0001a864 00BB8H bytes from zedit3p.lib (ZEDPBUF.C)
+               at offset 0001b41c 002FCH bytes from zedit3p.lib (ZEDPFNT.C)
+               at offset 0001b718 00808H bytes from zedit3p.lib (ZEDPIMG.C)
+               at offset 0001bf20 00128H bytes from zedit3p.lib (ZEDPLSP.C)
+               at offset 0001c048 00104H bytes from zedit3p.lib (ZEDPLUP.C)
+               at offset 0001c14c 00148H bytes from zedit3p.lib (ZEDPPRE.C)
+               at offset 0001c294 00850H bytes from zedit3p.lib (ZEDPPRT.C)
+               at offset 0001cae4 002ECH bytes from zedit3p.lib (ZEDPPSF.C)
+               at offset 0001cdd0 003B0H bytes from zedit3p.lib (ZEDPPSP.C)
+               at offset 0001d180 0009CH bytes from zedit3p.lib (ZEDPRAM.C)
+               at offset 0001d21c 00090H bytes from zedit3p.lib (ZEDPROM.C)
+               at offset 0001d2ac 0018CH bytes from zedit3p.lib (ZEDPX24.C)
+               at offset 0001d438 0005CH bytes from e:\str\stdf\stdf3p.lib (PTRINIT.C)
+               at offset 0001d494 00658H bytes from e:\str\stdf\stdf3p.lib (INVERT.C)
+               at offset 0001daec 0007CH bytes from e:\str\stdf\stdf3p.lib (LEFTFLD.C)
+               at offset 0001db68 00030H bytes from e:\str\stdf\stdf3p.lib (LEFTJUST.C)
+               at offset 0001db98 00040H bytes from e:\str\stdf\stdf3p.lib (LINDEX.C)
+               at offset 0001dbd8 00024H bytes from e:\str\stdf\stdf3p.lib (LOWER.C)
+               at offset 0001dbfc 0003CH bytes from e:\str\stdf\stdf3p.lib (NUMERIC.C)
+               at offset 0001dc38 00190H bytes from e:\str\stdf\stdf3p.lib (PINDEX.C)
+               at offset 0001ddc8 00098H bytes from e:\str\stdf\stdf3p.lib (RIGHTJST.C)
+               at offset 0001de60 0002CH bytes from e:\str\stdf\stdf3p.lib (UPPER.C)
+               at offset 0001de8c 0008CH bytes from e:\str\stdf\stdf3p.lib (GETINPT.C)
+               at offset 0001df18 00074H bytes from e:\str\stdf\stdf3p.lib (BYTEMAP.C)
+               at offset 0001df8c 00A44H bytes from e:\str\stdf\stdf3p.lib (ENTFIELD.C)
+               at offset 0001e9d0 00AE8H bytes from e:\str\stdf\stdf3p.lib (MAKEAFI.C)
+               at offset 0001f4b8 002B0H bytes from e:\str\stdf\stdf3p.lib (FORMDSN.C)
+               at offset 0001f768 00198H bytes from e:\str\stdf\stdf3p.lib (WHENOW.C)
+               at offset 0001f900 000BEH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (edcstrt.ASM)
+               at offset 0001f9c0 00330H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (EDCINIT.C)
+               at offset 0001fcf0 001F8H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (setuparg.ASM)
+               at offset 0001fee8 000E0H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (SETUPENV.C)
+               at offset 0001ffc8 0011CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CTORDTOR.C)
+               at offset 000200e4 00008H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WCTDT.C)
+               at offset 000200ec 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (SCTDT.C)
+               at offset 000200fc 000F4H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (EDCTERM.C)
+               at offset 000201f0 003D0H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (MALLOC.C)
+               at offset 000205c0 000F0H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FREE.C)
+               at offset 000206b0 00018H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FREEWEAK.C)
+               at offset 000206c8 003F4H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (HEAPMIN.C)
+               at offset 00020abc 00074H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CALLOC.C)
+               at offset 00020b30 00078H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (EXIT.C)
+               at offset 00020ba8 00020H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (TERMINAT.C)
+               at offset 00020bc8 007F4H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (N_EXCEPT.C)
+               at offset 000213bc 00068H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (N_EXCPIO.C)
+               at offset 00021424 0013CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (N_EXCRIT.C)
+               at offset 00021560 0007CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (N_DUMPWK.C)
+               at offset 000215dc 00014H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FCLWEAK.C)
+               at offset 000215f0 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CWEAK.C)
+               at offset 000215fc 00077H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (n_excpta.ASM)
+               at offset 00021674 00108H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LOCINIT.C)
+               at offset 0002177c 000C8H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FREEFCB.C)
+               at offset 00021844 000A4H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ITOA.C)
+               at offset 000218e8 00024H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (edcmsg.ASM)
+               at offset 0002190c 00258H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (PRTEMSG.C)
+               at offset 00021b64 0003BH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (strcspn.ASM)
+               at offset 00021ba0 00068H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (STRDUP.C)
+               at offset 00021c08 0003CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (strspn.ASM)
+               at offset 00021c44 00128H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (STRTOL.C)
+               at offset 00021d6c 000F8H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (STRTOUL.C)
+               at offset 00021e64 0010CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CTYPETBL.C)
+               at offset 00021f70 00A98H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FLOATFMT.C)
+               at offset 00022a08 000E1H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (asciitld.ASM)
+               at offset 00022aec 000C4H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (asciitod.ASM)
+               at offset 00022bb0 00560H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ATOF.C)
+               at offset 00023110 000ACH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (STRNICMP.C)
+               at offset 000231bc 000D0H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ATOI.C)
+               at offset 0002328c 00504H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ATOLD.C)
+               at offset 00023790 0038CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LUCVT.C)
+               at offset 00023b1c 00EECH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (DOFMTO.C)
+               at offset 00024a08 00028H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WEAKFMT.C)
+               at offset 00024a30 0001CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WEAKGET.C)
+               at offset 00024a4c 00014H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WEAKCPUT.C)
+               at offset 00024a60 00070H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FPRINTF.C)
+               at offset 00024ad0 00078H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (PRINTF.C)
+               at offset 00024b48 00068H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (SPRINTF.C)
+               at offset 00024bb0 000D4H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WCTOMB.C)
+               at offset 00024c84 000F4H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (BUFPRINT.C)
+               at offset 00024d78 01C58H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (GOSCAN.C)
+               at offset 000269d0 00070H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FSCANF.C)
+               at offset 00026a40 00504H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (_CNVRT.C)
+               at offset 00026f44 00278H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (MKTIME.C)
+               at offset 000271bc 00088H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (TIME.C)
+               at offset 00027244 000B8H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LOCALTM.C)
+               at offset 000272fc 00124H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CLOSSTRM.C)
+               at offset 00027420 00029H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (cntrl87.ASM)
+               at offset 0002744c 00048H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WMEMFILE.C)
+               at offset 00027494 00094H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FOPEN.C)
+               at offset 00027528 005A8H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FMPRS.C)
+               at offset 00027ad0 00078H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (INITBUF.C)
+               at offset 00027b48 00180H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (INITFCB.C)
+               at offset 00027cc8 00218H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CONVERT.C)
+               at offset 00027ee0 0008CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FCLOSEAL.C)
+               at offset 00027f6c 00088H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FCLOSE.C)
+               at offset 00027ff4 0004CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FEOF.C)
+               at offset 00028040 00088H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FFLUSH.C)
+               at offset 000280c8 005A4H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FGETS.C)
+               at offset 0002866c 00248H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FILLB.C)
+               at offset 000288b4 0018CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FLUSH.C)
+               at offset 00028a40 00304H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FLUSHB.C)
+               at offset 00028d44 001C4H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FPUTC.C)
+               at offset 00028f08 00114H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FPUTS.C)
+               at offset 0002901c 005CCH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FSEEK.C)
+               at offset 000295e8 001ACH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (GETCX.C)
+               at offset 00029794 000F8H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (GETENV.C)
+               at offset 0002988c 00006H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ilog2.ASM)
+               at offset 00029894 00054H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (INTERR.C)
+               at offset 000298e8 00063H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (longjmp.ASM)
+               at offset 0002994c 000A4H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LTOA.C)
+               at offset 000299f0 000C0H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (NODDPRS.C)
+               at offset 00029ab0 00570H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (OPENSTRM.C)
+               at offset 0002a020 00008H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (W_RAISE.C)
+               at offset 0002a028 0003AH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (setjmp.ASM)
+               at offset 0002a064 0006CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (UPUTS.C)
+               at offset 0002a0d0 0026CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (UREADBS.C)
+               at offset 0002a33c 00098H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (UUNGETC.C)
+               at offset 0002a3d4 00044H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (UWRITE.C)
+               at offset 0002a418 00034H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CRT_FD.C)
+               at offset 0002a44c 00054H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CHECKMEM.C)
+               at offset 0002a4a0 00096H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (edc3216.ASM)
+               at offset 0002a538 000B2H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (edcprol.ASM)
+               at offset 0002a5ec 0000DH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (sel_flat.ASM)
+               at offset 0002a5fc 001B8H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FULLPATH.C)
+               at offset 0002a7b4 00012H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (bts.ASM)
+               at offset 0002a7c8 0013CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (MBTOWC.C)
+               at offset 0002a904 00164H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WCSTOMBS.C)
+               at offset 0002aa68 001D8H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (TOINT.C)
+               at offset 0002ac40 000A8H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (XREAD.C)
+               at offset 0002ace8 00014H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (EDCMXDEF.C)
+               at offset 0002acfc 00014H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (MATHERR.C)
+
+ 0003:00000000 000000058H SEG16T__callafi        CODE 16-bit
+               at offset 00000000 00058H bytes from e:\str\stdf\stdf3p.lib (MAKEAFI.C)
+
+ 0003:00000058 000000019H CODE16                 CODE 16-bit
+               at offset 00000000 00019H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (edc3216.ASM)
+
+ 0004:00000000 000000030H _MSGSEG32              CODE 32-bit
+               at offset 00000000 00030H bytes from i:\toolkt21\os2lib\os2386.lib (.\msgseg32.asm)
+
+ 0005:00000000 000005820H ZEDRODAT               DATA 32-bit
+               at offset 00000000 00700H bytes from zedit3p.lib (ASCCHAR.C)
+               at offset 00000700 000F0H bytes from zedit3p.lib (CMDTXTS.C)
+               at offset 000007f0 000A0H bytes from zedit3p.lib (CMDVALS.C)
+               at offset 00000890 00700H bytes from zedit3p.lib (GRKCHAR.C)
+               at offset 00000f90 00700H bytes from zedit3p.lib (HEBCHAR.C)
+               at offset 00001690 00C60H bytes from zedit3p.lib (HELPEDT.C)
+               at offset 000022f0 00F20H bytes from zedit3p.lib (HELPGEN.C)
+               at offset 00003210 00DC0H bytes from zedit3p.lib (MSGTEXT.C)
+               at offset 00003fd0 002F0H bytes from zedit3p.lib (ZEDASCB.C)
+               at offset 000042c0 002F0H bytes from zedit3p.lib (ZEDASCT.C)
+               at offset 000045b0 002F0H bytes from zedit3p.lib (ZEDGRKB.C)
+               at offset 000048a0 002F0H bytes from zedit3p.lib (ZEDGRKT.C)
+               at offset 00004b90 002F0H bytes from zedit3p.lib (ZEDHEBB.C)
+               at offset 00004e80 002F0H bytes from zedit3p.lib (ZEDHEBT.C)
+               at offset 00005170 002F0H bytes from zedit3p.lib (ZEDLATB.C)
+               at offset 00005460 002F0H bytes from zedit3p.lib (ZEDLATT.C)
+               at offset 00005750 000D0H bytes from zedit3p.lib (ZEDLCHR.C)
+
+ 0006:00000000 000000008H LIBDATA16              DATA16 16-bit
+               at offset 00000000 00008H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (edc3216.ASM)
+
+ 0007:00000000 000005330H DATA32                 DATA 32-bit
+               at offset 00000000 001D0H bytes from ZEDIT3P.OBJ (ZEDMAIN.C)
+               at offset 000001d0 00100H bytes from zedit3p.lib (GRKEXCH.C)
+               at offset 000002d0 00080H bytes from zedit3p.lib (HEBHIEX.C)
+               at offset 00000350 00010H bytes from zedit3p.lib (LETSGRK.C)
+               at offset 00000360 00020H bytes from zedit3p.lib (TRANHEB.C)
+               at offset 00000380 000C0H bytes from zedit3p.lib (FKEYSET.C)
+               at offset 00000440 00100H bytes from zedit3p.lib (HEBEXCH.C)
+               at offset 00000540 00080H bytes from zedit3p.lib (BROWPAN.C)
+               at offset 000005c0 003E0H bytes from zedit3p.lib (CFGFPAN.C)
+               at offset 000009a0 00EF0H bytes from zedit3p.lib (CFGKPAN.C)
+               at offset 00001890 000A0H bytes from zedit3p.lib (EDITPAN.C)
+               at offset 00001930 00510H bytes from zedit3p.lib (FINDPRM.C)
+               at offset 00001e40 00010H bytes from zedit3p.lib (LOCLCMD.C)
+               at offset 00001e50 00020H bytes from zedit3p.lib (RDSPLAT.C)
+               at offset 00001e70 00030H bytes from zedit3p.lib (STATLIN.C)
+               at offset 00001ea0 00010H bytes from zedit3p.lib (CONVOUT.C)
+               at offset 00001eb0 000D0H bytes from zedit3p.lib (DSENTRY.C)
+               at offset 00001f80 00040H bytes from zedit3p.lib (PHEBCHR.C)
+               at offset 00001fc0 000A0H bytes from zedit3p.lib (PLATCHR.C)
+               at offset 00002060 00010H bytes from zedit3p.lib (TRANSCR.C)
+               at offset 00002070 00010H bytes from zedit3p.lib (SAVEVIO.C)
+               at offset 00002080 00010H bytes from zedit3p.lib (ZEPILOG.C)
+               at offset 00002090 00010H bytes from zedit3p.lib (COLSLIN.C)
+               at offset 000020a0 00020H bytes from zedit3p.lib (KEYSLIN.C)
+               at offset 000020c0 00020H bytes from zedit3p.lib (TOPLINE.C)
+               at offset 000020e0 01000H bytes from zedit3p.lib (MISCCMD.C)
+               at offset 000030e0 00010H bytes from zedit3p.lib (FILLSCR.C)
+               at offset 000030f0 00020H bytes from zedit3p.lib (GRPHREG.C)
+               at offset 00003110 00050H bytes from zedit3p.lib (PAN2CMD.C)
+               at offset 00003160 00030H bytes from zedit3p.lib (PRIMARY.C)
+               at offset 00003190 01000H bytes from zedit3p.lib (ZEDINIT.C)
+               at offset 00004190 00050H bytes from zedit3p.lib (ZEDPBUF.C)
+               at offset 000041e0 00040H bytes from zedit3p.lib (ZEDPIMG.C)
+               at offset 00004220 00020H bytes from zedit3p.lib (ZEDPLUP.C)
+               at offset 00004240 000A0H bytes from zedit3p.lib (ZEDPPRE.C)
+               at offset 000042e0 00010H bytes from zedit3p.lib (ZEDPPRT.C)
+               at offset 000042f0 005C0H bytes from zedit3p.lib (ZEDPPSF.C)
+               at offset 000048b0 00080H bytes from zedit3p.lib (ZEDPPSP.C)
+               at offset 00004930 00020H bytes from zedit3p.lib (ZEDPX24.C)
+               at offset 00004950 00140H bytes from e:\str\stdf\stdf3p.lib (MAKEAFI.C)
+               at offset 00004a90 0000EH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (edcstrt.ASM)
+               at offset 00004aa0 00260H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (EDCINIT.C)
+               at offset 00004d00 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (setuparg.ASM)
+               at offset 00004d10 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CTORDTOR.C)
+               at offset 00004d20 00030H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FREEWEAK.C)
+               at offset 00004d50 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (HEAPMIN.C)
+               at offset 00004d60 000B0H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (N_EXCEPT.C)
+               at offset 00004e10 00290H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LOCINIT.C)
+               at offset 000050a0 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (PRTEMSG.C)
+               at offset 000050b0 00110H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CTYPETBL.C)
+               at offset 000051c0 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FLOATFMT.C)
+               at offset 000051d0 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (DOFMTO.C)
+               at offset 000051e0 00070H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (_CNVRT.C)
+               at offset 00005250 00070H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (MKTIME.C)
+               at offset 000052c0 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CLOSSTRM.C)
+               at offset 000052d0 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FCLOSEAL.C)
+               at offset 000052e0 00030H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (OPENSTRM.C)
+               at offset 00005310 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CRT_FD.C)
+               at offset 00005320 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FULLPATH.C)
+
+ 0007:00005330 000000000H CTOR_DTOR1             DATA 32-bit
+ 0007:00005330 000000010H CTOR_DTOR2             DATA 32-bit
+               at offset 00000000 00010H bytes from ZEDIT3P.OBJ (ZEDMAIN.C)
+
+ 0007:00005340 000000000H CTOR_DTOR3             DATA 32-bit
+ 0007:00005340 0000025B0H CONST32                CONST 32-bit
+               at offset 00000000 00010H bytes from zedit3p.lib (CFGINIT.C)
+               at offset 00000010 00010H bytes from zedit3p.lib (WRTEBUF.C)
+               at offset 00000020 00110H bytes from zedit3p.lib (CFGFPAN.C)
+               at offset 00000130 00140H bytes from zedit3p.lib (CFGKPAN.C)
+               at offset 00000270 00050H bytes from zedit3p.lib (EDBRPAN.C)
+               at offset 000002c0 00020H bytes from zedit3p.lib (EXCXBLK.C)
+               at offset 000002e0 00020H bytes from zedit3p.lib (LOCLCMD.C)
+               at offset 00000300 00050H bytes from zedit3p.lib (STATLIN.C)
+               at offset 00000350 00010H bytes from zedit3p.lib (CFGKGET.C)
+               at offset 00000360 00050H bytes from zedit3p.lib (CFGFGET.C)
+               at offset 000003b0 00170H bytes from zedit3p.lib (DSENTRY.C)
+               at offset 00000520 006F0H bytes from zedit3p.lib (INUSAGE.C)
+               at offset 00000c10 00010H bytes from zedit3p.lib (TRANSCR.C)
+               at offset 00000c20 00100H bytes from zedit3p.lib (ZFINISH.C)
+               at offset 00000d20 00070H bytes from zedit3p.lib (LETSLIN.C)
+               at offset 00000d90 00010H bytes from zedit3p.lib (PROCEDT.C)
+               at offset 00000da0 00060H bytes from zedit3p.lib (BUFTSCR.C)
+               at offset 00000e00 00030H bytes from zedit3p.lib (TOPLINE.C)
+               at offset 00000e30 00040H bytes from zedit3p.lib (INVCOPT.C)
+               at offset 00000e70 00020H bytes from zedit3p.lib (MISCCMD.C)
+               at offset 00000e90 00010H bytes from zedit3p.lib (FILLSCR.C)
+               at offset 00000ea0 00010H bytes from zedit3p.lib (PAN2CMD.C)
+               at offset 00000eb0 00050H bytes from zedit3p.lib (PANLCMD.C)
+               at offset 00000f00 00200H bytes from zedit3p.lib (PRIMARY.C)
+               at offset 00001100 00030H bytes from zedit3p.lib (READBUF.C)
+               at offset 00001130 00010H bytes from zedit3p.lib (SCRPRNT.C)
+               at offset 00001140 00010H bytes from zedit3p.lib (ZEDPBSE.C)
+               at offset 00001150 00010H bytes from zedit3p.lib (ZEDPBUF.C)
+               at offset 00001160 00050H bytes from zedit3p.lib (ZEDPIMG.C)
+               at offset 000011b0 00660H bytes from zedit3p.lib (ZEDPPSF.C)
+               at offset 00001810 00090H bytes from zedit3p.lib (ZEDPPSP.C)
+               at offset 000018a0 00300H bytes from e:\str\stdf\stdf3p.lib (MAKEAFI.C)
+               at offset 00001ba0 00020H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (EDCINIT.C)
+               at offset 00001bc0 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (MALLOC.C)
+               at offset 00001bd0 00150H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LOCINIT.C)
+               at offset 00001d20 00030H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ITOA.C)
+               at offset 00001d50 00090H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (PRTEMSG.C)
+               at offset 00001de0 00020H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FLOATFMT.C)
+               at offset 00001e00 000C8H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (fltconst.ASM)
+               at offset 00001ec8 00592H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (powconst.ASM)
+               at offset 0000245c 0000AH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (asciitld.ASM)
+               at offset 00002468 0000AH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (asciitod.ASM)
+               at offset 00002480 00020H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ATOF.C)
+               at offset 000024a0 00020H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ATOLD.C)
+               at offset 000024c0 00050H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LUCVT.C)
+               at offset 00002510 00030H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (DOFMTO.C)
+               at offset 00002540 00010H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (GOSCAN.C)
+               at offset 00002550 00030H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FMPRS.C)
+               at offset 00002580 00030H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LTOA.C)
+
+ 0007:000078F0 00000000CH EDC1                   EDC_CLASS 32-bit
+               at offset 00000000 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (n_excpta.ASM)
+
+ 0007:000078FC 0000003FCH EDC2                   EDC_CLASS 32-bit
+               at offset 00000000 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (edcstrt.ASM)
+               at offset 0000000c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (EDCINIT.C)
+               at offset 00000018 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (setuparg.ASM)
+               at offset 00000024 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (SETUPENV.C)
+               at offset 00000030 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (EDCTERM.C)
+               at offset 0000003c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (MALLOC.C)
+               at offset 00000048 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FREE.C)
+               at offset 00000054 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (HEAPMIN.C)
+               at offset 00000060 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CALLOC.C)
+               at offset 0000006c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (EXIT.C)
+               at offset 00000078 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (TERMINAT.C)
+               at offset 00000084 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (N_EXCEPT.C)
+               at offset 00000090 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (N_EXCRIT.C)
+               at offset 0000009c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (N_DUMPWK.C)
+               at offset 000000a8 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FCLWEAK.C)
+               at offset 000000b4 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LOCINIT.C)
+               at offset 000000c0 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FREEFCB.C)
+               at offset 000000cc 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ITOA.C)
+               at offset 000000d8 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (edcmsg.ASM)
+               at offset 000000e4 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (PRTEMSG.C)
+               at offset 000000f0 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (strcspn.ASM)
+               at offset 000000fc 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (STRDUP.C)
+               at offset 00000108 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (strspn.ASM)
+               at offset 00000114 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (STRTOL.C)
+               at offset 00000120 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (STRTOUL.C)
+               at offset 0000012c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CTYPETBL.C)
+               at offset 00000138 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FLOATFMT.C)
+               at offset 00000144 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (asciitld.ASM)
+               at offset 00000150 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (asciitod.ASM)
+               at offset 0000015c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ATOF.C)
+               at offset 00000168 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (STRNICMP.C)
+               at offset 00000174 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ATOI.C)
+               at offset 00000180 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (ATOLD.C)
+               at offset 0000018c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LUCVT.C)
+               at offset 00000198 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (DOFMTO.C)
+               at offset 000001a4 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WEAKFMT.C)
+               at offset 000001b0 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WEAKGET.C)
+               at offset 000001bc 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WEAKCPUT.C)
+               at offset 000001c8 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FPRINTF.C)
+               at offset 000001d4 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (PRINTF.C)
+               at offset 000001e0 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (SPRINTF.C)
+               at offset 000001ec 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WCTOMB.C)
+               at offset 000001f8 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (BUFPRINT.C)
+               at offset 00000204 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (GOSCAN.C)
+               at offset 00000210 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FSCANF.C)
+               at offset 0000021c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (_CNVRT.C)
+               at offset 00000228 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (MKTIME.C)
+               at offset 00000234 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (TIME.C)
+               at offset 00000240 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LOCALTM.C)
+               at offset 0000024c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CLOSSTRM.C)
+               at offset 00000258 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (cntrl87.ASM)
+               at offset 00000264 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FOPEN.C)
+               at offset 00000270 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FMPRS.C)
+               at offset 0000027c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (INITBUF.C)
+               at offset 00000288 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (INITFCB.C)
+               at offset 00000294 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FCLOSEAL.C)
+               at offset 000002a0 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FCLOSE.C)
+               at offset 000002ac 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FEOF.C)
+               at offset 000002b8 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FFLUSH.C)
+               at offset 000002c4 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FGETS.C)
+               at offset 000002d0 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FILLB.C)
+               at offset 000002dc 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FLUSH.C)
+               at offset 000002e8 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FLUSHB.C)
+               at offset 000002f4 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FPUTC.C)
+               at offset 00000300 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FPUTS.C)
+               at offset 0000030c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FSEEK.C)
+               at offset 00000318 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (GETCX.C)
+               at offset 00000324 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (GETENV.C)
+               at offset 00000330 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (INTERR.C)
+               at offset 0000033c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (longjmp.ASM)
+               at offset 00000348 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (LTOA.C)
+               at offset 00000354 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (NODDPRS.C)
+               at offset 00000360 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (OPENSTRM.C)
+               at offset 0000036c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (setjmp.ASM)
+               at offset 00000378 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (UPUTS.C)
+               at offset 00000384 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (UUNGETC.C)
+               at offset 00000390 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (UWRITE.C)
+               at offset 0000039c 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (CHECKMEM.C)
+               at offset 000003a8 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (FULLPATH.C)
+               at offset 000003b4 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (bts.ASM)
+               at offset 000003c0 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (MBTOWC.C)
+               at offset 000003cc 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (WCSTOMBS.C)
+               at offset 000003d8 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (TOINT.C)
+               at offset 000003e4 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (EDCMXDEF.C)
+               at offset 000003f0 0000CH bytes from i:\ibmcpp\lib\DDE4SBS.LIB (MATHERR.C)
+
+ 0007:00007CF8 000000004H EDC3                   EDC_CLASS 32-bit
+               at offset 00000000 00004H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (n_excpta.ASM)
+
+ 0007:00007CFC 000000000H BSS32                  BSS 32-bit
+ 0007:00007CFC 0000004E8H c_common               BSS 32-bit
+ 0007:000081F0 0000FA000H STACK32                STACK 32-bit
+               at offset 00000000 08000H bytes from i:\ibmcpp\lib\DDE4SBS.LIB (edcstrt.ASM)
+
+
+ Origin   Group
+ 0000:0   FLAT
+ 0007:0   DGROUP
+
+  Address         Publics by Name
+
+ 0007:000081CC       @BSSATOF.C
+ 0007:00007D24       @BSSATOLD.C
+ 0007:00007F24       @BSSE:\str\zedit\FILLSCR.C
+ 0007:00007FB8       @BSSE:\str\zedit\GRPHREG.C
+ 0007:00007EE4       @BSSE:\str\zedit\PAN2CMD.C
+ 0007:0000815C       @BSSE:\str\zedit\PRIMARY.C
+ 0007:00007FA4       @BSSE:\str\zedit\ZEDINIT.C
+ 0007:00008044       @BSSE:\str\zedit\ZEDPBUF.C
+ 0007:00007FD4       @BSSE:\str\zedit\ZEDPIMG.C
+ 0007:0000814C       @BSSE:\str\zedit\ZEDPLUP.C
+ 0007:00008074       @BSSE:\str\zedit\ZEDPPRE.C
+ 0007:000080D0       @BSSE:\str\zedit\ZEDPPRT.C
+ 0007:00008090       @BSSE:\str\zedit\ZEDPPSF.C
+ 0007:000080E0       @BSSE:\str\zedit\ZEDPPSP.C
+ 0007:00007EE0       @BSSE:\str\zedit\ZEDPX24.C
+ 0007:00007D8C       @BSSEDCINIT.C
+ 0007:00007ED0       @BSSF:\str\stdf\MAKEAFI.C
+ 0007:00007F9C       @BSSF:\str\zedit\BROWPAN.C
+ 0007:00007F04       @BSSF:\str\zedit\CFGFPAN.C
+ 0007:00007F08       @BSSF:\str\zedit\CFGKPAN.C
+ 0007:00007FB4       @BSSF:\str\zedit\COLSLIN.C
+ 0007:0000816C       @BSSF:\str\zedit\CONVOUT.C
+ 0007:00008170       @BSSF:\str\zedit\DSENTRY.C
+ 0007:00007F0C       @BSSF:\str\zedit\EDITPAN.C
+ 0007:00007FA8       @BSSF:\str\zedit\ENTPANL.C
+ 0007:00007FEC       @BSSF:\str\zedit\FINDPRM.C
+ 0007:00008068       @BSSF:\str\zedit\GETSTRT.C
+ 0007:00007F70       @BSSF:\str\zedit\KEYSLIN.C
+ 0007:00007FE8       @BSSF:\str\zedit\LETSGRK.C
+ 0007:00007FB0       @BSSF:\str\zedit\LOCLCMD.C
+ 0007:00007F6C       @BSSF:\str\zedit\MISCCMD.C
+ 0007:00007F14       @BSSF:\str\zedit\PHEBCHR.C
+ 0007:00007F78       @BSSF:\str\zedit\PLATCHR.C
+ 0007:00007F1C       @BSSF:\str\zedit\RDSPLAT.C
+ 0007:00007F74       @BSSF:\str\zedit\SAVEVIO.C
+ 0007:00008150       @BSSF:\str\zedit\STATLIN.C
+ 0007:0000808C       @BSSF:\str\zedit\TOPLINE.C
+ 0007:00007FE0       @BSSF:\str\zedit\TRANHEB.C
+ 0007:00008070       @BSSF:\str\zedit\TRANSCR.C
+ 0007:0000817C       @BSSF:\str\zedit\TXTONLY.C
+ 0007:00007F28       @BSSF:\str\zedit\ZEDMAIN.C
+ 0007:00008040       @BSSF:\str\zedit\ZEPILOG.C
+ 0007:00007DB0       @BSSFLOATFMT.C
+ 0007:00007DCC       @BSSFULLPATH.C
+ 0007:00007D04       @BSSGOSCAN.C
+ 0007:00007D14       @BSSLUCVT.C
+ 0007:00007DC0       @BSSN_EXCEPT.C
+ 0007:00007DA0       @BSSPRTEMSG.C
+ 0007:00008174       afiptr
+ 0005:00000000       ascchar
+ 0002:000230E8       atof
+ 0002:000231BC       atoi
+ 0002:00015524       backcmd__FP8both_scrPUiiPA5_iPA25_A80_cPcT3T2T3PP7buflineP7buflinePiN212_P8lineptrsT6
+ 0002:00006DDC       browpan__FP8both_scrPiN22PPiPA25_A80_cPci
+ 0002:00015974       buftscr__FP8both_scriPA5_iPA25_A80_cP7buflineN22PiT8P8lineptrsT2
+ 0002:0000CAB8       buftsln__FP8both_scriPA5_iP7buflineN22PA25_A80_cPiN48
+ 0002:0001DF18       bytemap__FcPc
+ 0002:00020ABC       calloc
+ 0002:0000A890       cfgfget__FP8both_scrPA5_iPA25_A80_c
+ 0002:00006E8C       cfgfpan__FP8both_scrPiN22PPiPA25_A80_c
+ 0002:00000740       cfginit__Fv
+ 0002:0000A58C       cfgkget__FP8both_scrPA5_iPA25_A80_c
+ 0002:00007320       cfgkpan__FP8both_scrPiN22PPiPA25_A80_c
+ 0002:0000AB44       chngprm__FP8both_scriPcT3PiT2P7buflineT5
+ 0002:000119A4       ckplace__FP8both_scr6cktypeP8lineptrs
+ 0002:000069B4       clrline__FP8both_scri
+ 0002:00005E8C       clrlxga__FP8both_scri
+ 0002:00000928       clrpanl__FP8both_scr
+ 0002:00007C2C       cmddone__FP8both_scriUiT2PA5_iPiT6PA25_A80_cPUiPcN26N310_
+ 0002:0000AD24       cmdline__FP8both_scrPUiPc
+ 0002:00017AB4       cmdparm__FUiiN22PcT2PA5_iN35
+ 0002:00000968       cmdprse__FPcT1
+ 0002:00007FB4       cmdrest__FP8both_scriPA5_iPiT4PA25_A80_c
+ 0005:00000700       cmdtxts
+ 0005:000007F0       cmdvals
+ 0002:00000A08       cmpline__FP7buflineT1
+ 0002:00011C28       colslin__FP8both_scriP7buflineP8lineptrs
+ 0002:0000808C       convinp__FP8both_scrUiT2iT4PiT6T4PA5_iPA25_A80_cT2
+ 0002:0000BC08       convout__FiPcN22T1T2T1T2
+ 0002:00011D1C       copylin__FP8both_scrP8lineptrsi
+ 0002:00011E5C       copyonb__FP8lineptrs
+ 0002:00011EE0       ddelblk__FP8both_scrP8lineptrsi
+ 0002:000081FC       delchar__FiT1PA5_iN21PA25_A80_c
+ 0002:00000A5C       delnexc__FP8both_scriP7buflinePP7bufline
+ 0002:00000ADC       delprot__FP7buflinePP7bufline
+ 0002:00000B34       delxblk__FP8both_scriP7buflinePP7bufline
+ 0002:00005C88       dispchr__FP8both_scrciT3PA14_c
+ 0002:00001530       displin__FP8both_scrPciPA14_c
+ 0002:0000B878       dispmsg__FP8both_scri
+ 0002:00016230       dispnum__FP8both_scriPA5_icN22PcT2PA25_A80_c
+ 0000:00000000  Imp  DOS16ALLOCSEG        (DOSCALLS.34)
+ 0000:00000000  Imp  DOS16GETPROCADDR     (DOSCALLS.45)
+ 0000:00000000  Imp  DOS16SEMCLEAR        (DOSCALLS.141)
+ 0000:00000000  Imp  DOS16SEMREQUEST      (DOSCALLS.140)
+ 0000:00000000  Imp  DOS16SEMWAIT         (DOSCALLS.142)
+ 0000:00000000  Imp  DOS32FLATTOSEL       (DOSCALLS.425)
+ 0004:00000012       DOS32GETMESSAGE
+ 0004:00000012       Dos32GetMessage
+ 0000:00000000  Imp  DOS32IQUERYMESSAGECP (MSG.8)
+ 0000:00000000  Imp  DOS32SELTOFLAT       (DOSCALLS.426)
+ 0000:00000000  Imp  DOS32TRUEGETMESSAGE  (MSG.6)
+ 0000:00000000  Imp  DosAllocMem          (DOSCALLS.299)
+ 0000:00000000  Imp  DosBeep              (DOSCALLS.286)
+ 0000:00000000  Imp  DosClose             (DOSCALLS.257)
+ 0000:00000000  Imp  DosCreateMutexSem    (DOSCALLS.331)
+ 0000:00000000  Imp  DosCreateThread      (DOSCALLS.311)
+ 0000:00000000  Imp  DosExit              (DOSCALLS.234)
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  DOSFLATTOSEL         (DOSCALLS.425)
+ 0000:00000000  Imp  DosForceDelete       (DOSCALLS.110)
+ 0000:00000000  Imp  DosFreeMem           (DOSCALLS.304)
+ 0000:00000000  Imp  DosGetDateTime       (DOSCALLS.230)
+ 0000:00000000  Imp  DosGetInfoBlocks     (DOSCALLS.312)
+ 0004:00000012       DosGetMessage
+ 0004:00000012       DOSGETMESSAGE
+ 0000:00000000  Imp  DosLoadModule        (DOSCALLS.318)
+ 0000:00000000  Imp  DosOpen              (DOSCALLS.273)
+ 0000:00000000  Imp  DosQueryDBCSEnv      (NLS.6)
+ 0000:00000000  Imp  DosQueryHType        (DOSCALLS.224)
+ 0000:00000000  Imp  DosQueryPathInfo     (DOSCALLS.223)
+ 0000:00000000  Imp  DosQuerySysInfo      (DOSCALLS.348)
+ 0000:00000000  Imp  DosRaiseException    (DOSCALLS.356)
+ 0000:00000000  Imp  DosRead              (DOSCALLS.281)
+ 0000:00000000  Imp  DosSetExceptionHandler (DOSCALLS.354)
+ 0000:00000000  Imp  DosSetFilePtr        (DOSCALLS.256)
+ 0000:00000000  Imp  DosSetFileSize       (DOSCALLS.272)
+ 0000:00000000  Imp  DosSetRelMaxFH       (DOSCALLS.382)
+ 0000:00000000  Imp  DosSetSignalExceptionFocus (DOSCALLS.378)
+ 0000:00000000  Imp  DosSleep             (DOSCALLS.229)
+ 0000:00000000  Imp  DosUnsetExceptionHandler (DOSCALLS.355)
+ 0000:00000000  Imp  DosUnwindException   (DOSCALLS.357)
+ 0000:00000000  Imp  DosWrite             (DOSCALLS.282)
+ 0002:000017D0       ds8cib2__FP8both_scrciT3
+ 0002:00001C54       ds8cibm__FP8both_scrciT3
+ 0002:00005EEC       ds8cxga__FP8both_scrciT3
+ 0002:000020E0       ds8lib2__FP8both_scrPci
+ 0002:0000249C       ds8libm__FP8both_scrPci
+ 0002:000060E8       ds8lxga__FP8both_scrPci
+ 0002:0000C7BC       dsentry__FP8both_scrPiN22PPiPA25_A80_cPc
+ 0002:00002860       dsp8chr__FP8both_scrciT3
+ 0002:00002AC4       dsp8lin__FP8both_scrPci
+ 0002:00002DAC       dspcib2__FP8both_scrciT3PA14_c
+ 0002:00003200       dspcibm__FP8both_scrciT3PA14_c
+ 0002:00006324       dspcxga__FP8both_scrciT3PA14_c
+ 0002:00003504       dsplib2__FP8both_scrPciPA14_c
+ 0002:000038F0       dsplibm__FP8both_scrPciPA14_c
+ 0002:000064D4       dsplxga__FP8both_scrPciPA14_c
+ 0002:0000830C       edbrpan__FP8both_scrPA25_A80_cPci
+ 0002:00008470       editpan__FP8both_scrPiN22PPiPA25_A80_cPci
+ 0002:0001DF8C       entfield__F7csrfunciT2PA5_iPiT5
+ 0002:0000CE44       entpanl__FP8both_scriT2UiN22PiT7N22PA5_iPA25_A80_c
+ 0002:00008538       eraseof__FP8both_scriPA5_iPA25_A80_cN22
+ 0007:00007EFC       errno
+ 0002:00011F70       exclude__FP8both_scrP8lineptrs
+ 0002:00000BC0       excmerg__FP7bufline
+ 0002:00000C04       excrdsp__FP8both_scrP7bufline
+ 0002:00000D4C       excremv__FP7buflinePi
+ 0002:00012104       excshow__FP8both_scrP8lineptrsi
+ 0002:000086E8       excxblk__FP7bufline
+ 0002:00020B30       exit
+ 0002:00027F6C       fclose
+ 0002:00027FF4       feof
+ 0002:00028040       fflush
+ 0002:000280C8       fgets
+ 0002:00017E80       fillscr__FP8both_scr
+ 0002:000087FC       findprm__FP8both_scrPiT2iPA5_iT4UiT2P7buflinePP7buflineT2PcN212_T2
+ 0007:00000380       fkeyset
+ 0002:00027494       fopen
+ 0002:0001F4B8       formdsn__FPcN81
+ 0002:00028D44       fputc
+ 0002:00028F08       fputs
+ 0002:000205C0       free
+ 0002:00000D94       freebuf__FP7bufline
+ 0002:00029384       fseek
+ 0002:00000E74       funckey__FiUi
+ 0002:00029794       getenv
+ 0002:00017F50       getfile__FP8both_scrP7buflineP6__filei
+ 0002:0001DE8C       getinpt__FPiT1PUiUi
+ 0002:00009238       getstrt__FiPcPA5_iT2PiN35
+ 0007:000081A4       graphic
+ 0005:00000890       grkchar
+ 0007:000001D0       grkexch
+ 0002:00018164       grphreg__Fv
+ 0003:00000048       HBBCHN
+ 0003:00000028       HBBW
+ 0003:00000050       HCLOSE
+ 0005:00000F90       hebchar
+ 0007:00000440       hebexch
+ 0007:000002D0       hebhiex
+ 0003:00000020       HEGS
+ 0005:00001690       helpedt
+ 0005:000022F0       helpgen
+ 0003:00000008       HINIT
+ 0003:00000038       HOPEN
+ 0003:00000030       HQDPS
+ 0003:00000010       HSCOL
+ 0003:00000018       HSMX
+ 0003:00000040       HSYNC
+ 0002:000093F8       inschar__FP8both_scriPA5_iN22PA25_A80_c
+ 0002:0000D62C       inusage__Fv
+ 0002:000164DC       invcopt__FPP8both_scrPA56_ciPPcPUiPiT6
+ 0002:0001D494       invert__FcN71Pc
+ 0001:00000087       IOPLCYA
+ 0001:00000000       IOPLIBM
+ 0001:000000A5       IOPLPG0
+ 0001:000000B4       IOPLPG1
+ 0001:00000096       IOPLPUR
+ 0000:00000000  Imp  KBD16CHARIN          (KBDCALLS.4)
+ 0002:00012258       keyslin__FP8both_scrP7buflineP8lineptrs
+ 0002:000095D0       lastsrp__FiPc
+ 0002:00010D90       lcinval__FP8both_scr6lctypeP7bufline
+ 0002:0001DAEC       leftfld__FPci
+ 0002:0001DB68       leftjust__FPc
+ 0002:00000EF4       letsgrk__FiN21Pc
+ 0002:00000F60       letsheb__FiN21Pc
+ 0002:000123A8       letslin__FP8both_scriP7buflineP8lineptrs
+ 0002:0001DB98       lindex__FPcT1
+ 0002:00012A94       linecmd__FP8both_scriPA5_iPA25_A80_cPUiT2P7buflineP8lineptrsPi
+ 0002:00012CB4       lnecmd1__FP8both_scriPA5_iPUiT2P7buflineP8lineptrsPcT8PiT10_
+ 0002:00013340       lnecmd2__FP8both_scrPUiiP7buflineP8lineptrsPcT6PiT8
+ 0002:00013A2C       lnecmd3__FP8both_scriP7buflineP8lineptrsPcT5PiT7
+ 0002:00027244       localtime
+ 0002:0000965C       loclcmd__FP7buflinePcN22
+ 0002:000298E8       longjmp
+ 0002:0001DBD8       lower__FPc
+ 0002:0000000C       main
+ 0002:0001E9D0       makeafi__Fv
+ 0002:000202E8       malloc
+ 0002:0002A7C8       mbtowc
+ 0002:000010E4       mergeon__FPcT1
+ 0002:00016B8C       misccmd__FP8both_scriPiT3PUiT3PA5_iPA25_A80_cT2UiT2PP7buflineT12_N33P8lineptrsT2PPi
+ 0002:00026F44       mktime
+ 0002:00014140       movecpy__FP8both_scrP8lineptrsi
+ 0002:00013F88       movelin__FP8both_scrP8lineptrsi
+ 0002:00014058       moveonb__FP8both_scrP8lineptrsi
+ 0005:00003210       msgtext
+ 0002:0001DBFC       numeric__FPc
+ 0002:00009760       optback__FP8both_scrUiiPA5_iPA25_A80_cPcT3PUiPP7buflineP7buflinePiN211_T2
+ 0007:00000000       outfile
+ 0002:00003C98       ov8cib2__FP8both_scrciT3
+ 0002:00003F3C       ov8cibm__FP8both_scrciT3
+ 0002:00006708       ov8cxga__FP8both_scrciT3
+ 0002:000041D8       overchr__FP8both_scrciT3PA14_cT3
+ 0002:000043D0       ovr8chr__FP8both_scrciT3
+ 0002:000045F0       ovrcib2__FP8both_scrciT3PA14_cT3
+ 0002:00004860       ovrcibm__FP8both_scrciT3PA14_c
+ 0002:00006B88       ovrcxga__FP8both_scrciT3PA14_cT3
+ 0007:00000048       p
+ 0002:000185E0       pan2cmd__FP8both_scrPiT2PUiT2PPiPA25_A80_cPciT4T2P7buflineN32P8lineptrsT9
+ 0002:00018BD8       panlcmd__FP8both_scrPiT2PUiT2PPiPA25_A80_cPciT4T2PP7buflineT12_N32P8lineptrsT9
+ 0002:00017538       pascchr__FP8both_scriUiN22PA5_iPiT7PA25_A80_cT3
+ 0002:0000D7BC       pgrkchr__FP8both_scriUiN22PA5_iPiT7PA25_A80_cT3
+ 0002:0000E35C       phebchr__FP8both_scriUiN22PA5_iPiT7PA25_A80_cT3
+ 0002:0001DC38       pindex__FUiPPA_iPcT3
+ 0002:0000F328       platchr__FP8both_scriUiN22PA5_iPiT7PA25_A80_cT3
+ 0007:00000040       posxga
+ 0002:00018FEC       primary__FP8both_scrPiN22PPiPA25_A80_c
+ 0002:0000B908       primcmd__FP8both_scrPUiP7bufline
+ 0002:00014280       procedt__FP8both_scrUiiPA5_iT3PP7buflinePiN27PA25_A80_cPUiT3P8lineptrsPc
+ 0002:00014414       procinp__FP8both_scriT2UiN22T4T2PA5_iT2PP7buflinePiN212_PA25_A80_cPcN412_PUiP8lineptrsN216_
+ 0002:000146BC       procscn__FP8both_scriT2UiT2T4T2PA5_iT2PP7buflinePiN211_PA25_A80_cPcN411_PUiP8lineptrsN315_
+ 0002:000177FC       promchr__FP8both_scriUiN22PA5_iPiT7PA25_A80_cT3
+ 0002:00010E20       protlin__FP8both_scrP7buflinei
+ 0007:000081AC       prtmode
+ 0002:0000115C       pshstck__FPUiUi
+ 0002:0001D438       ptrinit__Fv
+ 0002:000098F0       rdspasc__FP8both_scriT2PA25_A80_c
+ 0002:00009954       rdspgrk__FP8both_scriT2PA25_A80_c
+ 0002:00010300       rdspheb__FP8both_scriT2PA25_A80_c
+ 0002:00009B6C       rdsplat__FP8both_scriT2PA25_A80_c
+ 0002:0000A05C       rdsplin__FP8both_scriN22PA25_A80_c
+ 0002:0000A14C       rdsprom__FP8both_scriT2PA25_A80_c
+ 0002:00019478       readbuf__FP8both_scrP6__filei
+ 0002:000011BC       renbufr__FP7bufline
+ 0002:000195BC       revchar__FP8both_scriT2
+ 0002:00004A54       revcib2__FP8both_scriT2
+ 0002:00004B84       revcibm__FP8both_scriT2
+ 0002:0000687C       revcxga__FP8both_scriT2
+ 0002:00004CC0       revline__FP8both_scri
+ 0002:00006944       revlxga__FP8both_scri
+ 0002:00001290       rhebrew__FPcN31
+ 0002:0001DDC8       rightjst__FPci
+ 0007:00008190       romptr
+ 0002:00014CF0       rrepblk__FP8both_scrP8lineptrsi
+ 0007:00007F00       rsptr
+ 0002:00011544       savevio
+ 0002:00014E18       scrlcmd__FP8both_scrUiiPA5_iPA25_A80_cN23PUiPiP7buflineT10_N39P8lineptrs
+ 0002:000197A4       scrpesc__FP6__files
+ 0002:00019874       scrprnt__FP8both_scr
+ 0002:00019FF8       scrpxga__FP8both_scrP6__file
+ 0002:00010E90       scrtbuf__FP8both_scriPA5_iPA25_A80_cP7buflineT2PiN27
+ 0007:00008188       sem_pr
+ 0002:0002A028       setjmp
+ 0002:000150EC       shiftlf__FP8both_scrP8lineptrsi
+ 0002:000151DC       shiftrt__FP8both_scrP8lineptrsi
+ 0004:00000000       sig32
+ 0002:0001537C       srchcmd__FP8both_scrPiT2UiiPA5_iPA25_A80_cT5T4T2P7buflinePP7buflineN32P8lineptrsPcT17_
+ 0002:0000BA78       srpbufr__FP8both_scriP7bufline
+ 0002:0000A1A8       statlin__FP8both_scriUiT2PA25_A80_c
+ 0002:00006CF0       stckcmd__FPUi
+ 0007:00004AA8       stderr
+ 0007:00004AA0       stdin
+ 0007:00004AA4       stdout
+ 0002:00021B64       strcspn
+ 0002:00021BA0       strdup
+ 0002:00023110       strnicmp
+ 0002:00021C08       strspn
+ 0002:00022BE0       strtod
+ 0002:00021C44       strtol
+ 0002:0002328C       strtold
+ 0002:00021D6C       strtoul
+ 0002:0001A4C4       textreg__Fv
+ 0002:000271BC       time
+ 0002:000162CC       topline__FP8both_scriPA5_iPA25_A80_cP7buflineN32
+ 0002:0000139C       tranheb__FPciP7bufline
+ 0002:00011230       transcr__FP8both_scrPciT3T2P7bufline
+ 0002:0000A35C       txtonly__FiPcT2Pi
+ 0002:0001DE60       upper__FPc
+ 0000:00000000  Imp  VIO16GETBUF          (VIOCALLS.31)
+ 0000:00000000  Imp  VIO16GETFONT         (VIOCALLS.29)
+ 0000:00000000  Imp  VIO16GETPHYSBUF      (VIOCALLS.2)
+ 0000:00000000  Imp  VIO16SAVREDRAWWAIT   (VIOCALLS.25)
+ 0000:00000000  Imp  VIO16SCRLOCK         (VIOCALLS.23)
+ 0000:00000000  Imp  VIO16SCROLLUP        (VIOCALLS.7)
+ 0000:00000000  Imp  VIO16SCRUNLOCK       (VIOCALLS.18)
+ 0000:00000000  Imp  VIO16SETCURPOS       (VIOCALLS.15)
+ 0000:00000000  Imp  VIO16SETMODE         (VIOCALLS.22)
+ 0000:00000000  Imp  VIO16SHOWBUF         (VIOCALLS.43)
+ 0002:0000BBBC       vrepcnt__FP8both_scrPc
+ 0002:0002A904       wcstombs
+ 0002:00024BB0       wctomb
+ 0002:0001F768       whenow__FPcT1
+ 0002:000014D0       wrtebuf__FPcP7bufline
+ 0002:00011738       xga8514__FP8both_scriT2
+ 0002:00017204       zdriver__FP8both_scriT2UiN22PiT7PUiT7PPiPA25_A80_cPcN27PP7buflineT16_N37P8lineptrsT9T2
+ 0005:00003FD0       zedascb
+ 0005:000042C0       zedasct
+ 0005:000045B0       zedgrkb
+ 0005:000048A0       zedgrkt
+ 0005:00004B90       zedhebb
+ 0005:00004E80       zedhebt
+ 0002:0001A548       zedinit__FiPPcPP8both_scrPA4_A25_A80_cPA56_cPiP8lineptrsPUiT6
+ 0005:00005170       zedlatb
+ 0005:00005460       zedlatt
+ 0005:00005750       zedlchr
+ 0002:00005018       zedlogo__FP8both_scr
+ 0002:0001A7D8       zedpbse__FPciT2
+ 0002:0001A864       zedpbuf__FP8both_scriP7buflineT2
+ 0002:0001B41C       zedpfnt__FicP6__filePA8_c
+ 0002:0001B718       zedpimg__FP8both_scriP7buflineT2
+ 0002:0001BF20       zedplsp__FP6__file
+ 0002:0001C048       zedplup__FiP6__file
+ 0002:0001C14C       zedppre__FiP6__fileN31cPc
+ 0002:000164BC       zedpprm
+ 0002:0001C294       zedpprt__FP6__fileiT2PcN22PiT7
+ 0002:0001CAE4       zedppsf__FP6__file
+ 0002:0001CDD0       zedppsp__FiP6__fileN31c
+ 0002:0001D180       zedpram__FP6__file
+ 0002:0001D21C       zedprom__FP6__file
+ 0002:0001D2AC       zedpx24__FP6__file
+ 0002:00011944       zepilog__FP8both_scr7fintype
+ 0002:0001141C       zfinish__FP8both_scr7fintype
+ 0007:00004A94       _argc
+ 0007:00004A98       _argv
+ 0002:00022A08       _asciitld
+ 0002:00022AEC       _asciitod
+ 0007:00007CFC       _Async_exception_flag
+ 0002:00022C10       _atofieee
+ 0002:0002376C       _atold
+ 0002:0002A7B4       _bit_test_set
+ 0007:00008198       _broken_time_ptr
+ 0002:00024C84       _bufprint
+ 0003:00000000       _callafi
+ 0002:00021620       _callback_opt_sys
+ 0002:0002A44C       _CheckIfMem
+ 0002:000272FC       _CloseStream
+ 0002:00026CF0       _cnvrt
+ 0002:00027420       _control87
+ 0002:00027CC8       _convert
+ 0002:00021424       _critlib_except
+ 0002:0001FA10       _CRT_init
+ 0007:00005310       _crt_msg_handle
+ 0002:000200FC       _CRT_term
+ 0007:000050B0       _ctable
+ 0007:0000818C       _ctype
+ 0007:000051B4       _ctypeModule
+ 0007:00007DA8       _cvt_buf_ptr
+ 0007:00004AB0       _daylight
+ 0007:00007150       _DBL_MAX
+ 0007:00007148       _DBL_MIN
+ 0007:00007188       _dneginfi
+ 0007:00007178       _dnegqnan
+ 0007:00007180       _dnegsnan
+ 0007:000081C4       _doserrno
+ 0002:0002A5F4       _DosFlatToSel
+ 0002:0002A5EC       _DosSelToFlat
+ 0007:00007170       _dposinfi
+ 0007:00007160       _dposqnan
+ 0007:00007168       _dpossnan
+ 0007:000081C8       _dttm_ptr
+ 0007:00007CFC       _edata
+ 0002:000218E8       _edcGetMessage
+ 0007:00007D88       _edcinit_fin
+ 0007:000081F0       _end
+ 0007:000081BC       _environ
+ 0002:000215FC       _Exception
+ 0002:000212E0       _exception_dllinit
+ 0002:00021310       _exception_procinit
+ 0007:00004A90       _exeentry
+ 0002:00020BC8       _EXE_Exception
+ 0002:00027EE0       _fcloseall
+ 0002:000215DC       _fcloseall_weak
+ 0002:0002866C       _fillb
+ 0007:000078F0       _firsteib
+ 0007:00008184       _flags
+ 0002:00021F70       _floatfmt
+ 0007:000051C0       _fltused
+ 0002:000288B4       _Flush
+ 0002:00028A40       _flushb
+ 0002:00027528       _Fmprs
+ 0007:000071A4       _fneginfi
+ 0007:0000719C       _fnegqnan
+ 0007:000071A0       _fnegsnan
+ 0007:000052D0       _fopenused
+ 0007:00007198       _fposinfi
+ 0007:00007190       _fposqnan
+ 0007:00007194       _fpossnan
+ 0002:00024A60       _fprintfieee
+ 0002:00024AA0       _fprintf_ansi
+ 0002:00021E64       _freeCtype
+ 0002:000215F8       _freeCtype_weak
+ 0002:0002177C       _FreeFCB
+ 0002:00021674       _freeLocale
+ 0002:000215F0       _freeLocale_weak
+ 0002:000269D0       _fscanfieee
+ 0002:00026A10       _fscanf_ansi
+ 0002:0002A5FC       _fullpath
+ 0002:000295E8       _getcx
+ 0002:00021344       _get_eib
+ 0002:00021638       _get_seglim
+ 0007:00007D44       _have_freed
+ 0002:00020A74       _heapmin
+ 0002:000207AC       _heapmin_int
+ 0007:00007158       _HUGE_VAL
+ 0002:0002988C       _ilog2
+ 0007:00007140       _infinity
+ 0002:00027AD0       _InitBuf
+ 0002:00027B48       _InitFCB
+ 0002:00021E80       _init_ctype
+ 0002:000215F4       _init_ctype_weak
+ 0002:000213BC       _input_excpt
+ 0007:000081A0       _internal_buf_ptr
+ 0002:00029894       _internal_err
+ 0002:00021844       _itoa
+ 0007:00007CF8       _lasteib
+ 0007:00007DAC       _lcvt_buf_ptr
+ 0007:000071B2       _LDBL_MAX
+ 0007:000071A8       _LDBL_MIN
+ 0007:000071F8       _ldneginfi
+ 0007:000071E4       _ldnegqnan
+ 0007:000071EE       _ldnegsnan
+ 0007:000071DA       _ldposinfi
+ 0007:000071C6       _ldposqnan
+ 0007:000071D0       _ldpossnan
+ 0007:000071BC       _LHUGE_VAL
+ 0002:00020D68       _Lib_excpt
+ 0007:000081DC       _locale_initialized
+ 0002:0002168C       _localInit
+ 0002:0002994C       _ltoa
+ 0002:00023790       _lucvt
+ 0002:0002ACFC       _matherr
+ 0007:00004D60       _matherr_ptr
+ 0002:0002ACE8       _Math_Exception_Def
+ 0002:00021960       _MesgServ
+ 0002:000213A0       _mig_eib_store
+ 0002:000299F0       _noddprs
+ 0002:00029E30       _OpenStream
+ 0007:000081C0       _osmajor
+ 0007:000081C1       _osminor
+ 0007:00004AB8       _osmode
+ 0007:00007D48       _pBucketArr
+ 0007:00008194       _perror_msg_ptr
+ 0007:00004AAC       _PGLOBAL_PTR
+ 0007:000081B0       _pgmptr
+ 0007:00004F70       _pg_c_locale
+ 0007:00004F74       _pg_default_locale
+ 0007:00004E10       _pg_locale_info
+ 0007:00007208       _pospow1
+ 0007:00007488       _pospow2
+ 0002:0002190C       _PrintErrMsg
+ 0002:00024AD0       _printfieee
+ 0002:00024B14       _printf_ansi
+ 0002:0002A064       _puts
+ 0007:00004AC0       _random_seed
+ 0002:0002A0D0       _readbSync
+ 0002:00020C0C       _recreate_exception
+ 0002:0002162C       _Regen_exception
+ 0007:00007D00       _Saved_Return_Address
+ 0002:0001FCF0       _setuparg
+ 0002:0001FEE8       _setupenv
+ 0002:0002A418       _set_crt_msg_handle
+ 0002:000201F0       _split_chunk
+ 0002:00024B48       _sprintfieee
+ 0002:00024B84       _sprintf_ansi
+ 0007:000081A8       _strerror_msg_ptr
+ 0002:00022BB0       _strtodieee
+ 0007:00007D9C       _strtok_pos
+ 0007:00007DA4       _tempname_ptr
+ 0002:00020BA8       _terminate
+ 0007:000081E0       _TerminateAndDumpSem
+ 0002:00021614       _Test_and_reset
+ 0002:0001F9C0       _test_handle
+ 0007:00004AB4       _timezone
+ 0002:0002AA68       _toint
+ 0007:000081B4       _tzname
+ 0002:0002A33C       _ungetc
+ 0002:0002A3D4       _uwrite
+ 0007:00004ABC       _version
+ 0002:00024A4C       _wcputs
+ 0002:000206B0       _Weak_FreeListEntry
+ 0002:00027464       _wfgetposMem
+ 0002:00024A08       _wfloatfmt
+ 0002:00027454       _wfsetposMem
+ 0002:00024A38       _wgetche
+ 0002:0002748C       _wOpenMemory
+ 0002:00027450       _wreadbSyncMem
+ 0002:00027488       _wRemoveMem
+ 0002:00027474       _wrewindMem
+ 0002:0002745C       _wSeekMem
+ 0002:00027478       _wtellMem
+ 0002:00024A30       _wungetch
+ 0002:0002744C       _wuwriteMem
+ 0002:0002A020       _w_raise
+ 0002:00021560       _w_Terminate_and_dump
+ 0002:0002AC40       _XDosRead
+ 0007:00004AC8       __char_set_type
+ 0007:00004D10       __ctdtused
+ 0007:0000819C       __ctordtorCurrent
+ 0007:00005340       __ctordtorEnd
+ 0002:00020000       __ctordtorInit
+ 0007:00005330       __ctordtorStart
+ 0002:0001FFC8       __ctordtorTerm
+ 0007:00008178       __c_local_ctype
+ 0007:00004AC4       __decimal_point
+ 0002:00024064       __dofmto
+ 0002:0002A4A0       __EDC3216
+ 0002:0002A538       __EDCThunkProlog
+ 0002:00020ED4       __Exception
+ 0006:00000000       __fac
+ 0002:000267FC       __goscan
+ 0007:00005214       __leapm
+ 0007:00005284       __mleapm
+ 0007:00005250       __mmonth
+ 0007:000051E0       __month
+ 0002:0001F900       __RunExitList
+ 0002:000200EC       __sctordtorInit
+ 0002:000200F4       __sctordtorTerm
+ 0002:000200E4       __wctordtorInit
+ 0002:000200E8       __wctordtorTerm
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  DosUnsetExceptionHandler (DOSCALLS.355)
+ 0000:00000000  Imp  VIO16SHOWBUF         (VIOCALLS.43)
+ 0000:00000000  Imp  VIO16SETCURPOS       (VIOCALLS.15)
+ 0000:00000000  Imp  DosGetDateTime       (DOSCALLS.230)
+ 0000:00000000  Imp  DosForceDelete       (DOSCALLS.110)
+ 0000:00000000  Imp  DOS32FLATTOSEL       (DOSCALLS.425)
+ 0000:00000000  Imp  DOS32IQUERYMESSAGECP (MSG.8)
+ 0000:00000000  Imp  DosSetRelMaxFH       (DOSCALLS.382)
+ 0000:00000000  Imp  DosSetFileSize       (DOSCALLS.272)
+ 0000:00000000  Imp  DosExit              (DOSCALLS.234)
+ 0000:00000000  Imp  DOS32SELTOFLAT       (DOSCALLS.426)
+ 0000:00000000  Imp  VIO16SCRUNLOCK       (VIOCALLS.18)
+ 0000:00000000  Imp  DosQueryHType        (DOSCALLS.224)
+ 0000:00000000  Imp  DosCreateThread      (DOSCALLS.311)
+ 0000:00000000  Imp  DOS16GETPROCADDR     (DOSCALLS.45)
+ 0000:00000000  Imp  DosSetFilePtr        (DOSCALLS.256)
+ 0000:00000000  Imp  VIO16GETPHYSBUF      (VIOCALLS.2)
+ 0000:00000000  Imp  DosSetSignalExceptionFocus (DOSCALLS.378)
+ 0000:00000000  Imp  DOS16SEMREQUEST      (DOSCALLS.140)
+ 0000:00000000  Imp  DosGetInfoBlocks     (DOSCALLS.312)
+ 0000:00000000  Imp  DosFreeMem           (DOSCALLS.304)
+ 0000:00000000  Imp  DosQueryDBCSEnv      (NLS.6)
+ 0000:00000000  Imp  DosLoadModule        (DOSCALLS.318)
+ 0000:00000000  Imp  DosQueryPathInfo     (DOSCALLS.223)
+ 0000:00000000  Imp  KBD16CHARIN          (KBDCALLS.4)
+ 0000:00000000  Imp  DosQuerySysInfo      (DOSCALLS.348)
+ 0000:00000000  Imp  DosRaiseException    (DOSCALLS.356)
+ 0000:00000000  Imp  DOS32TRUEGETMESSAGE  (MSG.6)
+ 0000:00000000  Imp  VIO16GETFONT         (VIOCALLS.29)
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  DOS16SEMWAIT         (DOSCALLS.142)
+ 0000:00000000  Imp  VIO16GETBUF          (VIOCALLS.31)
+ 0000:00000000  Imp  DosCreateMutexSem    (DOSCALLS.331)
+ 0000:00000000  Imp  VIO16SCROLLUP        (VIOCALLS.7)
+ 0000:00000000  Imp  DOS16ALLOCSEG        (DOSCALLS.34)
+ 0000:00000000  Imp  VIO16SAVREDRAWWAIT   (VIOCALLS.25)
+ 0000:00000000  Imp  DOSFLATTOSEL         (DOSCALLS.425)
+ 0000:00000000  Imp  DosRead              (DOSCALLS.281)
+ 0000:00000000  Imp  DosWrite             (DOSCALLS.282)
+ 0000:00000000  Imp  VIO16SETMODE         (VIOCALLS.22)
+ 0000:00000000  Imp  DosSleep             (DOSCALLS.229)
+ 0000:00000000  Imp  DOS16SEMCLEAR        (DOSCALLS.141)
+ 0000:00000000  Imp  DosBeep              (DOSCALLS.286)
+ 0000:00000000  Imp  DosUnwindException   (DOSCALLS.357)
+ 0000:00000000  Imp  VIO16SCRLOCK         (VIOCALLS.23)
+ 0000:00000000  Imp  DosOpen              (DOSCALLS.273)
+ 0000:00000000  Imp  DosSetExceptionHandler (DOSCALLS.354)
+ 0000:00000000  Imp  DosClose             (DOSCALLS.257)
+ 0000:00000000  Imp  DosAllocMem          (DOSCALLS.299)
+ 0001:00000000       IOPLIBM
+ 0001:00000087       IOPLCYA
+ 0001:00000096       IOPLPUR
+ 0001:000000A5       IOPLPG0
+ 0001:000000B4       IOPLPG1
+ 0002:0000000C       main
+ 0002:00000740       cfginit__Fv
+ 0002:00000928       clrpanl__FP8both_scr
+ 0002:00000968       cmdprse__FPcT1
+ 0002:00000A08       cmpline__FP7buflineT1
+ 0002:00000A5C       delnexc__FP8both_scriP7buflinePP7bufline
+ 0002:00000ADC       delprot__FP7buflinePP7bufline
+ 0002:00000B34       delxblk__FP8both_scriP7buflinePP7bufline
+ 0002:00000BC0       excmerg__FP7bufline
+ 0002:00000C04       excrdsp__FP8both_scrP7bufline
+ 0002:00000D4C       excremv__FP7buflinePi
+ 0002:00000D94       freebuf__FP7bufline
+ 0002:00000E74       funckey__FiUi
+ 0002:00000EF4       letsgrk__FiN21Pc
+ 0002:00000F60       letsheb__FiN21Pc
+ 0002:000010E4       mergeon__FPcT1
+ 0002:0000115C       pshstck__FPUiUi
+ 0002:000011BC       renbufr__FP7bufline
+ 0002:00001290       rhebrew__FPcN31
+ 0002:0000139C       tranheb__FPciP7bufline
+ 0002:000014D0       wrtebuf__FPcP7bufline
+ 0002:00001530       displin__FP8both_scrPciPA14_c
+ 0002:000017D0       ds8cib2__FP8both_scrciT3
+ 0002:00001C54       ds8cibm__FP8both_scrciT3
+ 0002:000020E0       ds8lib2__FP8both_scrPci
+ 0002:0000249C       ds8libm__FP8both_scrPci
+ 0002:00002860       dsp8chr__FP8both_scrciT3
+ 0002:00002AC4       dsp8lin__FP8both_scrPci
+ 0002:00002DAC       dspcib2__FP8both_scrciT3PA14_c
+ 0002:00003200       dspcibm__FP8both_scrciT3PA14_c
+ 0002:00003504       dsplib2__FP8both_scrPciPA14_c
+ 0002:000038F0       dsplibm__FP8both_scrPciPA14_c
+ 0002:00003C98       ov8cib2__FP8both_scrciT3
+ 0002:00003F3C       ov8cibm__FP8both_scrciT3
+ 0002:000041D8       overchr__FP8both_scrciT3PA14_cT3
+ 0002:000043D0       ovr8chr__FP8both_scrciT3
+ 0002:000045F0       ovrcib2__FP8both_scrciT3PA14_cT3
+ 0002:00004860       ovrcibm__FP8both_scrciT3PA14_c
+ 0002:00004A54       revcib2__FP8both_scriT2
+ 0002:00004B84       revcibm__FP8both_scriT2
+ 0002:00004CC0       revline__FP8both_scri
+ 0002:00005018       zedlogo__FP8both_scr
+ 0002:00005C88       dispchr__FP8both_scrciT3PA14_c
+ 0002:00005E8C       clrlxga__FP8both_scri
+ 0002:00005EEC       ds8cxga__FP8both_scrciT3
+ 0002:000060E8       ds8lxga__FP8both_scrPci
+ 0002:00006324       dspcxga__FP8both_scrciT3PA14_c
+ 0002:000064D4       dsplxga__FP8both_scrPciPA14_c
+ 0002:00006708       ov8cxga__FP8both_scrciT3
+ 0002:0000687C       revcxga__FP8both_scriT2
+ 0002:00006944       revlxga__FP8both_scri
+ 0002:000069B4       clrline__FP8both_scri
+ 0002:00006B88       ovrcxga__FP8both_scrciT3PA14_cT3
+ 0002:00006CF0       stckcmd__FPUi
+ 0002:00006DDC       browpan__FP8both_scrPiN22PPiPA25_A80_cPci
+ 0002:00006E8C       cfgfpan__FP8both_scrPiN22PPiPA25_A80_c
+ 0002:00007320       cfgkpan__FP8both_scrPiN22PPiPA25_A80_c
+ 0002:00007C2C       cmddone__FP8both_scriUiT2PA5_iPiT6PA25_A80_cPUiPcN26N310_
+ 0002:00007FB4       cmdrest__FP8both_scriPA5_iPiT4PA25_A80_c
+ 0002:0000808C       convinp__FP8both_scrUiT2iT4PiT6T4PA5_iPA25_A80_cT2
+ 0002:000081FC       delchar__FiT1PA5_iN21PA25_A80_c
+ 0002:0000830C       edbrpan__FP8both_scrPA25_A80_cPci
+ 0002:00008470       editpan__FP8both_scrPiN22PPiPA25_A80_cPci
+ 0002:00008538       eraseof__FP8both_scriPA5_iPA25_A80_cN22
+ 0002:000086E8       excxblk__FP7bufline
+ 0002:000087FC       findprm__FP8both_scrPiT2iPA5_iT4UiT2P7buflinePP7buflineT2PcN212_T2
+ 0002:00009238       getstrt__FiPcPA5_iT2PiN35
+ 0002:000093F8       inschar__FP8both_scriPA5_iN22PA25_A80_c
+ 0002:000095D0       lastsrp__FiPc
+ 0002:0000965C       loclcmd__FP7buflinePcN22
+ 0002:00009760       optback__FP8both_scrUiiPA5_iPA25_A80_cPcT3PUiPP7buflineP7buflinePiN211_T2
+ 0002:000098F0       rdspasc__FP8both_scriT2PA25_A80_c
+ 0002:00009954       rdspgrk__FP8both_scriT2PA25_A80_c
+ 0002:00009B6C       rdsplat__FP8both_scriT2PA25_A80_c
+ 0002:0000A05C       rdsplin__FP8both_scriN22PA25_A80_c
+ 0002:0000A14C       rdsprom__FP8both_scriT2PA25_A80_c
+ 0002:0000A1A8       statlin__FP8both_scriUiT2PA25_A80_c
+ 0002:0000A35C       txtonly__FiPcT2Pi
+ 0002:0000A58C       cfgkget__FP8both_scrPA5_iPA25_A80_c
+ 0002:0000A890       cfgfget__FP8both_scrPA5_iPA25_A80_c
+ 0002:0000AB44       chngprm__FP8both_scriPcT3PiT2P7buflineT5
+ 0002:0000AD24       cmdline__FP8both_scrPUiPc
+ 0002:0000B878       dispmsg__FP8both_scri
+ 0002:0000B908       primcmd__FP8both_scrPUiP7bufline
+ 0002:0000BA78       srpbufr__FP8both_scriP7bufline
+ 0002:0000BBBC       vrepcnt__FP8both_scrPc
+ 0002:0000BC08       convout__FiPcN22T1T2T1T2
+ 0002:0000C7BC       dsentry__FP8both_scrPiN22PPiPA25_A80_cPc
+ 0002:0000CAB8       buftsln__FP8both_scriPA5_iP7buflineN22PA25_A80_cPiN48
+ 0002:0000CE44       entpanl__FP8both_scriT2UiN22PiT7N22PA5_iPA25_A80_c
+ 0002:0000D62C       inusage__Fv
+ 0002:0000D7BC       pgrkchr__FP8both_scriUiN22PA5_iPiT7PA25_A80_cT3
+ 0002:0000E35C       phebchr__FP8both_scriUiN22PA5_iPiT7PA25_A80_cT3
+ 0002:0000F328       platchr__FP8both_scriUiN22PA5_iPiT7PA25_A80_cT3
+ 0002:00010300       rdspheb__FP8both_scriT2PA25_A80_c
+ 0002:00010D90       lcinval__FP8both_scr6lctypeP7bufline
+ 0002:00010E20       protlin__FP8both_scrP7buflinei
+ 0002:00010E90       scrtbuf__FP8both_scriPA5_iPA25_A80_cP7buflineT2PiN27
+ 0002:00011230       transcr__FP8both_scrPciT3T2P7bufline
+ 0002:0001141C       zfinish__FP8both_scr7fintype
+ 0002:00011544       savevio
+ 0002:00011738       xga8514__FP8both_scriT2
+ 0002:00011944       zepilog__FP8both_scr7fintype
+ 0002:000119A4       ckplace__FP8both_scr6cktypeP8lineptrs
+ 0002:00011C28       colslin__FP8both_scriP7buflineP8lineptrs
+ 0002:00011D1C       copylin__FP8both_scrP8lineptrsi
+ 0002:00011E5C       copyonb__FP8lineptrs
+ 0002:00011EE0       ddelblk__FP8both_scrP8lineptrsi
+ 0002:00011F70       exclude__FP8both_scrP8lineptrs
+ 0002:00012104       excshow__FP8both_scrP8lineptrsi
+ 0002:00012258       keyslin__FP8both_scrP7buflineP8lineptrs
+ 0002:000123A8       letslin__FP8both_scriP7buflineP8lineptrs
+ 0002:00012A94       linecmd__FP8both_scriPA5_iPA25_A80_cPUiT2P7buflineP8lineptrsPi
+ 0002:00012CB4       lnecmd1__FP8both_scriPA5_iPUiT2P7buflineP8lineptrsPcT8PiT10_
+ 0002:00013340       lnecmd2__FP8both_scrPUiiP7buflineP8lineptrsPcT6PiT8
+ 0002:00013A2C       lnecmd3__FP8both_scriP7buflineP8lineptrsPcT5PiT7
+ 0002:00013F88       movelin__FP8both_scrP8lineptrsi
+ 0002:00014058       moveonb__FP8both_scrP8lineptrsi
+ 0002:00014140       movecpy__FP8both_scrP8lineptrsi
+ 0002:00014280       procedt__FP8both_scrUiiPA5_iT3PP7buflinePiN27PA25_A80_cPUiT3P8lineptrsPc
+ 0002:00014414       procinp__FP8both_scriT2UiN22T4T2PA5_iT2PP7buflinePiN212_PA25_A80_cPcN412_PUiP8lineptrsN216_
+ 0002:000146BC       procscn__FP8both_scriT2UiT2T4T2PA5_iT2PP7buflinePiN211_PA25_A80_cPcN411_PUiP8lineptrsN315_
+ 0002:00014CF0       rrepblk__FP8both_scrP8lineptrsi
+ 0002:00014E18       scrlcmd__FP8both_scrUiiPA5_iPA25_A80_cN23PUiPiP7buflineT10_N39P8lineptrs
+ 0002:000150EC       shiftlf__FP8both_scrP8lineptrsi
+ 0002:000151DC       shiftrt__FP8both_scrP8lineptrsi
+ 0002:0001537C       srchcmd__FP8both_scrPiT2UiiPA5_iPA25_A80_cT5T4T2P7buflinePP7buflineN32P8lineptrsPcT17_
+ 0002:00015524       backcmd__FP8both_scrPUiiPA5_iPA25_A80_cPcT3T2T3PP7buflineP7buflinePiN212_P8lineptrsT6
+ 0002:00015974       buftscr__FP8both_scriPA5_iPA25_A80_cP7buflineN22PiT8P8lineptrsT2
+ 0002:00016230       dispnum__FP8both_scriPA5_icN22PcT2PA25_A80_c
+ 0002:000162CC       topline__FP8both_scriPA5_iPA25_A80_cP7buflineN32
+ 0002:000164BC       zedpprm
+ 0002:000164DC       invcopt__FPP8both_scrPA56_ciPPcPUiPiT6
+ 0002:00016B8C       misccmd__FP8both_scriPiT3PUiT3PA5_iPA25_A80_cT2UiT2PP7buflineT12_N33P8lineptrsT2PPi
+ 0002:00017204       zdriver__FP8both_scriT2UiN22PiT7PUiT7PPiPA25_A80_cPcN27PP7buflineT16_N37P8lineptrsT9T2
+ 0002:00017538       pascchr__FP8both_scriUiN22PA5_iPiT7PA25_A80_cT3
+ 0002:000177FC       promchr__FP8both_scriUiN22PA5_iPiT7PA25_A80_cT3
+ 0002:00017AB4       cmdparm__FUiiN22PcT2PA5_iN35
+ 0002:00017E80       fillscr__FP8both_scr
+ 0002:00017F50       getfile__FP8both_scrP7buflineP6__filei
+ 0002:00018164       grphreg__Fv
+ 0002:000185E0       pan2cmd__FP8both_scrPiT2PUiT2PPiPA25_A80_cPciT4T2P7buflineN32P8lineptrsT9
+ 0002:00018BD8       panlcmd__FP8both_scrPiT2PUiT2PPiPA25_A80_cPciT4T2PP7buflineT12_N32P8lineptrsT9
+ 0002:00018FEC       primary__FP8both_scrPiN22PPiPA25_A80_c
+ 0002:00019478       readbuf__FP8both_scrP6__filei
+ 0002:000195BC       revchar__FP8both_scriT2
+ 0002:000197A4       scrpesc__FP6__files
+ 0002:00019874       scrprnt__FP8both_scr
+ 0002:00019FF8       scrpxga__FP8both_scrP6__file
+ 0002:0001A4C4       textreg__Fv
+ 0002:0001A548       zedinit__FiPPcPP8both_scrPA4_A25_A80_cPA56_cPiP8lineptrsPUiT6
+ 0002:0001A7D8       zedpbse__FPciT2
+ 0002:0001A864       zedpbuf__FP8both_scriP7buflineT2
+ 0002:0001B41C       zedpfnt__FicP6__filePA8_c
+ 0002:0001B718       zedpimg__FP8both_scriP7buflineT2
+ 0002:0001BF20       zedplsp__FP6__file
+ 0002:0001C048       zedplup__FiP6__file
+ 0002:0001C14C       zedppre__FiP6__fileN31cPc
+ 0002:0001C294       zedpprt__FP6__fileiT2PcN22PiT7
+ 0002:0001CAE4       zedppsf__FP6__file
+ 0002:0001CDD0       zedppsp__FiP6__fileN31c
+ 0002:0001D180       zedpram__FP6__file
+ 0002:0001D21C       zedprom__FP6__file
+ 0002:0001D2AC       zedpx24__FP6__file
+ 0002:0001D438       ptrinit__Fv
+ 0002:0001D494       invert__FcN71Pc
+ 0002:0001DAEC       leftfld__FPci
+ 0002:0001DB68       leftjust__FPc
+ 0002:0001DB98       lindex__FPcT1
+ 0002:0001DBD8       lower__FPc
+ 0002:0001DBFC       numeric__FPc
+ 0002:0001DC38       pindex__FUiPPA_iPcT3
+ 0002:0001DDC8       rightjst__FPci
+ 0002:0001DE60       upper__FPc
+ 0002:0001DE8C       getinpt__FPiT1PUiUi
+ 0002:0001DF18       bytemap__FcPc
+ 0002:0001DF8C       entfield__F7csrfunciT2PA5_iPiT5
+ 0002:0001E9D0       makeafi__Fv
+ 0002:0001F4B8       formdsn__FPcN81
+ 0002:0001F768       whenow__FPcT1
+ 0002:0001F900       __RunExitList
+ 0002:0001F9C0       _test_handle
+ 0002:0001FA10       _CRT_init
+ 0002:0001FCF0       _setuparg
+ 0002:0001FEE8       _setupenv
+ 0002:0001FFC8       __ctordtorTerm
+ 0002:00020000       __ctordtorInit
+ 0002:000200E4       __wctordtorInit
+ 0002:000200E8       __wctordtorTerm
+ 0002:000200EC       __sctordtorInit
+ 0002:000200F4       __sctordtorTerm
+ 0002:000200FC       _CRT_term
+ 0002:000201F0       _split_chunk
+ 0002:000202E8       malloc
+ 0002:000205C0       free
+ 0002:000206B0       _Weak_FreeListEntry
+ 0002:000207AC       _heapmin_int
+ 0002:00020A74       _heapmin
+ 0002:00020ABC       calloc
+ 0002:00020B30       exit
+ 0002:00020BA8       _terminate
+ 0002:00020BC8       _EXE_Exception
+ 0002:00020C0C       _recreate_exception
+ 0002:00020D68       _Lib_excpt
+ 0002:00020ED4       __Exception
+ 0002:000212E0       _exception_dllinit
+ 0002:00021310       _exception_procinit
+ 0002:00021344       _get_eib
+ 0002:000213A0       _mig_eib_store
+ 0002:000213BC       _input_excpt
+ 0002:00021424       _critlib_except
+ 0002:00021560       _w_Terminate_and_dump
+ 0002:000215DC       _fcloseall_weak
+ 0002:000215F0       _freeLocale_weak
+ 0002:000215F4       _init_ctype_weak
+ 0002:000215F8       _freeCtype_weak
+ 0002:000215FC       _Exception
+ 0002:00021614       _Test_and_reset
+ 0002:00021620       _callback_opt_sys
+ 0002:0002162C       _Regen_exception
+ 0002:00021638       _get_seglim
+ 0002:00021674       _freeLocale
+ 0002:0002168C       _localInit
+ 0002:0002177C       _FreeFCB
+ 0002:00021844       _itoa
+ 0002:000218E8       _edcGetMessage
+ 0002:0002190C       _PrintErrMsg
+ 0002:00021960       _MesgServ
+ 0002:00021B64       strcspn
+ 0002:00021BA0       strdup
+ 0002:00021C08       strspn
+ 0002:00021C44       strtol
+ 0002:00021D6C       strtoul
+ 0002:00021E64       _freeCtype
+ 0002:00021E80       _init_ctype
+ 0002:00021F70       _floatfmt
+ 0002:00022A08       _asciitld
+ 0002:00022AEC       _asciitod
+ 0002:00022BB0       _strtodieee
+ 0002:00022BE0       strtod
+ 0002:00022C10       _atofieee
+ 0002:000230E8       atof
+ 0002:00023110       strnicmp
+ 0002:000231BC       atoi
+ 0002:0002328C       strtold
+ 0002:0002376C       _atold
+ 0002:00023790       _lucvt
+ 0002:00024064       __dofmto
+ 0002:00024A08       _wfloatfmt
+ 0002:00024A30       _wungetch
+ 0002:00024A38       _wgetche
+ 0002:00024A4C       _wcputs
+ 0002:00024A60       _fprintfieee
+ 0002:00024AA0       _fprintf_ansi
+ 0002:00024AD0       _printfieee
+ 0002:00024B14       _printf_ansi
+ 0002:00024B48       _sprintfieee
+ 0002:00024B84       _sprintf_ansi
+ 0002:00024BB0       wctomb
+ 0002:00024C84       _bufprint
+ 0002:000267FC       __goscan
+ 0002:000269D0       _fscanfieee
+ 0002:00026A10       _fscanf_ansi
+ 0002:00026CF0       _cnvrt
+ 0002:00026F44       mktime
+ 0002:000271BC       time
+ 0002:00027244       localtime
+ 0002:000272FC       _CloseStream
+ 0002:00027420       _control87
+ 0002:0002744C       _wuwriteMem
+ 0002:00027450       _wreadbSyncMem
+ 0002:00027454       _wfsetposMem
+ 0002:0002745C       _wSeekMem
+ 0002:00027464       _wfgetposMem
+ 0002:00027474       _wrewindMem
+ 0002:00027478       _wtellMem
+ 0002:00027488       _wRemoveMem
+ 0002:0002748C       _wOpenMemory
+ 0002:00027494       fopen
+ 0002:00027528       _Fmprs
+ 0002:00027AD0       _InitBuf
+ 0002:00027B48       _InitFCB
+ 0002:00027CC8       _convert
+ 0002:00027EE0       _fcloseall
+ 0002:00027F6C       fclose
+ 0002:00027FF4       feof
+ 0002:00028040       fflush
+ 0002:000280C8       fgets
+ 0002:0002866C       _fillb
+ 0002:000288B4       _Flush
+ 0002:00028A40       _flushb
+ 0002:00028D44       fputc
+ 0002:00028F08       fputs
+ 0002:00029384       fseek
+ 0002:000295E8       _getcx
+ 0002:00029794       getenv
+ 0002:0002988C       _ilog2
+ 0002:00029894       _internal_err
+ 0002:000298E8       longjmp
+ 0002:0002994C       _ltoa
+ 0002:000299F0       _noddprs
+ 0002:00029E30       _OpenStream
+ 0002:0002A020       _w_raise
+ 0002:0002A028       setjmp
+ 0002:0002A064       _puts
+ 0002:0002A0D0       _readbSync
+ 0002:0002A33C       _ungetc
+ 0002:0002A3D4       _uwrite
+ 0002:0002A418       _set_crt_msg_handle
+ 0002:0002A44C       _CheckIfMem
+ 0002:0002A4A0       __EDC3216
+ 0002:0002A538       __EDCThunkProlog
+ 0002:0002A5EC       _DosSelToFlat
+ 0002:0002A5F4       _DosFlatToSel
+ 0002:0002A5FC       _fullpath
+ 0002:0002A7B4       _bit_test_set
+ 0002:0002A7C8       mbtowc
+ 0002:0002A904       wcstombs
+ 0002:0002AA68       _toint
+ 0002:0002AC40       _XDosRead
+ 0002:0002ACE8       _Math_Exception_Def
+ 0002:0002ACFC       _matherr
+ 0003:00000000       _callafi
+ 0003:00000008       HINIT
+ 0003:00000010       HSCOL
+ 0003:00000018       HSMX
+ 0003:00000020       HEGS
+ 0003:00000028       HBBW
+ 0003:00000030       HQDPS
+ 0003:00000038       HOPEN
+ 0003:00000040       HSYNC
+ 0003:00000048       HBBCHN
+ 0003:00000050       HCLOSE
+ 0004:00000000       sig32
+ 0004:00000012       DOS32GETMESSAGE
+ 0004:00000012       DOSGETMESSAGE
+ 0004:00000012       Dos32GetMessage
+ 0004:00000012       DosGetMessage
+ 0005:00000000       ascchar
+ 0005:00000700       cmdtxts
+ 0005:000007F0       cmdvals
+ 0005:00000890       grkchar
+ 0005:00000F90       hebchar
+ 0005:00001690       helpedt
+ 0005:000022F0       helpgen
+ 0005:00003210       msgtext
+ 0005:00003FD0       zedascb
+ 0005:000042C0       zedasct
+ 0005:000045B0       zedgrkb
+ 0005:000048A0       zedgrkt
+ 0005:00004B90       zedhebb
+ 0005:00004E80       zedhebt
+ 0005:00005170       zedlatb
+ 0005:00005460       zedlatt
+ 0005:00005750       zedlchr
+ 0006:00000000       __fac
+ 0007:00000000       outfile
+ 0007:00000040       posxga
+ 0007:00000048       p
+ 0007:000001D0       grkexch
+ 0007:000002D0       hebhiex
+ 0007:00000380       fkeyset
+ 0007:00000440       hebexch
+ 0007:00004A90       _exeentry
+ 0007:00004A94       _argc
+ 0007:00004A98       _argv
+ 0007:00004AA0       stdin
+ 0007:00004AA4       stdout
+ 0007:00004AA8       stderr
+ 0007:00004AAC       _PGLOBAL_PTR
+ 0007:00004AB0       _daylight
+ 0007:00004AB4       _timezone
+ 0007:00004AB8       _osmode
+ 0007:00004ABC       _version
+ 0007:00004AC0       _random_seed
+ 0007:00004AC4       __decimal_point
+ 0007:00004AC8       __char_set_type
+ 0007:00004D10       __ctdtused
+ 0007:00004D60       _matherr_ptr
+ 0007:00004E10       _pg_locale_info
+ 0007:00004F70       _pg_c_locale
+ 0007:00004F74       _pg_default_locale
+ 0007:000050B0       _ctable
+ 0007:000051B4       _ctypeModule
+ 0007:000051C0       _fltused
+ 0007:000051E0       __month
+ 0007:00005214       __leapm
+ 0007:00005250       __mmonth
+ 0007:00005284       __mleapm
+ 0007:000052D0       _fopenused
+ 0007:00005310       _crt_msg_handle
+ 0007:00005330       __ctordtorStart
+ 0007:00005340       __ctordtorEnd
+ 0007:00007140       _infinity
+ 0007:00007148       _DBL_MIN
+ 0007:00007150       _DBL_MAX
+ 0007:00007158       _HUGE_VAL
+ 0007:00007160       _dposqnan
+ 0007:00007168       _dpossnan
+ 0007:00007170       _dposinfi
+ 0007:00007178       _dnegqnan
+ 0007:00007180       _dnegsnan
+ 0007:00007188       _dneginfi
+ 0007:00007190       _fposqnan
+ 0007:00007194       _fpossnan
+ 0007:00007198       _fposinfi
+ 0007:0000719C       _fnegqnan
+ 0007:000071A0       _fnegsnan
+ 0007:000071A4       _fneginfi
+ 0007:000071A8       _LDBL_MIN
+ 0007:000071B2       _LDBL_MAX
+ 0007:000071BC       _LHUGE_VAL
+ 0007:000071C6       _ldposqnan
+ 0007:000071D0       _ldpossnan
+ 0007:000071DA       _ldposinfi
+ 0007:000071E4       _ldnegqnan
+ 0007:000071EE       _ldnegsnan
+ 0007:000071F8       _ldneginfi
+ 0007:00007208       _pospow1
+ 0007:00007488       _pospow2
+ 0007:000078F0       _firsteib
+ 0007:00007CF8       _lasteib
+ 0007:00007CFC       _edata
+ 0007:00007CFC       _Async_exception_flag
+ 0007:00007D00       _Saved_Return_Address
+ 0007:00007D04       @BSSGOSCAN.C
+ 0007:00007D14       @BSSLUCVT.C
+ 0007:00007D24       @BSSATOLD.C
+ 0007:00007D44       _have_freed
+ 0007:00007D48       _pBucketArr
+ 0007:00007D88       _edcinit_fin
+ 0007:00007D8C       @BSSEDCINIT.C
+ 0007:00007D9C       _strtok_pos
+ 0007:00007DA0       @BSSPRTEMSG.C
+ 0007:00007DA4       _tempname_ptr
+ 0007:00007DA8       _cvt_buf_ptr
+ 0007:00007DAC       _lcvt_buf_ptr
+ 0007:00007DB0       @BSSFLOATFMT.C
+ 0007:00007DC0       @BSSN_EXCEPT.C
+ 0007:00007DCC       @BSSFULLPATH.C
+ 0007:00007ED0       @BSSF:\str\stdf\MAKEAFI.C
+ 0007:00007EE0       @BSSE:\str\zedit\ZEDPX24.C
+ 0007:00007EE4       @BSSE:\str\zedit\PAN2CMD.C
+ 0007:00007EFC       errno
+ 0007:00007F00       rsptr
+ 0007:00007F04       @BSSF:\str\zedit\CFGFPAN.C
+ 0007:00007F08       @BSSF:\str\zedit\CFGKPAN.C
+ 0007:00007F0C       @BSSF:\str\zedit\EDITPAN.C
+ 0007:00007F14       @BSSF:\str\zedit\PHEBCHR.C
+ 0007:00007F1C       @BSSF:\str\zedit\RDSPLAT.C
+ 0007:00007F24       @BSSE:\str\zedit\FILLSCR.C
+ 0007:00007F28       @BSSF:\str\zedit\ZEDMAIN.C
+ 0007:00007F6C       @BSSF:\str\zedit\MISCCMD.C
+ 0007:00007F70       @BSSF:\str\zedit\KEYSLIN.C
+ 0007:00007F74       @BSSF:\str\zedit\SAVEVIO.C
+ 0007:00007F78       @BSSF:\str\zedit\PLATCHR.C
+ 0007:00007F9C       @BSSF:\str\zedit\BROWPAN.C
+ 0007:00007FA4       @BSSE:\str\zedit\ZEDINIT.C
+ 0007:00007FA8       @BSSF:\str\zedit\ENTPANL.C
+ 0007:00007FB0       @BSSF:\str\zedit\LOCLCMD.C
+ 0007:00007FB4       @BSSF:\str\zedit\COLSLIN.C
+ 0007:00007FB8       @BSSE:\str\zedit\GRPHREG.C
+ 0007:00007FD4       @BSSE:\str\zedit\ZEDPIMG.C
+ 0007:00007FE0       @BSSF:\str\zedit\TRANHEB.C
+ 0007:00007FE8       @BSSF:\str\zedit\LETSGRK.C
+ 0007:00007FEC       @BSSF:\str\zedit\FINDPRM.C
+ 0007:00008040       @BSSF:\str\zedit\ZEPILOG.C
+ 0007:00008044       @BSSE:\str\zedit\ZEDPBUF.C
+ 0007:00008068       @BSSF:\str\zedit\GETSTRT.C
+ 0007:00008070       @BSSF:\str\zedit\TRANSCR.C
+ 0007:00008074       @BSSE:\str\zedit\ZEDPPRE.C
+ 0007:0000808C       @BSSF:\str\zedit\TOPLINE.C
+ 0007:00008090       @BSSE:\str\zedit\ZEDPPSF.C
+ 0007:000080D0       @BSSE:\str\zedit\ZEDPPRT.C
+ 0007:000080E0       @BSSE:\str\zedit\ZEDPPSP.C
+ 0007:0000814C       @BSSE:\str\zedit\ZEDPLUP.C
+ 0007:00008150       @BSSF:\str\zedit\STATLIN.C
+ 0007:0000815C       @BSSE:\str\zedit\PRIMARY.C
+ 0007:0000816C       @BSSF:\str\zedit\CONVOUT.C
+ 0007:00008170       @BSSF:\str\zedit\DSENTRY.C
+ 0007:00008174       afiptr
+ 0007:00008178       __c_local_ctype
+ 0007:0000817C       @BSSF:\str\zedit\TXTONLY.C
+ 0007:00008184       _flags
+ 0007:00008188       sem_pr
+ 0007:0000818C       _ctype
+ 0007:00008190       romptr
+ 0007:00008194       _perror_msg_ptr
+ 0007:00008198       _broken_time_ptr
+ 0007:0000819C       __ctordtorCurrent
+ 0007:000081A0       _internal_buf_ptr
+ 0007:000081A4       graphic
+ 0007:000081A8       _strerror_msg_ptr
+ 0007:000081AC       prtmode
+ 0007:000081B0       _pgmptr
+ 0007:000081B4       _tzname
+ 0007:000081BC       _environ
+ 0007:000081C0       _osmajor
+ 0007:000081C1       _osminor
+ 0007:000081C4       _doserrno
+ 0007:000081C8       _dttm_ptr
+ 0007:000081CC       @BSSATOF.C
+ 0007:000081DC       _locale_initialized
+ 0007:000081E0       _TerminateAndDumpSem
+ 0007:000081F0       _end
+
+Program entry point at 0002:0001F928

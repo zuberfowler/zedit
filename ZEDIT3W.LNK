@@ -1,0 +1,16 @@
+system os2fs
+file zedit3w.obj
+option protmode
+option DESCRIPTION ' ZEDIT V1 (c) Copyright 1987,2001 by Clyde Thomas Zuber '
+option newfiles
+option map
+option verbose
+option STACK=1024000
+option modname=ZEDIT
+option maxerrors=512
+SEGMENT _IOPLTXT IOPL EXECUTEONLY
+SEGMENT ZEDRODAT  READONLY
+libpath d:str\stdf
+library os2386.lib
+library zedit3w.lib
+library stdf3w.lib

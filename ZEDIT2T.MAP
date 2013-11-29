@@ -1,0 +1,1291 @@
+
+ ZEDIT
+
+ Start     Length     Name                   Class
+ 0001:0000 000C3H     _IOPLTXT               CODE
+ 0002:0000 00879H     ZEDMAIN_TEXT           CODE
+ 0003:0000 04E86H     _TEXT                  CODE
+ 0004:0000 026F0H     EMULATOR_TEXT          CODE
+ 0005:0000 0013AH     CFGINIT_TEXT           CODE
+ 0006:0000 00054H     CLRPANL_TEXT           CODE
+ 0007:0000 000C1H     CMDPRSE_TEXT           CODE
+ 0008:0000 000B6H     CMPLINE_TEXT           CODE
+ 0009:0000 00122H     DELNEXC_TEXT           CODE
+ 000A:0000 000F8H     DELPROT_TEXT           CODE
+ 000B:0000 0013CH     DELXBLK_TEXT           CODE
+ 000C:0000 000EAH     EXCMERG_TEXT           CODE
+ 000D:0000 002A8H     EXCRDSP_TEXT           CODE
+ 000E:0000 000ECH     EXCREMV_TEXT           CODE
+ 000F:0000 0012EH     FUNCKEY_TEXT           CODE
+ 0010:0000 00000H     GRKEXCH_TEXT           CODE
+ 0010:0000 00000H     HEBHIEX_TEXT           CODE
+ 0010:0000 000AEH     LETSGRK_TEXT           CODE
+ 0011:0000 0017EH     LETSHEB_TEXT           CODE
+ 0012:0000 000D4H     MERGEON_TEXT           CODE
+ 0013:0000 00055H     PSHSTCK_TEXT           CODE
+ 0014:0000 00154H     RENBUFR_TEXT           CODE
+ 0015:0000 000A2H     WRTEBUF_TEXT           CODE
+ 0016:0000 00062H     FREEBUF_TEXT           CODE
+ 0017:0000 0010AH     RHEBREW_TEXT           CODE
+ 0018:0000 00164H     TRANHEB_TEXT           CODE
+ 0019:0000 005E6H     DSPCIBM_TEXT           CODE
+ 001A:0000 00371H     OV8CIB2_TEXT           CODE
+ 001B:0000 0044EH     OVRCIBM_TEXT           CODE
+ 001C:0000 00327H     REVCIBM_TEXT           CODE
+ 001D:0000 0026EH     DISPLIN_TEXT           CODE
+ 001E:0000 0065FH     DS8CIB2_TEXT           CODE
+ 001F:0000 0082DH     DS8CIBM_TEXT           CODE
+ 0020:0000 00390H     DS8LIB2_TEXT           CODE
+ 0021:0000 003FEH     DS8LIBM_TEXT           CODE
+ 0022:0000 0027EH     DSP8CHR_TEXT           CODE
+ 0023:0000 002C3H     DSP8LIN_TEXT           CODE
+ 0024:0000 0066EH     DSPCIB2_TEXT           CODE
+ 0025:0000 0039FH     DSPLIB2_TEXT           CODE
+ 0026:0000 003D0H     DSPLIBM_TEXT           CODE
+ 0027:0000 00442H     OV8CIBM_TEXT           CODE
+ 0028:0000 001FBH     OVERCHR_TEXT           CODE
+ 0029:0000 001E4H     OVR8CHR_TEXT           CODE
+ 002A:0000 003BCH     OVRCIB2_TEXT           CODE
+ 002B:0000 00261H     REVCIB2_TEXT           CODE
+ 002C:0000 002E3H     REVLINE_TEXT           CODE
+ 002D:0000 00FE5H     ZEDLOGO_TEXT           CODE
+ 002E:0000 0022BH     DISPCHR_TEXT           CODE
+ 002F:0000 000D2H     CLRLXGA_TEXT           CODE
+ 0030:0000 002D4H     DS8CXGA_TEXT           CODE
+ 0031:0000 002F7H     DS8LXGA_TEXT           CODE
+ 0032:0000 002B4H     DSPCXGA_TEXT           CODE
+ 0033:0000 002ACH     DSPLXGA_TEXT           CODE
+ 0034:0000 001E8H     OV8CXGA_TEXT           CODE
+ 0035:0000 00143H     REVCXGA_TEXT           CODE
+ 0036:0000 00165H     REVLXGA_TEXT           CODE
+ 0037:0000 00256H     CLRLINE_TEXT           CODE
+ 0038:0000 00214H     OVRCXGA_TEXT           CODE
+ 0039:0000 000F8H     STCKCMD_TEXT           CODE
+ 003A:0000 00000H     FKEYSET_TEXT           CODE
+ 003A:0000 00000H     HEBEXCH_TEXT           CODE
+ 003A:0000 000FFH     BROWPAN_TEXT           CODE
+ 003B:0000 00200H     CFGFGET_TEXT           CODE
+ 003C:0000 004A4H     CFGFPAN_TEXT           CODE
+ 003D:0000 002B8H     CFGKGET_TEXT           CODE
+ 003E:0000 0064FH     CFGKPAN_TEXT           CODE
+ 003F:0000 001DDH     CHNGPRM_TEXT           CODE
+ 0040:0000 0039CH     CMDDONE_TEXT           CODE
+ 0041:0000 00953H     CMDLINE_TEXT           CODE
+ 0042:0000 000E4H     CMDREST_TEXT           CODE
+ 0043:0000 001C8H     CONVINP_TEXT           CODE
+ 0044:0000 0014AH     DELCHAR_TEXT           CODE
+ 0045:0000 000AFH     DISPMSG_TEXT           CODE
+ 0046:0000 00181H     EDBRPAN_TEXT           CODE
+ 0047:0000 00111H     EDITPAN_TEXT           CODE
+ 0048:0000 001ADH     ERASEOF_TEXT           CODE
+ 0049:0000 00129H     EXCXBLK_TEXT           CODE
+ 004A:0000 00CB3H     FINDPRM_TEXT           CODE
+ 004B:0000 001E6H     GETSTRT_TEXT           CODE
+ 004C:0000 001EBH     INSCHAR_TEXT           CODE
+ 004D:0000 000ADH     LASTSRP_TEXT           CODE
+ 004E:0000 000FDH     LOCLCMD_TEXT           CODE
+ 004F:0000 001DDH     OPTBACK_TEXT           CODE
+ 0050:0000 00173H     PRIMCMD_TEXT           CODE
+ 0051:0000 00088H     RDSPASC_TEXT           CODE
+ 0052:0000 00221H     RDSPGRK_TEXT           CODE
+ 0053:0000 003E5H     RDSPLAT_TEXT           CODE
+ 0054:0000 000EEH     RDSPLIN_TEXT           CODE
+ 0055:0000 0007AH     RDSPROM_TEXT           CODE
+ 0056:0000 00152H     SRPBUFR_TEXT           CODE
+ 0057:0000 00133H     STATLIN_TEXT           CODE
+ 0058:0000 001FAH     TXTONLY_TEXT           CODE
+ 0059:0000 00065H     VREPCNT_TEXT           CODE
+ 005A:0000 00900H     CONVOUT_TEXT           CODE
+ 005B:0000 00379H     DSENTRY_TEXT           CODE
+ 005C:0000 0043DH     BUFTSLN_TEXT           CODE
+ 005D:0000 00671H     ENTPANL_TEXT           CODE
+ 005E:0000 00231H     INUSAGE_TEXT           CODE
+ 005F:0000 000D2H     LCINVAL_TEXT           CODE
+ 0060:0000 00B85H     PGRKCHR_TEXT           CODE
+ 0061:0000 0105BH     PHEBCHR_TEXT           CODE
+ 0062:0000 00F46H     PLATCHR_TEXT           CODE
+ 0063:0000 000F5H     PROTLIN_TEXT           CODE
+ 0064:0000 0078CH     RDSPHEB_TEXT           CODE
+ 0065:0000 00459H     SCRTBUF_TEXT           CODE
+ 0066:0000 0028DH     TRANSCR_TEXT           CODE
+ 0067:0000 00140H     ZFINISH_TEXT           CODE
+ 0068:0000 001FEH     XGA8514_TEXT           CODE
+ 0069:0000 00067H     ZEPILOG_TEXT           CODE
+ 006A:0000 00480H     CKPLACE_TEXT           CODE
+ 006B:0000 00145H     COLSLIN_TEXT           CODE
+ 006C:0000 001FCH     COPYLIN_TEXT           CODE
+ 006D:0000 00145H     COPYONB_TEXT           CODE
+ 006E:0000 00134H     DDELBLK_TEXT           CODE
+ 006F:0000 0028CH     EXCLUDE_TEXT           CODE
+ 0070:0000 00262H     EXCSHOW_TEXT           CODE
+ 0071:0000 001C8H     KEYSLIN_TEXT           CODE
+ 0072:0000 003C9H     LETSLIN_TEXT           CODE
+ 0073:0000 001E2H     LINECMD_TEXT           CODE
+ 0074:0000 009C3H     LNECMD1_TEXT           CODE
+ 0075:0000 008B5H     LNECMD2_TEXT           CODE
+ 0076:0000 006B5H     LNECMD3_TEXT           CODE
+ 0077:0000 0019BH     MOVELIN_TEXT           CODE
+ 0078:0000 001CAH     MOVEONB_TEXT           CODE
+ 0079:0000 001E2H     MOVECPY_TEXT           CODE
+ 007A:0000 001DFH     PROCEDT_TEXT           CODE
+ 007B:0000 00316H     PROCINP_TEXT           CODE
+ 007C:0000 00631H     PROCSCN_TEXT           CODE
+ 007D:0000 001C9H     RREPBLK_TEXT           CODE
+ 007E:0000 003AAH     SCRLCMD_TEXT           CODE
+ 007F:0000 00133H     SHIFTLF_TEXT           CODE
+ 0080:0000 00227H     SHIFTRT_TEXT           CODE
+ 0081:0000 001F8H     SRCHCMD_TEXT           CODE
+ 0082:0000 004CBH     BACKCMD_TEXT           CODE
+ 0083:0000 00992H     BUFTSCR_TEXT           CODE
+ 0084:0000 000A0H     DISPNUM_TEXT           CODE
+ 0085:0000 002C2H     TOPLINE_TEXT           CODE
+ 0086:0000 007FAH     INVCOPT_TEXT           CODE
+ 0087:0000 00661H     MISCCMD_TEXT           CODE
+ 0088:0000 004B7H     ZDRIVER_TEXT           CODE
+ 0089:0000 002ECH     PASCCHR_TEXT           CODE
+ 008A:0000 002DEH     PROMCHR_TEXT           CODE
+ 008B:0000 003ABH     CMDPARM_TEXT           CODE
+ 008C:0000 00000H     ASCCHAR_TEXT           CODE
+ 008C:0000 00000H     CMDTXTS_TEXT           CODE
+ 008C:0000 00000H     CMDVALS_TEXT           CODE
+ 008C:0000 000FBH     FILLSCR_TEXT           CODE
+ 008D:0000 00275H     GETFILE_TEXT           CODE
+ 008E:0000 0030BH     GRPHREG_TEXT           CODE
+ 008F:0000 00000H     GRKCHAR_TEXT           CODE
+ 008F:0000 00000H     HEBCHAR_TEXT           CODE
+ 008F:0000 00000H     HELPEDT_TEXT           CODE
+ 008F:0000 00000H     HELPGEN_TEXT           CODE
+ 008F:0000 00000H     MSGTEXT_TEXT           CODE
+ 008F:0000 0060AH     PAN2CMD_TEXT           CODE
+ 0090:0000 004B3H     PANLCMD_TEXT           CODE
+ 0091:0000 004C5H     PRIMARY_TEXT           CODE
+ 0092:0000 00217H     READBUF_TEXT           CODE
+ 0093:0000 0020CH     REVCHAR_TEXT           CODE
+ 0094:0000 00113H     SCRPESC_TEXT           CODE
+ 0095:0000 0067DH     SCRPRNT_TEXT           CODE
+ 0096:0000 00427H     SCRPXGA_TEXT           CODE
+ 0097:0000 00054H     TEXTREG_TEXT           CODE
+ 0098:0000 00000H     ZEDASCB_TEXT           CODE
+ 0098:0000 00000H     ZEDASCT_TEXT           CODE
+ 0098:0000 00000H     ZEDGRKB_TEXT           CODE
+ 0098:0000 00000H     ZEDGRKT_TEXT           CODE
+ 0098:0000 00000H     ZEDHEBB_TEXT           CODE
+ 0098:0000 00000H     ZEDHEBT_TEXT           CODE
+ 0098:0000 0020EH     ZEDINIT_TEXT           CODE
+ 0099:0000 00000H     ZEDLATB_TEXT           CODE
+ 0099:0000 00000H     ZEDLATT_TEXT           CODE
+ 0099:0000 00000H     ZEDLCHR_TEXT           CODE
+ 0099:0000 000CBH     ZEDPBSE_TEXT           CODE
+ 009A:0000 00A02H     ZEDPBUF_TEXT           CODE
+ 009B:0000 00304H     ZEDPFNT_TEXT           CODE
+ 009C:0000 006CFH     ZEDPIMG_TEXT           CODE
+ 009D:0000 0018EH     ZEDPLSP_TEXT           CODE
+ 009E:0000 0013AH     ZEDPLUP_TEXT           CODE
+ 009F:0000 00228H     ZEDPPRE_TEXT           CODE
+ 00A0:0000 008C4H     ZEDPPRT_TEXT           CODE
+ 00A1:0000 002FAH     ZEDPPSF_TEXT           CODE
+ 00A2:0000 005B8H     ZEDPPSP_TEXT           CODE
+ 00A3:0000 000D8H     ZEDPRAM_TEXT           CODE
+ 00A4:0000 000C8H     ZEDPROM_TEXT           CODE
+ 00A5:0000 001F6H     ZEDPX24_TEXT           CODE
+ 00A6:0000 003FEH     INVERT_TEXT            CODE
+ 00A7:0000 00082H     LEFTFLD_TEXT           CODE
+ 00A8:0000 0005EH     LEFTJUST_TEXT          CODE
+ 00A9:0000 00052H     LINDEX_TEXT            CODE
+ 00AA:0000 0003EH     LOWER_TEXT             CODE
+ 00AB:0000 00046H     NUMERIC_TEXT           CODE
+ 00AC:0000 001F6H     PINDEX_TEXT            CODE
+ 00AD:0000 000A8H     RIGHTJST_TEXT          CODE
+ 00AE:0000 0003EH     UPPER_TEXT             CODE
+ 00AF:0000 00068H     GETINPT_TEXT           CODE
+ 00B0:0000 0007CH     BYTEMAP_TEXT           CODE
+ 00B1:0000 00A34H     ENTFIELD_TEXT          CODE
+ 00B2:0000 0041EH     MAKEAFI_TEXT           CODE
+ 00B3:0000 00268H     FORMDSN_TEXT           CODE
+ 00B4:0000 001AEH     WHENOW_TEXT            CODE
+ 00B5:0000 00000H     C_ETEXT                ENDCODE
+ 00B5:0000 00700H     ASCCHAR7_DATA          FAR_DATA
+ 00B5:0700 000EAH     CMDTXTS7_DATA          FAR_DATA
+ 00B5:07F0 0004EH     CMDVALS7_DATA          FAR_DATA
+ 00B5:0840 00700H     GRKCHAR7_DATA          FAR_DATA
+ 00B5:0F40 00700H     HEBCHAR7_DATA          FAR_DATA
+ 00B5:1640 00DC0H     MSGTEXT7_DATA          FAR_DATA
+ 00B5:2400 002F0H     ZEDASCB7_DATA          FAR_DATA
+ 00B5:26F0 002F0H     ZEDASCT7_DATA          FAR_DATA
+ 00B5:29E0 002F0H     ZEDGRKB7_DATA          FAR_DATA
+ 00B5:2CD0 002F0H     ZEDGRKT7_DATA          FAR_DATA
+ 00B5:2FC0 002F0H     ZEDHEBB7_DATA          FAR_DATA
+ 00B5:32B0 002F0H     ZEDHEBT7_DATA          FAR_DATA
+ 00B5:35A0 002F0H     ZEDLATB7_DATA          FAR_DATA
+ 00B5:3890 002F0H     ZEDLATT7_DATA          FAR_DATA
+ 00B5:3B80 00116H     ZEDMAIN7_DATA          FAR_DATA
+ 00B5:3CA0 00170H     EMULATOR_DATA          FAR_DATA
+ 00B5:3E10 00010H     CFGINIT7_DATA          FAR_DATA
+ 00B5:3E20 00100H     GRKEXCH7_DATA          FAR_DATA
+ 00B5:3F20 00080H     HEBHIEX7_DATA          FAR_DATA
+ 00B5:3FA0 00009H     LETSGRK7_DATA          FAR_DATA
+ 00B5:3FB0 00002H     WRTEBUF7_DATA          FAR_DATA
+ 00B5:3FC0 00011H     TRANHEB7_DATA          FAR_DATA
+ 00B5:3FE0 00060H     FKEYSET7_DATA          FAR_DATA
+ 00B5:4040 00100H     HEBEXCH7_DATA          FAR_DATA
+ 00B5:4140 0003CH     BROWPAN7_DATA          FAR_DATA
+ 00B5:4180 00045H     CFGFGET7_DATA          FAR_DATA
+ 00B5:41D0 002DBH     CFGFPAN7_DATA          FAR_DATA
+ 00B5:44B0 00002H     CFGKGET7_DATA          FAR_DATA
+ 00B5:44C0 008E2H     CFGKPAN7_DATA          FAR_DATA
+ 00B5:4DB0 0003CH     EDBRPAN7_DATA          FAR_DATA
+ 00B5:4DF0 00050H     EDITPAN7_DATA          FAR_DATA
+ 00B5:4E40 00018H     EXCXBLK7_DATA          FAR_DATA
+ 00B5:4E60 00514H     FINDPRM7_DATA          FAR_DATA
+ 00B5:5380 00002H     GETSTRT7_DATA          FAR_DATA
+ 00B5:5390 00019H     LOCLCMD7_DATA          FAR_DATA
+ 00B5:53B0 00011H     RDSPLAT7_DATA          FAR_DATA
+ 00B5:53D0 00063H     STATLIN7_DATA          FAR_DATA
+ 00B5:5440 00002H     TXTONLY7_DATA          FAR_DATA
+ 00B5:5450 00008H     CONVOUT7_DATA          FAR_DATA
+ 00B5:5460 001BBH     DSENTRY7_DATA          FAR_DATA
+ 00B5:5620 00002H     ENTPANL7_DATA          FAR_DATA
+ 00B5:5630 006B1H     INUSAGE7_DATA          FAR_DATA
+ 00B5:5CF0 00037H     PHEBCHR7_DATA          FAR_DATA
+ 00B5:5D30 00087H     PLATCHR7_DATA          FAR_DATA
+ 00B5:5DC0 00008H     TRANSCR7_DATA          FAR_DATA
+ 00B5:5DD0 00141H     ZFINISH7_DATA          FAR_DATA
+ 00B5:5F20 00004H     ZEPILOG7_DATA          FAR_DATA
+ 00B5:5F30 0000AH     COLSLIN7_DATA          FAR_DATA
+ 00B5:5F40 00018H     KEYSLIN7_DATA          FAR_DATA
+ 00B5:5F60 00065H     LETSLIN7_DATA          FAR_DATA
+ 00B5:5FD0 00001H     PROCEDT7_DATA          FAR_DATA
+ 00B5:5FE0 00070H     BUFTSCR7_DATA          FAR_DATA
+ 00B5:6050 00029H     TOPLINE7_DATA          FAR_DATA
+ 00B5:6080 0003CH     INVCOPT7_DATA          FAR_DATA
+ 00B5:60C0 01019H     MISCCMD7_DATA          FAR_DATA
+ 00B5:70E0 00005H     FILLSCR7_DATA          FAR_DATA
+ 00B5:70F0 00020H     GRPHREG7_DATA          FAR_DATA
+ 00B5:7110 00C60H     HELPEDT7_DATA          FAR_DATA
+ 00B5:7D70 00F20H     HELPGEN7_DATA          FAR_DATA
+ 00B5:8C90 0004DH     PAN2CMD7_DATA          FAR_DATA
+ 00B5:8CE0 00039H     PANLCMD7_DATA          FAR_DATA
+ 00B5:8D20 00205H     PRIMARY7_DATA          FAR_DATA
+ 00B5:8F30 0001FH     READBUF7_DATA          FAR_DATA
+ 00B5:8F50 00003H     SCRPRNT7_DATA          FAR_DATA
+ 00B5:8F60 01000H     ZEDINIT7_DATA          FAR_DATA
+ 00B5:9F60 000C4H     ZEDLCHR7_DATA          FAR_DATA
+ 00B5:A030 00002H     ZEDPBSE7_DATA          FAR_DATA
+ 00B5:A040 00041H     ZEDPBUF7_DATA          FAR_DATA
+ 00B5:A090 00023H     ZEDPIMG7_DATA          FAR_DATA
+ 00B5:A0C0 00010H     ZEDPLUP7_DATA          FAR_DATA
+ 00B5:A0D0 00054H     ZEDPPRE7_DATA          FAR_DATA
+ 00B5:A130 00005H     ZEDPPRT7_DATA          FAR_DATA
+ 00B5:A140 00DF1H     ZEDPPSF7_DATA          FAR_DATA
+ 00B5:AF40 00102H     ZEDPPSP7_DATA          FAR_DATA
+ 00B5:B050 00010H     ZEDPX247_DATA          FAR_DATA
+ 00B5:B060 003D7H     MAKEAFI5_DATA          FAR_DATA
+ 00B5:B440 00208H     FAR_BSS                FAR_BSS
+ 00B6:0000 00042H     NULL                   BEGDATA
+ 00B6:0042 0059DH     _DATA                  DATA
+ 00B6:05E0 0000EH     CDATA                  DATA
+ 00B6:05EE 00000H     XIFB                   DATA
+ 00B6:05EE 00000H     XIF                    DATA
+ 00B6:05EE 00000H     XIFE                   DATA
+ 00B6:05EE 00000H     XIB                    DATA
+ 00B6:05EE 00004H     XI                     DATA
+ 00B6:05F2 00000H     XIE                    DATA
+ 00B6:05F2 00000H     XPB                    DATA
+ 00B6:05F2 00004H     XP                     DATA
+ 00B6:05F6 00000H     XPE                    DATA
+ 00B6:05F6 00000H     XCB                    DATA
+ 00B6:05F6 00000H     XC                     DATA
+ 00B6:05F6 00000H     XCE                    DATA
+ 00B6:05F6 00000H     XCFB                   DATA
+ 00B6:05F6 00000H     XCF                    DATA
+ 00B6:05F6 00000H     XCFE                   DATA
+ 00B6:05F6 001DCH     CONST                  CONST
+ 00B6:07D2 00008H     HDR                    MSG
+ 00B6:07DA 001D9H     MSG                    MSG
+ 00B6:09B3 00002H     PAD                    MSG
+ 00B6:09B5 00001H     EPAD                   MSG
+ 00B6:09B6 0002AH     _BSS                   BSS
+ 00B6:09E0 00000H     XOB                    BSS
+ 00B6:09E0 00000H     XO                     BSS
+ 00B6:09E0 00000H     XOE                    BSS
+ 00B6:09E0 00000H     c_common               BSS
+ 00B6:09E0 0C800H     STACK                  STACK
+
+ Origin   Group
+ 00B6:0   DGROUP
+
+  Address         Publics by Name
+
+ 0003:3F48       $I10_OUTPUT
+ 0003:4291       $i8_output
+ 0003:4D26       $i8_tpwr10
+ 0082:0000       @backcmd
+ 003A:0000       @browpan
+ 0083:0000       @buftscr
+ 005C:0000       @buftsln
+ 00B0:0000       @bytemap
+ 003B:0000       @cfgfget
+ 003C:0000       @cfgfpan
+ 0005:0000       @cfginit
+ 003D:0000       @cfgkget
+ 003E:0000       @cfgkpan
+ 003F:0000       @chngprm
+ 006A:0000       @ckplace
+ 0037:0000       @clrline
+ 002F:0000       @clrlxga
+ 0006:0000       @clrpanl
+ 0040:0000       @cmddone
+ 0041:0000       @cmdline
+ 008B:0000       @cmdparm
+ 0007:0000       @cmdprse
+ 0042:0000       @cmdrest
+ 0008:0000       @cmpline
+ 006B:0000       @colslin
+ 0043:0000       @convinp
+ 005A:0000       @convout
+ 006C:0000       @copylin
+ 006D:0000       @copyonb
+ 006E:0000       @ddelblk
+ 0044:0000       @delchar
+ 0009:0000       @delnexc
+ 000A:0000       @delprot
+ 000B:0000       @delxblk
+ 002E:0000       @dispchr
+ 001D:0000       @displin
+ 0045:0000       @dispmsg
+ 0084:0000       @dispnum
+ 001E:0000       @ds8cib2
+ 001F:0000       @ds8cibm
+ 0030:0000       @ds8cxga
+ 0020:0000       @ds8lib2
+ 0021:0000       @ds8libm
+ 0031:0000       @ds8lxga
+ 005B:0000       @dsentry
+ 0022:0000       @dsp8chr
+ 0023:0000       @dsp8lin
+ 0024:0000       @dspcib2
+ 0019:0000       @dspcibm
+ 0032:0000       @dspcxga
+ 0025:0000       @dsplib2
+ 0026:0000       @dsplibm
+ 0033:0000       @dsplxga
+ 0046:0000       @edbrpan
+ 0047:0000       @editpan
+ 00B1:0000       @entfield
+ 005D:0000       @entpanl
+ 0048:0000       @eraseof
+ 006F:0000       @exclude
+ 000C:0000       @excmerg
+ 000D:0000       @excrdsp
+ 000E:0000       @excremv
+ 0070:0000       @excshow
+ 0049:0000       @excxblk
+ 008C:0000       @fillscr
+ 004A:0000       @findprm
+ 00B3:0000       @formdsn
+ 0016:0000       @freebuf
+ 000F:0000       @funckey
+ 008D:0000       @getfile
+ 00AF:0000       @getinpt
+ 004B:0000       @getstrt
+ 008E:0000       @grphreg
+ 004C:0000       @inschar
+ 005E:0000       @inusage
+ 0086:0000       @invcopt
+ 00A6:0000       @invert
+ 0071:0000       @keyslin
+ 004D:0000       @lastsrp
+ 005F:0000       @lcinval
+ 00A7:0000       @leftfld
+ 00A8:0000       @leftjust
+ 0010:0000       @letsgrk
+ 0011:0000       @letsheb
+ 0072:0000       @letslin
+ 00A9:0000       @lindex
+ 0073:0000       @linecmd
+ 0074:0000       @lnecmd1
+ 0075:0000       @lnecmd2
+ 0076:0000       @lnecmd3
+ 004E:0000       @loclcmd
+ 00AA:0000       @lower
+ 00B2:028A       @makeafi
+ 0012:0000       @mergeon
+ 0087:0000       @misccmd
+ 0079:0000       @movecpy
+ 0077:0000       @movelin
+ 0078:0000       @moveonb
+ 00AB:0000       @numeric
+ 004F:0000       @optback
+ 001A:0000       @ov8cib2
+ 0027:0000       @ov8cibm
+ 0034:0000       @ov8cxga
+ 0028:0000       @overchr
+ 0029:0000       @ovr8chr
+ 002A:0000       @ovrcib2
+ 001B:0000       @ovrcibm
+ 0038:0000       @ovrcxga
+ 008F:0000       @pan2cmd
+ 0090:0000       @panlcmd
+ 0089:0000       @pascchr
+ 0060:0000       @pgrkchr
+ 0061:0000       @phebchr
+ 00AC:0000       @pindex
+ 0062:0000       @platchr
+ 0091:0000       @primary
+ 0050:0000       @primcmd
+ 007A:0000       @procedt
+ 007B:0000       @procinp
+ 007C:0000       @procscn
+ 008A:0000       @promchr
+ 0063:0000       @protlin
+ 0013:0000       @pshstck
+ 0051:0000       @rdspasc
+ 0052:0000       @rdspgrk
+ 0064:0000       @rdspheb
+ 0053:0000       @rdsplat
+ 0054:0000       @rdsplin
+ 0055:0000       @rdsprom
+ 0092:0000       @readbuf
+ 0014:0000       @renbufr
+ 0093:0000       @revchar
+ 002B:0000       @revcib2
+ 001C:0000       @revcibm
+ 0035:0000       @revcxga
+ 002C:0000       @revline
+ 0036:0000       @revlxga
+ 0017:0000       @rhebrew
+ 00AD:0000       @rightjst
+ 007D:0000       @rrepblk
+ 007E:0000       @scrlcmd
+ 0094:0000       @scrpesc
+ 0095:0000       @scrprnt
+ 0096:0000       @scrpxga
+ 0065:0000       @scrtbuf
+ 007F:0000       @shiftlf
+ 0080:0000       @shiftrt
+ 0081:0000       @srchcmd
+ 0056:0000       @srpbufr
+ 0057:0000       @statlin
+ 0039:0000       @stckcmd
+ 0097:0000       @textreg
+ 0085:0000       @topline
+ 0018:0000       @tranheb
+ 0066:0000       @transcr
+ 0058:0000       @txtonly
+ 00AE:0000       @upper
+ 0059:0000       @vrepcnt
+ 00B4:0000       @whenow
+ 0015:0000       @wrtebuf
+ 0068:0000       @xga8514
+ 0088:0000       @zdriver
+ 0098:0000       @zedinit
+ 002D:0000       @zedlogo
+ 0099:0000       @zedpbse
+ 009B:0000       @zedpfnt
+ 009C:0000       @zedpimg
+ 009D:0000       @zedplsp
+ 009E:0000       @zedplup
+ 009F:0000       @zedppre
+ 00A0:0000       @zedpprt
+ 00A1:0000       @zedppsf
+ 00A2:0000       @zedppsp
+ 00A3:0000       @zedpram
+ 00A4:0000       @zedprom
+ 00A5:0000       @zedpx24
+ 0069:0000       @zepilog
+ 0067:0000       @zfinish
+ 0000:0000  Imp  DOSALLOCSEG          (DOSCALLS.34)
+ 0000:0000  Imp  DOSBEEP              (DOSCALLS.50)
+ 0000:0000  Imp  DOSCHGFILEPTR        (DOSCALLS.58)
+ 0000:0000  Imp  DOSCLOSE             (DOSCALLS.59)
+ 0000:0000  Imp  DOSDELETE            (DOSCALLS.60)
+ 0000:0000  Imp  DOSEXIT              (DOSCALLS.5)
+ 0000:0000  Imp  DOSGETDATETIME       (DOSCALLS.33)
+ 0000:0000  Imp  DOSGETMACHINEMODE    (DOSCALLS.49)
+ 0000:0000  Imp  DOSGETPROCADDR       (DOSCALLS.45)
+ 0000:0000  Imp  DOSGETVERSION        (DOSCALLS.92)
+ 0000:0000  Imp  DOSLOADMODULE        (DOSCALLS.44)
+ 0000:0000  Imp  DOSNEWSIZE           (DOSCALLS.68)
+ 0000:0000  Imp  DOSOPEN              (DOSCALLS.70)
+ 0000:0000  Imp  DOSQFILEMODE         (DOSCALLS.75)
+ 0000:0000  Imp  DOSQHANDTYPE         (DOSCALLS.77)
+ 0000:0000  Imp  DOSREAD              (DOSCALLS.137)
+ 0000:0000  Imp  DOSREALLOCSEG        (DOSCALLS.38)
+ 0000:0000  Imp  DOSSEMCLEAR          (DOSCALLS.141)
+ 0000:0000  Imp  DOSSETVEC            (DOSCALLS.89)
+ 0000:0000  Imp  DOSWRITE             (DOSCALLS.138)
+ 0000:FE32  Abs  FIARQQ
+ 0000:0E32  Abs  FICRQQ
+ 0000:5C32  Abs  FIDRQQ
+ 0000:1632  Abs  FIERQQ
+ 0000:0632  Abs  FISRQQ
+ 0000:A23D  Abs  FIWRQQ
+ 0000:4000  Abs  FJARQQ
+ 0000:C000  Abs  FJCRQQ
+ 0000:8000  Abs  FJSRQQ
+ 00B2:0144       HBBCHN
+ 00B2:0056       HBBW
+ 00B2:0246       HCLOSE
+ 00B2:004A       HEGS
+ 00B2:0026       HINIT
+ 00B2:006E       HOPEN
+ 00B2:0062       HQDPS
+ 00B2:0032       HSCOL
+ 00B2:003E       HSMX
+ 00B2:00FC       HSYNC
+ 0001:0087       IOPLCYA
+ 0001:0000       IOPLIBM
+ 0001:00A5       IOPLPG0
+ 0001:00B4       IOPLPG1
+ 0001:0096       IOPLPUR
+ 0000:0000  Imp  KBDCHARIN            (KBDCALLS.4)
+ 00B6:00CC       STKHQQ
+ 0000:0000  Imp  VIOGETBUF            (VIOCALLS.31)
+ 0000:0000  Imp  VIOGETFONT           (VIOCALLS.29)
+ 0000:0000  Imp  VIOGETPHYSBUF        (VIOCALLS.2)
+ 0000:0000  Imp  VIOSCROLLUP          (VIOCALLS.7)
+ 0000:0000  Imp  VIOSETCURPOS         (VIOCALLS.15)
+ 0000:0000  Imp  VIOSETMODE           (VIOCALLS.22)
+ 0000:0000  Imp  VIOSHOWBUF           (VIOCALLS.43)
+ 00B5:B060       _afiptr
+ 00B5:0000       _ascchar
+ 0003:3A28       _atof
+ 0003:0B4A       _atoi
+ 0003:3A24       _atol
+ 00B2:0000       _callafi
+ 0003:2244       _close
+ 00B5:0700       _cmdtxts
+ 00B5:07F0       _cmdvals
+ 00B6:0498       _daylight
+ 00B6:09B6       _edata
+ 00B6:09E0       _end
+ 00B6:00B9       _environ
+ 00B6:0080       _errno
+ 0003:017A       _exit
+ 0003:0872       _fclose
+ 0003:13E4       _fflush
+ 0003:0B9E       _fgets
+ 00B5:3FE0       _fkeyset
+ 0003:1464       _flushall
+ 0003:096C       _fopen
+ 0003:0988       _fprintf
+ 0003:0A34       _fputc
+ 0003:0A2C       _fputchar
+ 0003:0C18       _fputs
+ 0003:0A5C       _free
+ 0003:09C8       _fscanf
+ 0003:0C7A       _fseek
+ 0003:2302       _ftell
+ 0003:0EDA       _fwrite
+ 0003:3B26       _getenv
+ 0003:249C       _gmtime
+ 00B5:3B84       _graphic
+ 00B5:0840       _grkchar
+ 00B5:3E20       _grkexch
+ 00B5:0F40       _hebchar
+ 00B5:4040       _hebexch
+ 00B5:3F20       _hebhiex
+ 00B5:7110       _helpedt
+ 00B5:7D70       _helpgen
+ 00B6:05D6       _HUGE
+ 0003:0B4E       _itoa
+ 0003:0D68       _localtime
+ 0003:226E       _lseek
+ 0002:0000       _main
+ 0003:053C       _malloc
+ 0003:07CC       _memcpy
+ 0003:3BB4       _memmove
+ 0003:082A       _memset
+ 00B5:1640       _msgtext
+ 0003:3583       _open
+ 00B5:3B88       _outfile
+ 00B5:3BC6       _p
+ 00B5:B440       _posxga
+ 0003:09E8       _printf
+ 00B5:3B86       _prtmode
+ 0003:0A34       _putc
+ 0003:0A2C       _putchar
+ 0003:3738       _read
+ 0003:298A       _remove
+ 00B5:3BC8       _romptr
+ 00B5:B064       _rsptr
+ 00B5:3B80       _sem_pr
+ 0003:3572       _sopen
+ 0003:0CFC       _sprintf
+ 0003:41C8       _stackavail
+ 0003:0A62       _strcat
+ 0003:0E36       _strchr
+ 0003:0ADE       _strcmp
+ 0003:0AA8       _strcpy
+ 0003:0B08       _strlen
+ 0003:41DC       _strncmp
+ 0003:0B20       _strncpy
+ 0003:0E64       _strrchr
+ 0003:0DEC       _time
+ 00B6:0494       _timezone
+ 00B6:049A       _tzname
+ 0003:2678       _tzset
+ 0003:3506       _ungetc
+ 0003:298A       _unlink
+ 0003:387A       _write
+ 00B5:2400       _zedascb
+ 00B5:26F0       _zedasct
+ 00B5:29E0       _zedgrkb
+ 00B5:2CD0       _zedgrkt
+ 00B5:2FC0       _zedhebb
+ 00B5:32B0       _zedhebt
+ 00B5:35A0       _zedlatb
+ 00B5:3890       _zedlatt
+ 00B5:9F60       _zedlchr
+ 009A:0000       _zedpbuf
+ 00B6:00C8       __aaltstkovr
+ 00B6:0060       __acfinfo
+ 00B6:0042       __acmdln
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:D6D6  Abs  __aDBdoswp
+ 00B6:00C4       __adbgmsg
+ 0000:D6D6  Abs  __aDBused
+ 00B6:0044       __aenvseg
+ 00B6:0048       __aexit_rtn
+ 0003:4218       __aFahdiff
+ 0003:0240       __aFchkstk
+ 0003:3C98       __aFFalmul
+ 0003:3CBA       __aFFalrem
+ 0003:3CDC       __aFFalshl
+ 0003:3C98       __aFFaulmul
+ 0003:0E92       __aFftol
+ 0003:3CFC       __aFldiv
+ 0003:3D96       __aFlmul
+ 0003:3DC8       __aFlrem
+ 0003:4238       __aFlshl
+ 0003:0B6A       __aFrchkstk
+ 0003:3E68       __aFuldiv
+ 0003:3D96       __aFulmul
+ 0003:3EC8       __aFulrem
+ 0000:0000  Imp  __AHINCR             (DOSCALLS.136)
+ 0000:0000  Imp  __AHSHIFT            (DOSCALLS.135)
+ 00B6:00E2       __amblksiz
+ 0003:0090       __amsg_exit
+ 00B6:0042       __anullsize
+ 00B6:0070       __aseghi
+ 00B6:006E       __aseglo
+ 00B6:004A       __asizds
+ 00B6:0474       __asizeC
+ 00B6:0475       __asizeD
+ 0003:0010       __astart
+ 0003:41A2       __atold
+ 00B6:0046       __atopsp
+ 00B5:B448       __bufin
+ 0003:22AC       __catox
+ 0003:0189       __cexit
+ 0003:2F38       __cfltcvt
+ 00B6:0458       __cfltcvt_tab
+ 00B6:050A       __cflush
+ 0003:2B32       __cftoe
+ 0003:2CE4       __cftof
+ 0003:2E62       __cftog
+ 00B6:00C1       __child
+ 0003:0240       __chkstk
+ 0003:00F2       __cinit
+ 0003:0086       __cintDIV
+ 0003:33BA       __cldcvt
+ 0003:3012       __cldtoe
+ 0003:31D4       __cldtof
+ 0003:3340       __cldtog
+ 0003:2926       __cltoasub
+ 0003:2A18       __cropzeros
+ 0003:01F7       __ctermsub
+ 00B6:00E8       __ctype
+ 00B6:00E8       __ctype_
+ 0003:3726       __cXENIXtoDOSmode
+ 0003:2933       __cxtoa
+ 0003:0193       __c_exit
+ 0003:00F0       __dataseg
+ 00B6:0526       __days
+ 0000:0000  Imp  __DOSCREATECSALIAS   (DOSCALLS.43)
+ 0000:0000  Imp  __DOSDEVCONFIG       (DOSCALLS.52)
+ 00B6:0087       __doserrno
+ 0000:0000  Imp  __DOSFREESEG         (DOSCALLS.39)
+ 0000:0000  Imp  __DOSGETMACHINEMODE  (DOSCALLS.49)
+ 00B6:0086       __dosmode
+ 0003:347D       __dosret
+ 0003:346E       __dosretf
+ 0000:0000  Imp  __DOSSETVEC          (DOSCALLS.89)
+ 00B6:0084       __dosvermajor
+ 00B6:0085       __dosverminor
+ 0000:0000  Imp  __DOSWRITE           (DOSCALLS.138)
+ 0003:2822       __dtoxtime
+ 0004:0000       __EmDataSeg
+ 0003:0181       __exit
+ 00B6:0076       __fac
+ 0003:2AC4       __fassign
+ 0003:0542       __ffree
+ 0003:0218       __FF_MSGBANNER
+ 00B6:00D4       __fheap
+ 0003:1072       __filbuf
+ 0003:077A       __findlast
+ 0003:110E       __flsbuf
+ 0003:4B50       __fltin
+ 0003:4156       __fltout
+ 0000:9876  Abs  __fltused
+ 0003:0555       __fmalloc
+ 00B6:0580       __fmode
+ 0003:29A8       __forcdecpt
+ 0004:087F       __fpemulator
+ 0004:0010       __fpemulatorbegin
+ 0004:266F       __fpemulatorend
+ 0004:02DE       __FPEXCEPTION87
+ 00B6:05E2       __fpinit
+ 0004:267A       __FPINSTALL87
+ 0004:003A       __fpmath
+ 0003:2FCE       __fpsignal
+ 00B5:3E09       __fptaskdata
+ 0004:26A9       __FPTERMINATE87
+ 0003:3A80       __fptostr
+ 0003:023A       __fptrap
+ 0003:11F4       __freebuf
+ 0003:0938       __fsopen
+ 0003:139C       __ftbuf
+ 0003:0E92       __ftol
+ 0003:34BA       __getbuf
+ 0003:21F6       __getstream
+ 0003:06B8       __growseg
+ 0003:0747       __incseg
+ 0003:05D2       __initseg
+ 0003:14B8       __input
+ 00B6:0202       __iob
+ 00B6:02F2       __iob2
+ 00B6:0580       __iomode
+ 0003:2748       __isindst
+ 00B6:03E2       __lastiob
+ 0003:4763       __LD12MULT
+ 0003:468E       __LD12MULTTENPOWER
+ 0003:0606       __linkseg
+ 00B6:050C       __lpdays
+ 0003:4D64       __MANTOLD12
+ 00B6:05DE       __matherr_flag
+ 0003:079A       __newseg
+ 00B6:0089       __nfile
+ 00B6:004C       __nheap_desc
+ 0003:04B4       __NMSG_TEXT
+ 0003:04E4       __NMSG_WRITE
+ 0003:0264       __nullcheck
+ 0003:122C       __openfile
+ 00B6:0087       __oserr
+ 00B6:008B       __osfile
+ 00B6:0084       __osmajor
+ 00B6:0085       __osminor
+ 00B6:0086       __osmode
+ 00B6:0084       __osversion
+ 0003:1D0C       __output
+ 00B6:00BD       __pgmptr
+ 00B6:009F       __pipech
+ 0003:2A96       __positive
+ 0003:063C       __searchseg
+ 0003:0288       __setargv
+ 0003:0410       __setenvp
+ 00B6:0472       __sigintoff
+ 00B6:0470       __sigintseg
+ 0003:1324       __stbuf
+ 0003:051A       __stdalloc
+ 0003:4E1E       __STRINGTOD
+ 0003:48E8       __STRINGTOLD
+ 00B6:0082       __umaskval
+ 0003:3C7E       __wrt2err
+ 00B6:0074       ___aDBrterr
+ 00B6:0072       ___aDBswpflg
+ 00B6:00B3       ___argc
+ 00B6:00B5       ___argv
+ 00B6:04A2       ___dnames
+ 00B6:04B8       ___mnames
+ 0003:2666       ___tzset
+
+  Address         Publics by Value
+
+ 0000:0000  Imp  DOSWRITE             (DOSCALLS.138)
+ 0000:0000  Imp  __AHINCR             (DOSCALLS.136)
+ 0000:0000  Imp  __DOSSETVEC          (DOSCALLS.89)
+ 0000:0000  Imp  DOSREAD              (DOSCALLS.137)
+ 0000:0000  Imp  DOSNEWSIZE           (DOSCALLS.68)
+ 0000:0000  Imp  DOSGETPROCADDR       (DOSCALLS.45)
+ 0000:0000  Imp  DOSGETMACHINEMODE    (DOSCALLS.49)
+ 0000:0000  Imp  DOSQHANDTYPE         (DOSCALLS.77)
+ 0000:0000  Imp  DOSOPEN              (DOSCALLS.70)
+ 0000:0000  Imp  VIOSCROLLUP          (VIOCALLS.7)
+ 0000:0000  Imp  DOSCHGFILEPTR        (DOSCALLS.58)
+ 0000:0000  Imp  __DOSFREESEG         (DOSCALLS.39)
+ 0000:0000  Imp  __AHSHIFT            (DOSCALLS.135)
+ 0000:0000  Imp  DOSEXIT              (DOSCALLS.5)
+ 0000:0000  Imp  VIOGETBUF            (VIOCALLS.31)
+ 0000:0000  Imp  __DOSDEVCONFIG       (DOSCALLS.52)
+ 0000:0000  Imp  VIOSETMODE           (VIOCALLS.22)
+ 0000:0000  Imp  __DOSWRITE           (DOSCALLS.138)
+ 0000:0000  Imp  __DOSGETMACHINEMODE  (DOSCALLS.49)
+ 0000:0000  Imp  DOSDELETE            (DOSCALLS.60)
+ 0000:0000  Imp  VIOGETPHYSBUF        (VIOCALLS.2)
+ 0000:0000  Imp  DOSREALLOCSEG        (DOSCALLS.38)
+ 0000:0000  Imp  DOSSETVEC            (DOSCALLS.89)
+ 0000:0000  Imp  DOSBEEP              (DOSCALLS.50)
+ 0000:0000  Imp  DOSQFILEMODE         (DOSCALLS.75)
+ 0000:0000  Imp  DOSLOADMODULE        (DOSCALLS.44)
+ 0000:0000  Imp  DOSSEMCLEAR          (DOSCALLS.141)
+ 0000:0000  Imp  VIOSHOWBUF           (VIOCALLS.43)
+ 0000:0000  Imp  VIOSETCURPOS         (VIOCALLS.15)
+ 0000:0000  Imp  VIOGETFONT           (VIOCALLS.29)
+ 0000:0000  Imp  DOSALLOCSEG          (DOSCALLS.34)
+ 0000:0000  Imp  DOSGETDATETIME       (DOSCALLS.33)
+ 0000:0000  Imp  __DOSCREATECSALIAS   (DOSCALLS.43)
+ 0000:0000  Imp  DOSGETVERSION        (DOSCALLS.92)
+ 0000:0000  Imp  KBDCHARIN            (KBDCALLS.4)
+ 0000:0000  Imp  DOSCLOSE             (DOSCALLS.59)
+ 0000:0632  Abs  FISRQQ
+ 0000:0E32  Abs  FICRQQ
+ 0000:1632  Abs  FIERQQ
+ 0000:4000  Abs  FJARQQ
+ 0000:5C32  Abs  FIDRQQ
+ 0000:8000  Abs  FJSRQQ
+ 0000:9876  Abs  __fltused
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:A23D  Abs  FIWRQQ
+ 0000:C000  Abs  FJCRQQ
+ 0000:D6D6  Abs  __aDBused
+ 0000:D6D6  Abs  __aDBdoswp
+ 0000:FE32  Abs  FIARQQ
+ 0001:0000       IOPLIBM
+ 0001:0087       IOPLCYA
+ 0001:0096       IOPLPUR
+ 0001:00A5       IOPLPG0
+ 0001:00B4       IOPLPG1
+ 0002:0000       _main
+ 0003:0010       __astart
+ 0003:0086       __cintDIV
+ 0003:0090       __amsg_exit
+ 0003:00F0       __dataseg
+ 0003:00F2       __cinit
+ 0003:017A       _exit
+ 0003:0181       __exit
+ 0003:0189       __cexit
+ 0003:0193       __c_exit
+ 0003:01F7       __ctermsub
+ 0003:0218       __FF_MSGBANNER
+ 0003:023A       __fptrap
+ 0003:0240       __aFchkstk
+ 0003:0240       __chkstk
+ 0003:0264       __nullcheck
+ 0003:0288       __setargv
+ 0003:0410       __setenvp
+ 0003:04B4       __NMSG_TEXT
+ 0003:04E4       __NMSG_WRITE
+ 0003:051A       __stdalloc
+ 0003:053C       _malloc
+ 0003:0542       __ffree
+ 0003:0555       __fmalloc
+ 0003:05D2       __initseg
+ 0003:0606       __linkseg
+ 0003:063C       __searchseg
+ 0003:06B8       __growseg
+ 0003:0747       __incseg
+ 0003:077A       __findlast
+ 0003:079A       __newseg
+ 0003:07CC       _memcpy
+ 0003:082A       _memset
+ 0003:0872       _fclose
+ 0003:0938       __fsopen
+ 0003:096C       _fopen
+ 0003:0988       _fprintf
+ 0003:09C8       _fscanf
+ 0003:09E8       _printf
+ 0003:0A2C       _fputchar
+ 0003:0A2C       _putchar
+ 0003:0A34       _putc
+ 0003:0A34       _fputc
+ 0003:0A5C       _free
+ 0003:0A62       _strcat
+ 0003:0AA8       _strcpy
+ 0003:0ADE       _strcmp
+ 0003:0B08       _strlen
+ 0003:0B20       _strncpy
+ 0003:0B4A       _atoi
+ 0003:0B4E       _itoa
+ 0003:0B6A       __aFrchkstk
+ 0003:0B9E       _fgets
+ 0003:0C18       _fputs
+ 0003:0C7A       _fseek
+ 0003:0CFC       _sprintf
+ 0003:0D68       _localtime
+ 0003:0DEC       _time
+ 0003:0E36       _strchr
+ 0003:0E64       _strrchr
+ 0003:0E92       __aFftol
+ 0003:0E92       __ftol
+ 0003:0EDA       _fwrite
+ 0003:1072       __filbuf
+ 0003:110E       __flsbuf
+ 0003:11F4       __freebuf
+ 0003:122C       __openfile
+ 0003:1324       __stbuf
+ 0003:139C       __ftbuf
+ 0003:13E4       _fflush
+ 0003:1464       _flushall
+ 0003:14B8       __input
+ 0003:1D0C       __output
+ 0003:21F6       __getstream
+ 0003:2244       _close
+ 0003:226E       _lseek
+ 0003:22AC       __catox
+ 0003:2302       _ftell
+ 0003:249C       _gmtime
+ 0003:2666       ___tzset
+ 0003:2678       _tzset
+ 0003:2748       __isindst
+ 0003:2822       __dtoxtime
+ 0003:2926       __cltoasub
+ 0003:2933       __cxtoa
+ 0003:298A       _remove
+ 0003:298A       _unlink
+ 0003:29A8       __forcdecpt
+ 0003:2A18       __cropzeros
+ 0003:2A96       __positive
+ 0003:2AC4       __fassign
+ 0003:2B32       __cftoe
+ 0003:2CE4       __cftof
+ 0003:2E62       __cftog
+ 0003:2F38       __cfltcvt
+ 0003:2FCE       __fpsignal
+ 0003:3012       __cldtoe
+ 0003:31D4       __cldtof
+ 0003:3340       __cldtog
+ 0003:33BA       __cldcvt
+ 0003:346E       __dosretf
+ 0003:347D       __dosret
+ 0003:34BA       __getbuf
+ 0003:3506       _ungetc
+ 0003:3572       _sopen
+ 0003:3583       _open
+ 0003:3726       __cXENIXtoDOSmode
+ 0003:3738       _read
+ 0003:387A       _write
+ 0003:3A24       _atol
+ 0003:3A28       _atof
+ 0003:3A80       __fptostr
+ 0003:3B26       _getenv
+ 0003:3BB4       _memmove
+ 0003:3C7E       __wrt2err
+ 0003:3C98       __aFFaulmul
+ 0003:3C98       __aFFalmul
+ 0003:3CBA       __aFFalrem
+ 0003:3CDC       __aFFalshl
+ 0003:3CFC       __aFldiv
+ 0003:3D96       __aFulmul
+ 0003:3D96       __aFlmul
+ 0003:3DC8       __aFlrem
+ 0003:3E68       __aFuldiv
+ 0003:3EC8       __aFulrem
+ 0003:3F48       $I10_OUTPUT
+ 0003:4156       __fltout
+ 0003:41A2       __atold
+ 0003:41C8       _stackavail
+ 0003:41DC       _strncmp
+ 0003:4218       __aFahdiff
+ 0003:4238       __aFlshl
+ 0003:4291       $i8_output
+ 0003:468E       __LD12MULTTENPOWER
+ 0003:4763       __LD12MULT
+ 0003:48E8       __STRINGTOLD
+ 0003:4B50       __fltin
+ 0003:4D26       $i8_tpwr10
+ 0003:4D64       __MANTOLD12
+ 0003:4E1E       __STRINGTOD
+ 0004:0000       __EmDataSeg
+ 0004:0010       __fpemulatorbegin
+ 0004:003A       __fpmath
+ 0004:02DE       __FPEXCEPTION87
+ 0004:087F       __fpemulator
+ 0004:266F       __fpemulatorend
+ 0004:267A       __FPINSTALL87
+ 0004:26A9       __FPTERMINATE87
+ 0005:0000       @cfginit
+ 0006:0000       @clrpanl
+ 0007:0000       @cmdprse
+ 0008:0000       @cmpline
+ 0009:0000       @delnexc
+ 000A:0000       @delprot
+ 000B:0000       @delxblk
+ 000C:0000       @excmerg
+ 000D:0000       @excrdsp
+ 000E:0000       @excremv
+ 000F:0000       @funckey
+ 0010:0000       @letsgrk
+ 0011:0000       @letsheb
+ 0012:0000       @mergeon
+ 0013:0000       @pshstck
+ 0014:0000       @renbufr
+ 0015:0000       @wrtebuf
+ 0016:0000       @freebuf
+ 0017:0000       @rhebrew
+ 0018:0000       @tranheb
+ 0019:0000       @dspcibm
+ 001A:0000       @ov8cib2
+ 001B:0000       @ovrcibm
+ 001C:0000       @revcibm
+ 001D:0000       @displin
+ 001E:0000       @ds8cib2
+ 001F:0000       @ds8cibm
+ 0020:0000       @ds8lib2
+ 0021:0000       @ds8libm
+ 0022:0000       @dsp8chr
+ 0023:0000       @dsp8lin
+ 0024:0000       @dspcib2
+ 0025:0000       @dsplib2
+ 0026:0000       @dsplibm
+ 0027:0000       @ov8cibm
+ 0028:0000       @overchr
+ 0029:0000       @ovr8chr
+ 002A:0000       @ovrcib2
+ 002B:0000       @revcib2
+ 002C:0000       @revline
+ 002D:0000       @zedlogo
+ 002E:0000       @dispchr
+ 002F:0000       @clrlxga
+ 0030:0000       @ds8cxga
+ 0031:0000       @ds8lxga
+ 0032:0000       @dspcxga
+ 0033:0000       @dsplxga
+ 0034:0000       @ov8cxga
+ 0035:0000       @revcxga
+ 0036:0000       @revlxga
+ 0037:0000       @clrline
+ 0038:0000       @ovrcxga
+ 0039:0000       @stckcmd
+ 003A:0000       @browpan
+ 003B:0000       @cfgfget
+ 003C:0000       @cfgfpan
+ 003D:0000       @cfgkget
+ 003E:0000       @cfgkpan
+ 003F:0000       @chngprm
+ 0040:0000       @cmddone
+ 0041:0000       @cmdline
+ 0042:0000       @cmdrest
+ 0043:0000       @convinp
+ 0044:0000       @delchar
+ 0045:0000       @dispmsg
+ 0046:0000       @edbrpan
+ 0047:0000       @editpan
+ 0048:0000       @eraseof
+ 0049:0000       @excxblk
+ 004A:0000       @findprm
+ 004B:0000       @getstrt
+ 004C:0000       @inschar
+ 004D:0000       @lastsrp
+ 004E:0000       @loclcmd
+ 004F:0000       @optback
+ 0050:0000       @primcmd
+ 0051:0000       @rdspasc
+ 0052:0000       @rdspgrk
+ 0053:0000       @rdsplat
+ 0054:0000       @rdsplin
+ 0055:0000       @rdsprom
+ 0056:0000       @srpbufr
+ 0057:0000       @statlin
+ 0058:0000       @txtonly
+ 0059:0000       @vrepcnt
+ 005A:0000       @convout
+ 005B:0000       @dsentry
+ 005C:0000       @buftsln
+ 005D:0000       @entpanl
+ 005E:0000       @inusage
+ 005F:0000       @lcinval
+ 0060:0000       @pgrkchr
+ 0061:0000       @phebchr
+ 0062:0000       @platchr
+ 0063:0000       @protlin
+ 0064:0000       @rdspheb
+ 0065:0000       @scrtbuf
+ 0066:0000       @transcr
+ 0067:0000       @zfinish
+ 0068:0000       @xga8514
+ 0069:0000       @zepilog
+ 006A:0000       @ckplace
+ 006B:0000       @colslin
+ 006C:0000       @copylin
+ 006D:0000       @copyonb
+ 006E:0000       @ddelblk
+ 006F:0000       @exclude
+ 0070:0000       @excshow
+ 0071:0000       @keyslin
+ 0072:0000       @letslin
+ 0073:0000       @linecmd
+ 0074:0000       @lnecmd1
+ 0075:0000       @lnecmd2
+ 0076:0000       @lnecmd3
+ 0077:0000       @movelin
+ 0078:0000       @moveonb
+ 0079:0000       @movecpy
+ 007A:0000       @procedt
+ 007B:0000       @procinp
+ 007C:0000       @procscn
+ 007D:0000       @rrepblk
+ 007E:0000       @scrlcmd
+ 007F:0000       @shiftlf
+ 0080:0000       @shiftrt
+ 0081:0000       @srchcmd
+ 0082:0000       @backcmd
+ 0083:0000       @buftscr
+ 0084:0000       @dispnum
+ 0085:0000       @topline
+ 0086:0000       @invcopt
+ 0087:0000       @misccmd
+ 0088:0000       @zdriver
+ 0089:0000       @pascchr
+ 008A:0000       @promchr
+ 008B:0000       @cmdparm
+ 008C:0000       @fillscr
+ 008D:0000       @getfile
+ 008E:0000       @grphreg
+ 008F:0000       @pan2cmd
+ 0090:0000       @panlcmd
+ 0091:0000       @primary
+ 0092:0000       @readbuf
+ 0093:0000       @revchar
+ 0094:0000       @scrpesc
+ 0095:0000       @scrprnt
+ 0096:0000       @scrpxga
+ 0097:0000       @textreg
+ 0098:0000       @zedinit
+ 0099:0000       @zedpbse
+ 009A:0000       _zedpbuf
+ 009B:0000       @zedpfnt
+ 009C:0000       @zedpimg
+ 009D:0000       @zedplsp
+ 009E:0000       @zedplup
+ 009F:0000       @zedppre
+ 00A0:0000       @zedpprt
+ 00A1:0000       @zedppsf
+ 00A2:0000       @zedppsp
+ 00A3:0000       @zedpram
+ 00A4:0000       @zedprom
+ 00A5:0000       @zedpx24
+ 00A6:0000       @invert
+ 00A7:0000       @leftfld
+ 00A8:0000       @leftjust
+ 00A9:0000       @lindex
+ 00AA:0000       @lower
+ 00AB:0000       @numeric
+ 00AC:0000       @pindex
+ 00AD:0000       @rightjst
+ 00AE:0000       @upper
+ 00AF:0000       @getinpt
+ 00B0:0000       @bytemap
+ 00B1:0000       @entfield
+ 00B2:0000       _callafi
+ 00B2:0026       HINIT
+ 00B2:0032       HSCOL
+ 00B2:003E       HSMX
+ 00B2:004A       HEGS
+ 00B2:0056       HBBW
+ 00B2:0062       HQDPS
+ 00B2:006E       HOPEN
+ 00B2:00FC       HSYNC
+ 00B2:0144       HBBCHN
+ 00B2:0246       HCLOSE
+ 00B2:028A       @makeafi
+ 00B3:0000       @formdsn
+ 00B4:0000       @whenow
+ 00B5:0000       _ascchar
+ 00B5:0700       _cmdtxts
+ 00B5:07F0       _cmdvals
+ 00B5:0840       _grkchar
+ 00B5:0F40       _hebchar
+ 00B5:1640       _msgtext
+ 00B5:2400       _zedascb
+ 00B5:26F0       _zedasct
+ 00B5:29E0       _zedgrkb
+ 00B5:2CD0       _zedgrkt
+ 00B5:2FC0       _zedhebb
+ 00B5:32B0       _zedhebt
+ 00B5:35A0       _zedlatb
+ 00B5:3890       _zedlatt
+ 00B5:3B80       _sem_pr
+ 00B5:3B84       _graphic
+ 00B5:3B86       _prtmode
+ 00B5:3B88       _outfile
+ 00B5:3BC6       _p
+ 00B5:3BC8       _romptr
+ 00B5:3E09       __fptaskdata
+ 00B5:3E20       _grkexch
+ 00B5:3F20       _hebhiex
+ 00B5:3FE0       _fkeyset
+ 00B5:4040       _hebexch
+ 00B5:7110       _helpedt
+ 00B5:7D70       _helpgen
+ 00B5:9F60       _zedlchr
+ 00B5:B060       _afiptr
+ 00B5:B064       _rsptr
+ 00B5:B440       _posxga
+ 00B5:B448       __bufin
+ 00B6:0042       __anullsize
+ 00B6:0042       __acmdln
+ 00B6:0044       __aenvseg
+ 00B6:0046       __atopsp
+ 00B6:0048       __aexit_rtn
+ 00B6:004A       __asizds
+ 00B6:004C       __nheap_desc
+ 00B6:0060       __acfinfo
+ 00B6:006E       __aseglo
+ 00B6:0070       __aseghi
+ 00B6:0072       ___aDBswpflg
+ 00B6:0074       ___aDBrterr
+ 00B6:0076       __fac
+ 00B6:0080       _errno
+ 00B6:0082       __umaskval
+ 00B6:0084       __dosvermajor
+ 00B6:0084       __osversion
+ 00B6:0084       __osmajor
+ 00B6:0085       __osminor
+ 00B6:0085       __dosverminor
+ 00B6:0086       __dosmode
+ 00B6:0086       __osmode
+ 00B6:0087       __doserrno
+ 00B6:0087       __oserr
+ 00B6:0089       __nfile
+ 00B6:008B       __osfile
+ 00B6:009F       __pipech
+ 00B6:00B3       ___argc
+ 00B6:00B5       ___argv
+ 00B6:00B9       _environ
+ 00B6:00BD       __pgmptr
+ 00B6:00C1       __child
+ 00B6:00C4       __adbgmsg
+ 00B6:00C8       __aaltstkovr
+ 00B6:00CC       STKHQQ
+ 00B6:00D4       __fheap
+ 00B6:00E2       __amblksiz
+ 00B6:00E8       __ctype_
+ 00B6:00E8       __ctype
+ 00B6:0202       __iob
+ 00B6:02F2       __iob2
+ 00B6:03E2       __lastiob
+ 00B6:0458       __cfltcvt_tab
+ 00B6:0470       __sigintseg
+ 00B6:0472       __sigintoff
+ 00B6:0474       __asizeC
+ 00B6:0475       __asizeD
+ 00B6:0494       _timezone
+ 00B6:0498       _daylight
+ 00B6:049A       _tzname
+ 00B6:04A2       ___dnames
+ 00B6:04B8       ___mnames
+ 00B6:050A       __cflush
+ 00B6:050C       __lpdays
+ 00B6:0526       __days
+ 00B6:0580       __fmode
+ 00B6:0580       __iomode
+ 00B6:05D6       _HUGE
+ 00B6:05DE       __matherr_flag
+ 00B6:05E2       __fpinit
+ 00B6:09B6       _edata
+ 00B6:09E0       _end
+
+Program entry point at 0003:0010
