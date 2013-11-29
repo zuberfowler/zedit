@@ -10,7 +10,7 @@ LICENSE
 
 COMPILE TOOLS
 ===============
-* 
+* VisualAge for C
 
 AUTHORS
 ===============
